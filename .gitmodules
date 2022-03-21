@@ -1,0 +1,5 @@
+[submodule "generator"]
+	path = generator
+	url = git@github.com:db-tu-dresden/TVLGen.git
+	branch = main
+	
