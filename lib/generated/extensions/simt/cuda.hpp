@@ -18,7 +18,6 @@
 /*
  * @file /home/runner/work/TVLGen/TVLGen/lib/generated/extensions/simt/cuda.hpp
  * @date 23.03.2022
- * @brief 
  */
 #ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_EXTENSIONS_SIMT_CUDA_HPP
 #define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_EXTENSIONS_SIMT_CUDA_HPP
