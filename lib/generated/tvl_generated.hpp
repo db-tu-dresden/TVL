@@ -24,9 +24,9 @@
 #define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_TVL_GENERATED_HPP
 
 #include "extensions/simd/arm/neon.hpp"
-#include "definitions/io/io_neon.hpp"
-#include "definitions/mask/mask_neon.hpp"
-#include "definitions/compare/compare_neon.hpp"
 #include "definitions/ls/ls_neon.hpp"
+#include "definitions/io/io_neon.hpp"
+#include "definitions/compare/compare_neon.hpp"
+#include "definitions/mask/mask_neon.hpp"
 
 #endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_TVL_GENERATED_HPP
