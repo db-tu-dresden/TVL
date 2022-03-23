@@ -16,12 +16,12 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLPrimitiveData/TVLPrimitiveData/lib/generated/definitions/compare/compare_avx2.hpp
- * @date 22.03.2022
+ * @file /home/runner/work/TVLGen/TVLGen/lib/generated/definitions/compare/compare_avx2.hpp
+ * @date 23.03.2022
  * @brief Compare primitives. Implementation for avx2
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLPRIMITIVEDATA_TVLPRIMITIVEDATA_LIB_GENERATED_DEFINITIONS_COMPARE_COMPARE_AVX2_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLPRIMITIVEDATA_TVLPRIMITIVEDATA_LIB_GENERATED_DEFINITIONS_COMPARE_COMPARE_AVX2_HPP
+#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DEFINITIONS_COMPARE_COMPARE_AVX2_HPP
+#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DEFINITIONS_COMPARE_COMPARE_AVX2_HPP
 
 #include "../../declarations/compare.hpp"
 
@@ -78,4 +78,4 @@ namespace tvl {
    
 } // end of namespace tvl
 
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLPRIMITIVEDATA_TVLPRIMITIVEDATA_LIB_GENERATED_DEFINITIONS_COMPARE_COMPARE_AVX2_HPP
+#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DEFINITIONS_COMPARE_COMPARE_AVX2_HPP
