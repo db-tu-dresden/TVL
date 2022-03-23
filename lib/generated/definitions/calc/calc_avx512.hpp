@@ -16,12 +16,12 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLPrimitiveData/TVLPrimitiveData/lib/generated/definitions/calc/calc_avx512.hpp
- * @date 22.03.2022
+ * @file /home/runner/work/TVLGen/TVLGen/lib/generated/definitions/calc/calc_avx512.hpp
+ * @date 23.03.2022
  * @brief Arithmetic primitives. Implementation for avx512
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLPRIMITIVEDATA_TVLPRIMITIVEDATA_LIB_GENERATED_DEFINITIONS_CALC_CALC_AVX512_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLPRIMITIVEDATA_TVLPRIMITIVEDATA_LIB_GENERATED_DEFINITIONS_CALC_CALC_AVX512_HPP
+#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DEFINITIONS_CALC_CALC_AVX512_HPP
+#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DEFINITIONS_CALC_CALC_AVX512_HPP
 
 #include "../../declarations/calc.hpp"
 
@@ -78,4 +78,4 @@ namespace tvl {
    
 } // end of namespace tvl
 
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLPRIMITIVEDATA_TVLPRIMITIVEDATA_LIB_GENERATED_DEFINITIONS_CALC_CALC_AVX512_HPP
+#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DEFINITIONS_CALC_CALC_AVX512_HPP

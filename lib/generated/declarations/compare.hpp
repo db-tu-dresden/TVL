@@ -16,12 +16,12 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLPrimitiveData/TVLPrimitiveData/lib/generated/declarations/compare.hpp
- * @date 22.03.2022
+ * @file /home/runner/work/TVLGen/TVLGen/lib/generated/declarations/compare.hpp
+ * @date 23.03.2022
  * @brief Compare primitives.
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLPRIMITIVEDATA_TVLPRIMITIVEDATA_LIB_GENERATED_DECLARATIONS_COMPARE_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLPRIMITIVEDATA_TVLPRIMITIVEDATA_LIB_GENERATED_DECLARATIONS_COMPARE_HPP
+#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DECLARATIONS_COMPARE_HPP
+#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DECLARATIONS_COMPARE_HPP
 
 
 namespace tvl {
@@ -73,4 +73,4 @@ namespace tvl {
    
 } // end of namespace tvl
 
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLPRIMITIVEDATA_TVLPRIMITIVEDATA_LIB_GENERATED_DECLARATIONS_COMPARE_HPP
+#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DECLARATIONS_COMPARE_HPP
