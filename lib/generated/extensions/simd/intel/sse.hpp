@@ -18,7 +18,6 @@
 /*
  * @file /home/runner/work/TVLGen/TVLGen/lib/generated/extensions/simd/intel/sse.hpp
  * @date 23.03.2022
- * @brief 
  */
 #ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_SSE_HPP
 #define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_SSE_HPP

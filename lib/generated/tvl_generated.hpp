@@ -18,20 +18,19 @@
 /*
  * @file /home/runner/work/TVLGen/TVLGen/lib/generated/tvl_generated.hpp
  * @date 23.03.2022
- * @brief 
  */
 #ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_TVL_GENERATED_HPP
 #define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_TVL_GENERATED_HPP
 
 #include "extensions/simd/intel/sse.hpp"
 #include "extensions/simd/intel/avx2.hpp"
-#include "definitions/ls/ls_avx2.hpp"
-#include "definitions/ls/ls_sse.hpp"
-#include "definitions/io/io_avx2.hpp"
-#include "definitions/io/io_sse.hpp"
-#include "definitions/compare/compare_avx2.hpp"
-#include "definitions/compare/compare_sse.hpp"
 #include "definitions/mask/mask_avx2.hpp"
 #include "definitions/mask/mask_sse.hpp"
+#include "definitions/compare/compare_avx2.hpp"
+#include "definitions/compare/compare_sse.hpp"
+#include "definitions/io/io_avx2.hpp"
+#include "definitions/io/io_sse.hpp"
+#include "definitions/ls/ls_avx2.hpp"
+#include "definitions/ls/ls_sse.hpp"
 
 #endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_TVL_GENERATED_HPP
