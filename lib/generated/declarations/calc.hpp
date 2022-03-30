@@ -23,7 +23,6 @@
 #ifndef TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_CALC_HPP
 #define TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_CALC_HPP
 
-#include "immintrin.h"
 namespace tvl {
    namespace details {
       // Forward declaration of implementation struct for TVL-primitive "add".
@@ -44,6 +43,47 @@ namespace tvl {
    ) {
       return details::add_impl< Vec, Idof >::apply(
          vec_a, vec_b
+      );
+   }
+   namespace details {
+      // Forward declaration of implementation struct for TVL-primitive "mul".
+      template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
+         struct mul_impl{};
+   }
+   /*
+    * @brief Multiplies two vector registers.
+    * @details todo.
+    * @param vec_a First vector.
+    * @param vec_b Second vector.
+    * @return Vector containing result of the multiplication.
+    */
+   template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
+   [[nodiscard]] 
+   TVL_FORCE_INLINE typename Vec::register_type mul(
+      typename Vec::register_type vec_a, typename Vec::register_type vec_b
+   ) {
+      return details::mul_impl< Vec, Idof >::apply(
+         vec_a, vec_b
+      );
+   }
+   namespace details {
+      // Forward declaration of implementation struct for TVL-primitive "hadd".
+      template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
+         struct hadd_impl{};
+   }
+   /*
+    * @brief Reduces the elements to a sum.
+    * @details todo.
+    * @param value Input vector.
+    * @return Scalar value after adding all elements in the vector.
+    */
+   template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
+   [[nodiscard]] 
+   TVL_FORCE_INLINE typename Vec::base_type hadd(
+      typename Vec::register_type value
+   ) {
+      return details::hadd_impl< Vec, Idof >::apply(
+         value
       );
    }
 } // end of namespace tvl

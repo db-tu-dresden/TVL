@@ -28,66 +28,50 @@ namespace tvl {
       template<Arithmetic BaseType, std::size_t VectorSizeInBits = 512>
          struct types {
             using default_size_in_bits = std::integral_constant< std::size_t, VectorSizeInBits >;
-            using register_t __attribute__ ((
-            __vector_size__ (
-               VectorSizeInBits/sizeof(
+            using register_t __attribute__((__vector_size__(VectorSizeInBits/8),__may_alias__,__aligned__(VectorSizeInBits/8))) =
+               TVL_DEP_TYPE(
+                  (std::is_integral_v< BaseType >),
+                  long long,
                   TVL_DEP_TYPE(
-                     (std::is_integral_v< BaseType >),
-                     long long,
-                     TVL_DEP_TYPE(
-                        (sizeof( BaseType ) == 4),
-                        float,
-                        double
-                     )
+                     (sizeof( BaseType ) == 4),
+                     float,
+                     double
                   )
-               )
-            ), 
-            __may_alias__, 
-            __aligned__(VectorSizeInBits/sizeof(char))
-            )) =
-               TVL_DEP_TYPE(
-               (std::is_integral_v< BaseType >),
-               long long,
-               TVL_DEP_TYPE(
-                  (sizeof( BaseType ) == 4),
-                  float,
-                  double
-               )
-            );
+               );
             using mask_t =
                TVL_DEP_TYPE(
-            ( VectorSizeInBits == 512 ),
-            TVL_DEP_TYPE(
-               ( sizeof( register_t ) / sizeof( BaseType ) ) == 64,
-               __mmask64,
-               TVL_DEP_TYPE(
-                  ( sizeof( register_t ) / sizeof( BaseType ) ) == 32,
-                  __mmask32,
+                  ( VectorSizeInBits == 512 ),
                   TVL_DEP_TYPE(
-                     ( sizeof( register_t ) / sizeof( BaseType ) ) == 16,
-                     __mmask16,
-                     __mmask8
-                  )
-               )
-            ),
-            TVL_DEP_TYPE(
-               ( VectorSizeInBits == 256 ),
-               TVL_DEP_TYPE(
-                  ( sizeof( register_t ) / sizeof( BaseType ) ) == 32,
-                  __mmask32,
+                     ( sizeof( register_t ) / sizeof( BaseType ) ) == 64,
+                     __mmask64,
+                     TVL_DEP_TYPE(
+                        ( sizeof( register_t ) / sizeof( BaseType ) ) == 32,
+                        __mmask32,
+                        TVL_DEP_TYPE(
+                           ( sizeof( register_t ) / sizeof( BaseType ) ) == 16,
+                           __mmask16,
+                           __mmask8
+                        )
+                     )
+                  ),
                   TVL_DEP_TYPE(
-                     ( sizeof( register_t ) / sizeof( BaseType ) ) == 16,
-                     __mmask16,
-                     __mmask8
+                     ( VectorSizeInBits == 256 ),
+                     TVL_DEP_TYPE(
+                        ( sizeof( register_t ) / sizeof( BaseType ) ) == 32,
+                        __mmask32,
+                        TVL_DEP_TYPE(
+                           ( sizeof( register_t ) / sizeof( BaseType ) ) == 16,
+                           __mmask16,
+                           __mmask8
+                        )
+                     ),
+                     TVL_DEP_TYPE(
+                        ( sizeof( register_t ) / sizeof( BaseType ) ) == 16,
+                        __mmask16,
+                        __mmask8
+                     )
                   )
-               ),
-               TVL_DEP_TYPE(
-                  ( sizeof( register_t ) / sizeof( BaseType ) ) == 16,
-                  __mmask16,
-                  __mmask8
-               )
-            )
-         );
+               );
          };
    };
 } // end of namespace tvl

@@ -117,5 +117,53 @@ namespace tvl {
             }
          };
    } // end of namespace details for template specialization of gather_impl for avx2 using int64_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set".
+       * @details:
+       * Target Extension: avx2.
+       *        Data Type: uint64_t
+       *  Extension Flags: ['avx2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set_impl<simd<uint64_t, avx2>, Idof> {
+            using Vec = simd< uint64_t, avx2  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            template< typename... Ts >
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               Ts... args
+            ) {
+               return _mm256_set_epi64x( args... );
+            }
+         };
+   } // end of namespace details for template specialization of set_impl for avx2 using uint64_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set".
+       * @details:
+       * Target Extension: avx2.
+       *        Data Type: int64_t
+       *  Extension Flags: ['avx2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set_impl<simd<int64_t, avx2>, Idof> {
+            using Vec = simd< int64_t, avx2  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            template< typename... Ts >
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               Ts... args
+            ) {
+               return _mm256_set_epi64x( args... );
+            }
+         };
+   } // end of namespace details for template specialization of set_impl for avx2 using int64_t.
 } // end of namespace tvl
 #endif //TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_LS_LS_AVX2_HPP

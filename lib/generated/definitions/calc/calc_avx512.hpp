@@ -30,25 +30,47 @@ namespace tvl {
        * @brief: Template specialization of implementation for "add".
        * @details:
        * Target Extension: avx512.
-       *        Data Type: uint64_t
+       *        Data Type: uint8_t
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct add_impl<simd<uint64_t, avx512>, Idof> {
-            using Vec = simd< uint64_t, avx512  >;
+         struct add_impl<simd<uint8_t, avx512>, Idof> {
+            using Vec = simd< uint8_t, avx512  >;
             static constexpr bool native_supported() {
-               return false;
+               return true;
             }
-            [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
+            [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
                typename Vec::register_type  vec_a, typename Vec::register_type  vec_b
             ) {
-               static_assert( !std::is_same_v< Idof, native >, "The primitive add is not supported by your hardware natively while it is forced by using native" );
-               return _mm512_add_epi64(vec_a, vec_b);
+               return _mm512_add_epi8(vec_a, vec_b);
             }
          };
-   } // end of namespace details for template specialization of add_impl for avx512 using uint64_t.
+   } // end of namespace details for template specialization of add_impl for avx512 using uint8_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "add".
+       * @details:
+       * Target Extension: avx512.
+       *        Data Type: uint16_t
+       *  Extension Flags: ['avx512f']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct add_impl<simd<uint16_t, avx512>, Idof> {
+            using Vec = simd< uint16_t, avx512  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::register_type  vec_a, typename Vec::register_type  vec_b
+            ) {
+               return _mm512_add_epi16(vec_a, vec_b);
+            }
+         };
+   } // end of namespace details for template specialization of add_impl for avx512 using uint16_t.
    namespace details {
       /**
        * @brief: Template specialization of implementation for "add".
@@ -72,5 +94,28 @@ namespace tvl {
             }
          };
    } // end of namespace details for template specialization of add_impl for avx512 using uint32_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "add".
+       * @details:
+       * Target Extension: avx512.
+       *        Data Type: uint64_t
+       *  Extension Flags: ['avx512f']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct add_impl<simd<uint64_t, avx512>, Idof> {
+            using Vec = simd< uint64_t, avx512  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::register_type  vec_a, typename Vec::register_type  vec_b
+            ) {
+               return _mm512_add_epi64(vec_a, vec_b);
+            }
+         };
+   } // end of namespace details for template specialization of add_impl for avx512 using uint64_t.
 } // end of namespace tvl
 #endif //TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_CALC_CALC_AVX512_HPP

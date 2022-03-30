@@ -30,16 +30,56 @@ namespace tvl {
             using default_size_in_bits = std::integral_constant< std::size_t, VectorSizeInBits >;
             using register_t  =
                TVL_DEP_TYPE(
-               (std::is_integral_v< BaseType >),
-               int64x2_t,
-               TVL_DEP_TYPE(
-                  (sizeof( BaseType ) == 4),
-                  float32x4_t,
-                  float64x2_t
-               )
-            );
+                  std::is_integral_v< BaseType >,
+                  TVL_DEP_TYPE( 
+                     std::is_unsigned_v< BaseType >,
+                     TVL_DEP_TYPE(
+                        (sizeof( BaseType ) == 1),
+                        uint8x16_t,
+                        TVL_DEP_TYPE(
+                           (sizeof( BaseType ) == 2),
+                           uint16x8_t,
+                           TVL_DEP_TYPE(
+                              (sizeof( BaseType ) == 4),
+                              uint32x4_t,
+                              uint64x2_t
+                           )
+                        )
+                     ),
+                     TVL_DEP_TYPE(
+                        (sizeof( BaseType ) == 1),
+                        int8x16_t,
+                        TVL_DEP_TYPE(
+                           (sizeof( BaseType ) == 2),
+                           int16x8_t,
+                           TVL_DEP_TYPE(
+                              (sizeof( BaseType ) == 4),
+                              int32x4_t,
+                              int64x2_t
+                           )
+                        )
+                     )
+                  ),
+                  TVL_DEP_TYPE(
+                     (sizeof( BaseType ) == 4),
+                     float32x4_t,
+                     float64x2_t
+                  )
+               );
             using mask_t =
-               uint64x2_t;
+               TVL_DEP_TYPE(
+                  (sizeof( BaseType ) == 1),
+                  uint8x16_t,
+                  TVL_DEP_TYPE(
+                     (sizeof( BaseType ) == 2),
+                     uint16x8_t,
+                     TVL_DEP_TYPE(
+                        (sizeof( BaseType ) == 4),
+                        uint32x4_t,
+                        uint64x2_t
+                     )
+                  )
+               );
          };
    };
 } // end of namespace tvl

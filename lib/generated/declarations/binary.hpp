@@ -16,31 +16,34 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file lib/generated/extensions/simd/intel/sse.hpp
+ * @file lib/generated/declarations/binary.hpp
  * @date 30.03.2022
+ * @brief Bit manipulation primitives.
  */
-#ifndef TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_SSE_HPP
-#define TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_SSE_HPP
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_BINARY_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_BINARY_HPP
 
-#include "immintrin.h"
 namespace tvl {
-   struct sse {
-      template<Arithmetic BaseType, std::size_t VectorSizeInBits = 128>
-         struct types {
-            using default_size_in_bits = std::integral_constant< std::size_t, VectorSizeInBits >;
-            using register_t __attribute__((__vector_size__(VectorSizeInBits/8),__may_alias__,__aligned__(VectorSizeInBits/8))) =
-               TVL_DEP_TYPE(
-                  (std::is_integral_v< BaseType >),
-                  long long,
-                  TVL_DEP_TYPE(
-                     (sizeof( BaseType ) == 4),
-                     float,
-                     double
-                  )
-               );
-            using mask_t =
-               register_t;
-         };
-   };
+   namespace details {
+      // Forward declaration of implementation struct for TVL-primitive "binary_and".
+      template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
+         struct binary_and_impl{};
+   }
+   /*
+    * @brief Binary ANDs two vector registers.
+    * @details todo.
+    * @param a First vector.
+    * @param b Second vector.
+    * @return Vector containing result of the binary AND.
+    */
+   template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
+   [[nodiscard]] 
+   TVL_FORCE_INLINE typename Vec::register_type binary_and(
+      typename Vec::register_type a, typename Vec::register_type b
+   ) {
+      return details::binary_and_impl< Vec, Idof >::apply(
+         a, b
+      );
+   }
 } // end of namespace tvl
-#endif //TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_SSE_HPP
+#endif //TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_BINARY_HPP
