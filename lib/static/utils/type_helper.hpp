@@ -16,12 +16,12 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLGen/TVLGen/lib/static/utils/type_helper.hpp
- * @date 23.03.2022
+ * @file lib/static/utils/type_helper.hpp
+ * @date 30.03.2022
  * @brief TODO.
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_UTILS_TYPE_HELPER_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_UTILS_TYPE_HELPER_HPP
+#ifndef TUD_D2RG_TVL_LIB_STATIC_UTILS_TYPE_HELPER_HPP
+#define TUD_D2RG_TVL_LIB_STATIC_UTILS_TYPE_HELPER_HPP
 
 #include <cstddef>
 #include <type_traits>
@@ -31,7 +31,6 @@
 #include <string>
 #include <cstdlib>
 #include <limits>
-
 namespace tvl {
    template< class T >
    std::string type_name( ) {
@@ -56,7 +55,6 @@ namespace tvl {
    }
    #define TYPENAME( x ) type_name< decltype( x ) >( )
 
-   
    template< typename T >
    struct is_tuple_impl : std::false_type { };   
    template< typename... Ts >
@@ -64,7 +62,5 @@ namespace tvl {
    template< typename T >
    struct is_tuple : is_tuple_impl< std::remove_cv_t< T > > { };
 
-   
 } // end of namespace tvl
-
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_UTILS_TYPE_HELPER_HPP
+#endif //TUD_D2RG_TVL_LIB_STATIC_UTILS_TYPE_HELPER_HPP

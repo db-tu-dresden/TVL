@@ -16,20 +16,20 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLGen/TVLGen/lib/generated/declarations/calc.hpp
- * @date 23.03.2022
+ * @file lib/generated/declarations/calc.hpp
+ * @date 30.03.2022
  * @brief Arithmetic primitives.
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DECLARATIONS_CALC_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DECLARATIONS_CALC_HPP
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_CALC_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_CALC_HPP
 
 #include "immintrin.h"
-
 namespace tvl {
    namespace details {
-      template< VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof >
-      struct add_impl{};
-   } // end namespace details
+      // Forward declaration of implementation struct for TVL-primitive "add".
+      template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
+         struct add_impl{};
+   }
    /*
     * @brief Adds two vector registers.
     * @details todo.
@@ -37,17 +37,14 @@ namespace tvl {
     * @param vec_b Second vector.
     * @return Vector containing result of the addition.
     */
-   template< VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround >
+   template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
    [[nodiscard]] 
    TVL_FORCE_INLINE typename Vec::register_type add(
-      typename Vec::register_type  vec_a, 
-      typename Vec::register_type  vec_b
+      typename Vec::register_type vec_a, typename Vec::register_type vec_b
    ) {
       return details::add_impl< Vec, Idof >::apply(
          vec_a, vec_b
       );
    }
-   
 } // end of namespace tvl
-
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DECLARATIONS_CALC_HPP
+#endif //TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_CALC_HPP
