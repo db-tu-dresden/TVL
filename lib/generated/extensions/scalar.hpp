@@ -16,21 +16,22 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file lib/generated/tvl_generated.hpp
+ * @file lib/generated/extensions/scalar.hpp
  * @date 30.03.2022
  */
-#ifndef TUD_D2RG_TVL_LIB_GENERATED_TVL_GENERATED_HPP
-#define TUD_D2RG_TVL_LIB_GENERATED_TVL_GENERATED_HPP
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SCALAR_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SCALAR_HPP
 
-#include "extensions/scalar.hpp"
-#include "extensions/simd/arm/neon.hpp"
-#include "definitions/compare/compare_neon.hpp"
-#include "definitions/calc/calc_neon.hpp"
-#include "definitions/calc/calc_scalar.hpp"
-#include "definitions/io/io_neon.hpp"
-#include "definitions/mask/mask_neon.hpp"
-#include "definitions/ls/ls_neon.hpp"
-#include "definitions/ls/ls_scalar.hpp"
-#include "definitions/binary/binary_neon.hpp"
-#include "definitions/binary/binary_scalar.hpp"
-#endif //TUD_D2RG_TVL_LIB_GENERATED_TVL_GENERATED_HPP
+namespace tvl {
+   struct scalar {
+      template<Arithmetic BaseType, std::size_t VectorSizeInBits = sizeof(BaseType)*8>
+         struct types {
+            using default_size_in_bits = std::integral_constant< std::size_t, VectorSizeInBits >;
+            using register_t  =
+               BaseType;
+            using mask_t =
+               bool;
+         };
+   };
+} // end of namespace tvl
+#endif //TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SCALAR_HPP

@@ -16,21 +16,37 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file lib/generated/tvl_generated.hpp
+ * @file lib/generated/definitions/binary/binary_scalar.hpp
  * @date 30.03.2022
+ * @brief Bit manipulation primitives. Implementation for scalar
  */
-#ifndef TUD_D2RG_TVL_LIB_GENERATED_TVL_GENERATED_HPP
-#define TUD_D2RG_TVL_LIB_GENERATED_TVL_GENERATED_HPP
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_BINARY_BINARY_SCALAR_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_BINARY_BINARY_SCALAR_HPP
 
-#include "extensions/scalar.hpp"
-#include "extensions/simd/arm/neon.hpp"
-#include "definitions/compare/compare_neon.hpp"
-#include "definitions/calc/calc_neon.hpp"
-#include "definitions/calc/calc_scalar.hpp"
-#include "definitions/io/io_neon.hpp"
-#include "definitions/mask/mask_neon.hpp"
-#include "definitions/ls/ls_neon.hpp"
-#include "definitions/ls/ls_scalar.hpp"
-#include "definitions/binary/binary_neon.hpp"
-#include "definitions/binary/binary_scalar.hpp"
-#endif //TUD_D2RG_TVL_LIB_GENERATED_TVL_GENERATED_HPP
+#include "../../declarations/binary.hpp"
+namespace tvl {
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "binary_and".
+       * @details:
+       * Target Extension: scalar.
+       *        Data Type: T
+       *  Extension Flags: []
+       */
+      template<typename T, ImplementationDegreeOfFreedom Idof>
+         struct binary_and_impl<simd<T, scalar>, Idof> {
+            using Vec = simd< T, scalar  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::register_type  a, typename Vec::register_type  b
+            ) {
+               return a & b;
+            }
+         };
+   } // end of namespace details for template specialization of binary_and_impl for scalar using T.
+} // end of namespace tvl
+#endif //TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_BINARY_BINARY_SCALAR_HPP

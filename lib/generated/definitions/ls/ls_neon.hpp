@@ -53,6 +53,167 @@ namespace tvl {
        * @brief: Template specialization of implementation for "loadu".
        * @details:
        * Target Extension: neon.
+       *        Data Type: uint8_t
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct loadu_impl<simd<uint8_t, neon>, Idof> {
+            using Vec = simd< uint8_t, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return vld1q_u8( memory );
+            }
+         };
+   } // end of namespace details for template specialization of loadu_impl for neon using uint8_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "loadu".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: uint16_t
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct loadu_impl<simd<uint16_t, neon>, Idof> {
+            using Vec = simd< uint16_t, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return vld1q_u16( memory );
+            }
+         };
+   } // end of namespace details for template specialization of loadu_impl for neon using uint16_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "loadu".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: uint32_t
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct loadu_impl<simd<uint32_t, neon>, Idof> {
+            using Vec = simd< uint32_t, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return vld1q_u32( memory );
+            }
+         };
+   } // end of namespace details for template specialization of loadu_impl for neon using uint32_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "loadu".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: uint64_t
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct loadu_impl<simd<uint64_t, neon>, Idof> {
+            using Vec = simd< uint64_t, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return vld1q_u64( memory );
+            }
+         };
+   } // end of namespace details for template specialization of loadu_impl for neon using uint64_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "loadu".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: int8_t
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct loadu_impl<simd<int8_t, neon>, Idof> {
+            using Vec = simd< int8_t, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return vld1q_s8( memory );
+            }
+         };
+   } // end of namespace details for template specialization of loadu_impl for neon using int8_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "loadu".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: int16_t
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct loadu_impl<simd<int16_t, neon>, Idof> {
+            using Vec = simd< int16_t, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return vld1q_s16( memory );
+            }
+         };
+   } // end of namespace details for template specialization of loadu_impl for neon using int16_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "loadu".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: int32_t
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct loadu_impl<simd<int32_t, neon>, Idof> {
+            using Vec = simd< int32_t, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return vld1q_s32( memory );
+            }
+         };
+   } // end of namespace details for template specialization of loadu_impl for neon using int32_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "loadu".
+       * @details:
+       * Target Extension: neon.
        *        Data Type: int64_t
        *  Extension Flags: ['neon']
        */
@@ -71,6 +232,213 @@ namespace tvl {
             }
          };
    } // end of namespace details for template specialization of loadu_impl for neon using int64_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "loadu".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: float
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct loadu_impl<simd<float, neon>, Idof> {
+            using Vec = simd< float, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return vld1q_f32( memory );
+            }
+         };
+   } // end of namespace details for template specialization of loadu_impl for neon using float.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "loadu".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: double
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct loadu_impl<simd<double, neon>, Idof> {
+            using Vec = simd< double, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return vld1q_f64( memory );
+            }
+         };
+   } // end of namespace details for template specialization of loadu_impl for neon using double.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: uint8_t
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<uint8_t, neon>, Idof> {
+            using Vec = simd< uint8_t, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return vdupq_n_u8( value );
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for neon using uint8_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: uint16_t
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<uint16_t, neon>, Idof> {
+            using Vec = simd< uint16_t, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return vdupq_n_u16( value );
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for neon using uint16_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: uint32_t
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<uint32_t, neon>, Idof> {
+            using Vec = simd< uint32_t, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return vdupq_n_u32( value );
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for neon using uint32_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: uint64_t
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<uint64_t, neon>, Idof> {
+            using Vec = simd< uint64_t, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return vdupq_n_u64( value );
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for neon using uint64_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: int8_t
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<int8_t, neon>, Idof> {
+            using Vec = simd< int8_t, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return vdupq_n_s8( value );
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for neon using int8_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: int16_t
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<int16_t, neon>, Idof> {
+            using Vec = simd< int16_t, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return vdupq_n_s16( value );
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for neon using int16_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: int32_t
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<int32_t, neon>, Idof> {
+            using Vec = simd< int32_t, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return vdupq_n_s32( value );
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for neon using int32_t.
    namespace details {
       /**
        * @brief: Template specialization of implementation for "set1".
@@ -94,6 +462,52 @@ namespace tvl {
             }
          };
    } // end of namespace details for template specialization of set1_impl for neon using int64_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: float
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<float, neon>, Idof> {
+            using Vec = simd< float, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return vdupq_n_f32( value );
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for neon using float.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: neon.
+       *        Data Type: double
+       *  Extension Flags: ['neon']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<double, neon>, Idof> {
+            using Vec = simd< double, neon  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return vdupq_n_f64( value );
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for neon using double.
    namespace details {
       /**
        * @brief: Template specialization of implementation for "gather".

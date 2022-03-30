@@ -107,5 +107,25 @@ namespace tvl {
          source, memory, index, mask
       );
    }
+   namespace details {
+      // Forward declaration of implementation struct for TVL-primitive "set".
+      template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
+         struct set_impl{};
+   }
+   /*
+    * @brief Transfers provided elements into a vector register.
+    * @details todo.
+    * @param args Values which should be transferred.
+    * @return Vector register containing the values.
+    */
+   template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround, typename... Ts>
+   [[nodiscard]] 
+   TVL_FORCE_INLINE typename Vec::register_type set(
+      Ts... args
+   ) {
+      return details::set_impl< Vec, Idof >::apply(
+         args...
+      );
+   }
 } // end of namespace tvl
 #endif //TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_LS_HPP

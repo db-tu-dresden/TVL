@@ -16,21 +16,34 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file lib/generated/tvl_generated.hpp
+ * @file lib/generated/declarations/binary.hpp
  * @date 30.03.2022
+ * @brief Bit manipulation primitives.
  */
-#ifndef TUD_D2RG_TVL_LIB_GENERATED_TVL_GENERATED_HPP
-#define TUD_D2RG_TVL_LIB_GENERATED_TVL_GENERATED_HPP
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_BINARY_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_BINARY_HPP
 
-#include "extensions/scalar.hpp"
-#include "extensions/simd/arm/neon.hpp"
-#include "definitions/compare/compare_neon.hpp"
-#include "definitions/calc/calc_neon.hpp"
-#include "definitions/calc/calc_scalar.hpp"
-#include "definitions/io/io_neon.hpp"
-#include "definitions/mask/mask_neon.hpp"
-#include "definitions/ls/ls_neon.hpp"
-#include "definitions/ls/ls_scalar.hpp"
-#include "definitions/binary/binary_neon.hpp"
-#include "definitions/binary/binary_scalar.hpp"
-#endif //TUD_D2RG_TVL_LIB_GENERATED_TVL_GENERATED_HPP
+namespace tvl {
+   namespace details {
+      // Forward declaration of implementation struct for TVL-primitive "binary_and".
+      template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
+         struct binary_and_impl{};
+   }
+   /*
+    * @brief Binary ANDs two vector registers.
+    * @details todo.
+    * @param a First vector.
+    * @param b Second vector.
+    * @return Vector containing result of the binary AND.
+    */
+   template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
+   [[nodiscard]] 
+   TVL_FORCE_INLINE typename Vec::register_type binary_and(
+      typename Vec::register_type a, typename Vec::register_type b
+   ) {
+      return details::binary_and_impl< Vec, Idof >::apply(
+         a, b
+      );
+   }
+} // end of namespace tvl
+#endif //TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_BINARY_HPP
