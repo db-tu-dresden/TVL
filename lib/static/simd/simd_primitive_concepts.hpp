@@ -16,23 +16,25 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLGen/TVLGen/lib/static/simd/simd_primitive_concepts.hpp
- * @date 23.03.2022
+ * @file lib/static/simd/simd_primitive_concepts.hpp
+ * @date 30.03.2022
  * @brief TODO.
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_SIMD_SIMD_PRIMITIVE_CONCEPTS_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_SIMD_SIMD_PRIMITIVE_CONCEPTS_HPP
+#ifndef TUD_D2RG_TVL_LIB_STATIC_SIMD_SIMD_PRIMITIVE_CONCEPTS_HPP
+#define TUD_D2RG_TVL_LIB_STATIC_SIMD_SIMD_PRIMITIVE_CONCEPTS_HPP
 
 #include "../utils/type_concepts.hpp"
-
 namespace tvl {
+   
+#ifdef TVL_USE_CONCEPTS
    template< typename T >
    concept SimdPrimitiveImpl = requires {
       { T::native_supported() } -> std::same_as< bool >;
    } &&
       ( T::native_supported() || (! T::native_supported() ) );
+#else
+#define SimdPrimitiveImpl class
+#endif
 
-   
 } // end of namespace tvl
-
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_SIMD_SIMD_PRIMITIVE_CONCEPTS_HPP
+#endif //TUD_D2RG_TVL_LIB_STATIC_SIMD_SIMD_PRIMITIVE_CONCEPTS_HPP

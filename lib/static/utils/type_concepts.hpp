@@ -16,23 +16,27 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLGen/TVLGen/lib/static/utils/type_concepts.hpp
- * @date 23.03.2022
+ * @file lib/static/utils/type_concepts.hpp
+ * @date 30.03.2022
  * @brief TODO.
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_UTILS_TYPE_CONCEPTS_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_UTILS_TYPE_CONCEPTS_HPP
+#ifndef TUD_D2RG_TVL_LIB_STATIC_UTILS_TYPE_CONCEPTS_HPP
+#define TUD_D2RG_TVL_LIB_STATIC_UTILS_TYPE_CONCEPTS_HPP
 
 #include "type_helper.hpp"
-
 namespace tvl {
+   
+#ifdef TVL_USE_CONCEPTS
+   #include <concepts> //this is ugly, but the generator does not support conditional includes
    template< typename T >
    concept Arithmetic = std::is_arithmetic_v< T >;
 
    template< typename T >
    concept Tuple = is_tuple< T >::value;
+#else
+#define Arithmetic typename
+#define Tuple typename
+#endif
 
-   
 } // end of namespace tvl
-
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_UTILS_TYPE_CONCEPTS_HPP
+#endif //TUD_D2RG_TVL_LIB_STATIC_UTILS_TYPE_CONCEPTS_HPP

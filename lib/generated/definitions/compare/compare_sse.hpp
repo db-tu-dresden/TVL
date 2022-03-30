@@ -16,66 +16,60 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLGen/TVLGen/lib/generated/definitions/compare/compare_sse.hpp
- * @date 23.03.2022
+ * @file lib/generated/definitions/compare/compare_sse.hpp
+ * @date 30.03.2022
  * @brief Compare primitives. Implementation for sse
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DEFINITIONS_COMPARE_COMPARE_SSE_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DEFINITIONS_COMPARE_COMPARE_SSE_HPP
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_COMPARE_COMPARE_SSE_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_COMPARE_COMPARE_SSE_HPP
 
 #include "../../declarations/compare.hpp"
-
 namespace tvl {
    namespace details {
-      template<  ImplementationDegreeOfFreedom Idof >
-      struct equal_impl< simd< int64_t, sse >, Idof > {
-         using Vec = simd< int64_t, sse  >;
-         static constexpr bool native_supported() {
-            return true;
-         }
-   /*
-    * @brief Compares two vector registers for equality.
-    * @details todo.
-    * @param vec_a Left vector.
-    * @param vec_b Right vector.
-    * @return Vector mask type indicating whether vec_a[*]==vec_b[*].
-    */
-         [[nodiscard]] 
-         TVL_FORCE_INLINE static typename Vec::mask_type apply(
-            typename Vec::register_type  vec_a, 
-            typename Vec::register_type  vec_b
-         ) {
-            return _mm_cmpeq_epi64( vec_a, vec_b );
-         }
-      };
+      /**
+       * @brief: Template specialization of implementation for "equal".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: int64_t
+       *  Extension Flags: ['sse4_1']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct equal_impl<simd<int64_t, sse>, Idof> {
+            using Vec = simd< int64_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::mask_type apply(
+               typename Vec::register_type  vec_a, typename Vec::register_type  vec_b
+            ) {
+               return _mm_cmpeq_epi64( vec_a, vec_b );
+            }
+         };
    } // end of namespace details for template specialization of equal_impl for sse using int64_t.
-   
    namespace details {
-      template<  ImplementationDegreeOfFreedom Idof >
-      struct between_inclusive_impl< simd< int64_t, sse >, Idof > {
-         using Vec = simd< int64_t, sse  >;
-         static constexpr bool native_supported() {
-            return true;
-         }
-   /*
-    * @brief Checks if the values of a vector are in a specific range (min[*] <= d[*] <= max[*]).
-    * @details todo.
-    * @param vec_data Data vector.
-    * @param vec_min Minimum vector.
-    * @param vec_max Maximum vector.
-    * @return Vector mask type indicating whether the data is in the given range.
-    */
-         [[nodiscard]] 
-         TVL_FORCE_INLINE static typename Vec::mask_type apply(
-            typename Vec::register_type  vec_data, 
-            typename Vec::register_type  vec_min, 
-            typename Vec::register_type  vec_max
-         ) {
-            return _mm_andnot_si128( _mm_cmpgt_epi64( vec_min, vec_data ), _mm_andnot_si128( _mm_cmpgt_epi64( vec_data, vec_max ), _mm_set1_epi64x(-1)));
-         }
-      };
+      /**
+       * @brief: Template specialization of implementation for "between_inclusive".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: int64_t
+       *  Extension Flags: ['sse2', 'sse4_2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct between_inclusive_impl<simd<int64_t, sse>, Idof> {
+            using Vec = simd< int64_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::mask_type apply(
+               typename Vec::register_type  vec_data, typename Vec::register_type  vec_min, typename Vec::register_type  vec_max
+            ) {
+               return _mm_andnot_si128( _mm_cmpgt_epi64( vec_min, vec_data ), _mm_andnot_si128( _mm_cmpgt_epi64( vec_data, vec_max ), _mm_set1_epi64x(-1)));
+            }
+         };
    } // end of namespace details for template specialization of between_inclusive_impl for sse using int64_t.
-   
 } // end of namespace tvl
-
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DEFINITIONS_COMPARE_COMPARE_SSE_HPP
+#endif //TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_COMPARE_COMPARE_SSE_HPP
