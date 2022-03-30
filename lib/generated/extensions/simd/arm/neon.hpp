@@ -16,21 +16,20 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLGen/TVLGen/lib/generated/extensions/simd/arm/neon.hpp
- * @date 23.03.2022
+ * @file lib/generated/extensions/simd/arm/neon.hpp
+ * @date 30.03.2022
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_EXTENSIONS_SIMD_ARM_NEON_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_EXTENSIONS_SIMD_ARM_NEON_HPP
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_ARM_NEON_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_ARM_NEON_HPP
 
 #include <arm_neon.h>
-
 namespace tvl {
    struct neon {
-      using default_size_in_bits = std::integral_constant< std::size_t, 128 >;
-      template< Arithmetic BaseType, std::size_t VectorSizeInBits = default_size_in_bits::value >
-      struct types {
-         using register_t  =
-            TVL_DEP_TYPE(
+      template<Arithmetic BaseType, std::size_t VectorSizeInBits = 128>
+         struct types {
+            using default_size_in_bits = std::integral_constant< std::size_t, VectorSizeInBits >;
+            using register_t  =
+               TVL_DEP_TYPE(
                (std::is_integral_v< BaseType >),
                int64x2_t,
                TVL_DEP_TYPE(
@@ -39,11 +38,9 @@ namespace tvl {
                   float64x2_t
                )
             );
-         using mask_t =
-            uint64x2_t;
-      };
+            using mask_t =
+               uint64x2_t;
+         };
    };
-   
 } // end of namespace tvl
-
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_EXTENSIONS_SIMD_ARM_NEON_HPP
+#endif //TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_ARM_NEON_HPP

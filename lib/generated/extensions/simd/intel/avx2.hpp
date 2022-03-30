@@ -16,20 +16,19 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLGen/TVLGen/lib/generated/extensions/simd/intel/avx2.hpp
- * @date 23.03.2022
+ * @file lib/generated/extensions/simd/intel/avx2.hpp
+ * @date 30.03.2022
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_AVX2_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_AVX2_HPP
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_AVX2_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_AVX2_HPP
 
 #include "immintrin.h"
-
 namespace tvl {
    struct avx2 {
-      using default_size_in_bits = std::integral_constant< std::size_t, 256 >;
-      template< Arithmetic BaseType, std::size_t VectorSizeInBits = default_size_in_bits::value >
-      struct types {
-         using register_t __attribute__ ((
+      template<Arithmetic BaseType, std::size_t VectorSizeInBits = 256>
+         struct types {
+            using default_size_in_bits = std::integral_constant< std::size_t, VectorSizeInBits >;
+            using register_t __attribute__ ((
             __vector_size__ (
                VectorSizeInBits/sizeof(
                   TVL_DEP_TYPE(
@@ -46,7 +45,7 @@ namespace tvl {
             __may_alias__, 
             __aligned__(VectorSizeInBits/sizeof(char))
             )) =
-            TVL_DEP_TYPE(
+               TVL_DEP_TYPE(
                (std::is_integral_v< BaseType >),
                long long,
                TVL_DEP_TYPE(
@@ -55,11 +54,9 @@ namespace tvl {
                   double
                )
             );
-         using mask_t =
-            register_t;
-      };
+            using mask_t =
+               register_t;
+         };
    };
-   
 } // end of namespace tvl
-
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_AVX2_HPP
+#endif //TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_AVX2_HPP

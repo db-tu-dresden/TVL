@@ -16,19 +16,19 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLGen/TVLGen/lib/generated/declarations/io.hpp
- * @date 23.03.2022
+ * @file lib/generated/declarations/io.hpp
+ * @date 30.03.2022
  * @brief Input/Output primitives.
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DECLARATIONS_IO_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DECLARATIONS_IO_HPP
-
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_IO_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_IO_HPP
 
 namespace tvl {
    namespace details {
-      template< VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof >
-      struct to_ostream_impl{};
-   } // end namespace details
+      // Forward declaration of implementation struct for TVL-primitive "to_ostream".
+      template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
+         struct to_ostream_impl{};
+   }
    /*
     * @brief Loads data from aligned memory into a vector register.
     * @details todo.
@@ -36,17 +36,14 @@ namespace tvl {
     * @param data 
     * @return 
     */
-   template< VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround >
+   template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
    [[nodiscard]] 
    TVL_FORCE_INLINE std::ostream & to_ostream(
-      std::ostream &  out, 
-      typename Vec::register_type const  data
+      std::ostream & out, typename Vec::register_type const data
    ) {
       return details::to_ostream_impl< Vec, Idof >::apply(
          out, data
       );
    }
-   
 } // end of namespace tvl
-
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DECLARATIONS_IO_HPP
+#endif //TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_IO_HPP

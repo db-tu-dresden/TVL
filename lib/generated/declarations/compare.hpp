@@ -16,19 +16,19 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLGen/TVLGen/lib/generated/declarations/compare.hpp
- * @date 23.03.2022
+ * @file lib/generated/declarations/compare.hpp
+ * @date 30.03.2022
  * @brief Compare primitives.
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DECLARATIONS_COMPARE_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DECLARATIONS_COMPARE_HPP
-
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_COMPARE_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_COMPARE_HPP
 
 namespace tvl {
    namespace details {
-      template< VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof >
-      struct equal_impl{};
-   } // end namespace details
+      // Forward declaration of implementation struct for TVL-primitive "equal".
+      template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
+         struct equal_impl{};
+   }
    /*
     * @brief Compares two vector registers for equality.
     * @details todo.
@@ -36,21 +36,20 @@ namespace tvl {
     * @param vec_b Right vector.
     * @return Vector mask type indicating whether vec_a[*]==vec_b[*].
     */
-   template< VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround >
+   template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
    [[nodiscard]] 
    TVL_FORCE_INLINE typename Vec::mask_type equal(
-      typename Vec::register_type  vec_a, 
-      typename Vec::register_type  vec_b
+      typename Vec::register_type vec_a, typename Vec::register_type vec_b
    ) {
       return details::equal_impl< Vec, Idof >::apply(
          vec_a, vec_b
       );
    }
-   
    namespace details {
-      template< VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof >
-      struct between_inclusive_impl{};
-   } // end namespace details
+      // Forward declaration of implementation struct for TVL-primitive "between_inclusive".
+      template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
+         struct between_inclusive_impl{};
+   }
    /*
     * @brief Checks if the values of a vector are in a specific range (min[*] <= d[*] <= max[*]).
     * @details todo.
@@ -59,18 +58,14 @@ namespace tvl {
     * @param vec_max Maximum vector.
     * @return Vector mask type indicating whether the data is in the given range.
     */
-   template< VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround >
+   template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
    [[nodiscard]] 
    TVL_FORCE_INLINE typename Vec::mask_type between_inclusive(
-      typename Vec::register_type  vec_data, 
-      typename Vec::register_type  vec_min, 
-      typename Vec::register_type  vec_max
+      typename Vec::register_type vec_data, typename Vec::register_type vec_min, typename Vec::register_type vec_max
    ) {
       return details::between_inclusive_impl< Vec, Idof >::apply(
          vec_data, vec_min, vec_max
       );
    }
-   
 } // end of namespace tvl
-
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DECLARATIONS_COMPARE_HPP
+#endif //TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_COMPARE_HPP

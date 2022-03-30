@@ -16,20 +16,19 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLGen/TVLGen/lib/generated/extensions/simd/intel/avx512.hpp
- * @date 23.03.2022
+ * @file lib/generated/extensions/simd/intel/avx512.hpp
+ * @date 30.03.2022
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_AVX512_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_AVX512_HPP
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_AVX512_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_AVX512_HPP
 
 #include "immintrin.h"
-
 namespace tvl {
    struct avx512 {
-      using default_size_in_bits = std::integral_constant< std::size_t, 512 >;
-      template< Arithmetic BaseType, std::size_t VectorSizeInBits = default_size_in_bits::value >
-      struct types {
-         using register_t __attribute__ ((
+      template<Arithmetic BaseType, std::size_t VectorSizeInBits = 512>
+         struct types {
+            using default_size_in_bits = std::integral_constant< std::size_t, VectorSizeInBits >;
+            using register_t __attribute__ ((
             __vector_size__ (
                VectorSizeInBits/sizeof(
                   TVL_DEP_TYPE(
@@ -46,7 +45,7 @@ namespace tvl {
             __may_alias__, 
             __aligned__(VectorSizeInBits/sizeof(char))
             )) =
-            TVL_DEP_TYPE(
+               TVL_DEP_TYPE(
                (std::is_integral_v< BaseType >),
                long long,
                TVL_DEP_TYPE(
@@ -55,8 +54,8 @@ namespace tvl {
                   double
                )
             );
-         using mask_t =
-            TVL_DEP_TYPE(
+            using mask_t =
+               TVL_DEP_TYPE(
             ( VectorSizeInBits == 512 ),
             TVL_DEP_TYPE(
                ( sizeof( register_t ) / sizeof( BaseType ) ) == 64,
@@ -89,9 +88,7 @@ namespace tvl {
                )
             )
          );
-      };
+         };
    };
-   
 } // end of namespace tvl
-
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_AVX512_HPP
+#endif //TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_AVX512_HPP

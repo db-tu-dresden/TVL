@@ -16,22 +16,22 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLGen/TVLGen/lib/static/simd/simd_type_concepts.hpp
- * @date 23.03.2022
+ * @file lib/static/simd/simd_type_concepts.hpp
+ * @date 30.03.2022
  * @brief TODO.
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_SIMD_SIMD_TYPE_CONCEPTS_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_SIMD_SIMD_TYPE_CONCEPTS_HPP
+#ifndef TUD_D2RG_TVL_LIB_STATIC_SIMD_SIMD_TYPE_CONCEPTS_HPP
+#define TUD_D2RG_TVL_LIB_STATIC_SIMD_SIMD_TYPE_CONCEPTS_HPP
 
 #include <type_traits>
-#include <concepts>
 #include "../utils/type_concepts.hpp"
-
 namespace tvl {
+   
+#ifdef TVL_USE_CONCEPTS
    template< typename T, typename U >
    concept TargetExtension = Arithmetic< U > && requires {
-      typename T::default_size_in_bits;
       typename T:: template types< U >;
+      typename T:: template types< U >::default_size_in_bits;
       typename T:: template types< U >::register_t;
       typename T:: template types< U >::mask_t;
    };
@@ -56,13 +56,17 @@ namespace tvl {
       ( T::vector_alignment() > 0 ) &&
       ( T::vector_mask_ratio() > 0 ) &&
       ( T::mask_shift() > 0 );
-
+#else
+#define VectorProcessingStyle class
+#endif
    struct native{};
    struct workaround{};
+#ifdef TVL_USE_CONCEPTS
    template< class T >
    concept ImplementationDegreeOfFreedom = std::is_same_v< T, native > || std::is_same_v< T, workaround >;
+#else
+#define ImplementationDegreeOfFreedom class
+#endif
 
-   
 } // end of namespace tvl
-
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_SIMD_SIMD_TYPE_CONCEPTS_HPP
+#endif //TUD_D2RG_TVL_LIB_STATIC_SIMD_SIMD_TYPE_CONCEPTS_HPP

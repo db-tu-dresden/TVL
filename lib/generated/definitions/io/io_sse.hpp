@@ -16,42 +16,38 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLGen/TVLGen/lib/generated/definitions/io/io_sse.hpp
- * @date 23.03.2022
+ * @file lib/generated/definitions/io/io_sse.hpp
+ * @date 30.03.2022
  * @brief Input/Output primitives. Implementation for sse
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DEFINITIONS_IO_IO_SSE_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DEFINITIONS_IO_IO_SSE_HPP
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_IO_IO_SSE_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_IO_IO_SSE_HPP
 
 #include "../../declarations/io.hpp"
-
 namespace tvl {
    namespace details {
-      template<  ImplementationDegreeOfFreedom Idof >
-      struct to_ostream_impl< simd< int64_t, sse >, Idof > {
-         using Vec = simd< int64_t, sse  >;
-         static constexpr bool native_supported() {
-            return true;
-         }
-   /*
-    * @brief Loads data from aligned memory into a vector register.
-    * @details todo.
-    * @param out 
-    * @param data 
-    * @return 
-    */
-         [[nodiscard]] 
-         TVL_FORCE_INLINE static std::ostream & apply(
-            std::ostream &  out, 
-            typename Vec::register_type const  data
-         ) {
-            out << data[1]<< "|" << data[0] << "\n";
+      /**
+       * @brief: Template specialization of implementation for "to_ostream".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: int64_t
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct to_ostream_impl<simd<int64_t, sse>, Idof> {
+            using Vec = simd< int64_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static std::ostream & apply(
+               std::ostream &  out, typename Vec::register_type const  data
+            ) {
+               out << data[1]<< "|" << data[0] << "\n";
 return out;
-
-         }
-      };
+            }
+         };
    } // end of namespace details for template specialization of to_ostream_impl for sse using int64_t.
-   
 } // end of namespace tvl
-
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DEFINITIONS_IO_IO_SSE_HPP
+#endif //TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_IO_IO_SSE_HPP

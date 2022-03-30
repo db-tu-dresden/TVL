@@ -16,45 +16,41 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLGen/TVLGen/lib/generated/definitions/io/io_avx512.hpp
- * @date 23.03.2022
+ * @file lib/generated/definitions/io/io_avx512.hpp
+ * @date 30.03.2022
  * @brief Input/Output primitives. Implementation for avx512
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DEFINITIONS_IO_IO_AVX512_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DEFINITIONS_IO_IO_AVX512_HPP
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_IO_IO_AVX512_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_IO_IO_AVX512_HPP
 
 #include "../../declarations/io.hpp"
-
 namespace tvl {
    namespace details {
-      template<  ImplementationDegreeOfFreedom Idof >
-      struct to_ostream_impl< simd< int64_t, avx512 >, Idof > {
-         using Vec = simd< int64_t, avx512  >;
-         static constexpr bool native_supported() {
-            return true;
-         }
-   /*
-    * @brief Loads data from aligned memory into a vector register.
-    * @details todo.
-    * @param out 
-    * @param data 
-    * @return 
-    */
-         [[nodiscard]] 
-         TVL_FORCE_INLINE static std::ostream & apply(
-            std::ostream &  out, 
-            typename Vec::register_type const  data
-         ) {
-            for(auto idx = 0; idx < 8; ++idx ) {
+      /**
+       * @brief: Template specialization of implementation for "to_ostream".
+       * @details:
+       * Target Extension: avx512.
+       *        Data Type: int64_t
+       *  Extension Flags: ['avx512f']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct to_ostream_impl<simd<int64_t, avx512>, Idof> {
+            using Vec = simd< int64_t, avx512  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static std::ostream & apply(
+               std::ostream &  out, typename Vec::register_type const  data
+            ) {
+               for(auto idx = 0; idx < 8; ++idx ) {
    out << data[7-idx] << "|";
 }
 out << "\n";
 return out;
-
-         }
-      };
+            }
+         };
    } // end of namespace details for template specialization of to_ostream_impl for avx512 using int64_t.
-   
 } // end of namespace tvl
-
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DEFINITIONS_IO_IO_AVX512_HPP
+#endif //TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_IO_IO_AVX512_HPP
