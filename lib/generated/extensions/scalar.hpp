@@ -16,31 +16,22 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file lib/generated/extensions/simd/intel/sse.hpp
+ * @file lib/generated/extensions/scalar.hpp
  * @date 30.03.2022
  */
-#ifndef TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_SSE_HPP
-#define TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_SSE_HPP
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SCALAR_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SCALAR_HPP
 
-#include "immintrin.h"
 namespace tvl {
-   struct sse {
-      template<Arithmetic BaseType, std::size_t VectorSizeInBits = 128>
+   struct scalar {
+      template<Arithmetic BaseType, std::size_t VectorSizeInBits = sizeof(BaseType)*8>
          struct types {
             using default_size_in_bits = std::integral_constant< std::size_t, VectorSizeInBits >;
-            using register_t __attribute__((__vector_size__(VectorSizeInBits/8),__may_alias__,__aligned__(VectorSizeInBits/8))) =
-               TVL_DEP_TYPE(
-                  (std::is_integral_v< BaseType >),
-                  long long,
-                  TVL_DEP_TYPE(
-                     (sizeof( BaseType ) == 4),
-                     float,
-                     double
-                  )
-               );
+            using register_t  =
+               BaseType;
             using mask_t =
-               register_t;
+               bool;
          };
    };
 } // end of namespace tvl
-#endif //TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_SSE_HPP
+#endif //TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SCALAR_HPP

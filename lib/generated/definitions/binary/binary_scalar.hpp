@@ -16,31 +16,37 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file lib/generated/extensions/simd/intel/sse.hpp
+ * @file lib/generated/definitions/binary/binary_scalar.hpp
  * @date 30.03.2022
+ * @brief Bit manipulation primitives. Implementation for scalar
  */
-#ifndef TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_SSE_HPP
-#define TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_SSE_HPP
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_BINARY_BINARY_SCALAR_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_BINARY_BINARY_SCALAR_HPP
 
-#include "immintrin.h"
+#include "../../declarations/binary.hpp"
 namespace tvl {
-   struct sse {
-      template<Arithmetic BaseType, std::size_t VectorSizeInBits = 128>
-         struct types {
-            using default_size_in_bits = std::integral_constant< std::size_t, VectorSizeInBits >;
-            using register_t __attribute__((__vector_size__(VectorSizeInBits/8),__may_alias__,__aligned__(VectorSizeInBits/8))) =
-               TVL_DEP_TYPE(
-                  (std::is_integral_v< BaseType >),
-                  long long,
-                  TVL_DEP_TYPE(
-                     (sizeof( BaseType ) == 4),
-                     float,
-                     double
-                  )
-               );
-            using mask_t =
-               register_t;
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "binary_and".
+       * @details:
+       * Target Extension: scalar.
+       *        Data Type: T
+       *  Extension Flags: []
+       */
+      template<typename T, ImplementationDegreeOfFreedom Idof>
+         struct binary_and_impl<simd<T, scalar>, Idof> {
+            using Vec = simd< T, scalar  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::register_type  a, typename Vec::register_type  b
+            ) {
+               return a & b;
+            }
          };
-   };
+   } // end of namespace details for template specialization of binary_and_impl for scalar using T.
 } // end of namespace tvl
-#endif //TUD_D2RG_TVL_LIB_GENERATED_EXTENSIONS_SIMD_INTEL_SSE_HPP
+#endif //TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_BINARY_BINARY_SCALAR_HPP

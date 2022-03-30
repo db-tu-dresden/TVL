@@ -23,6 +23,7 @@
 #ifndef TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_IO_HPP
 #define TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_IO_HPP
 
+#include <ostream>
 namespace tvl {
    namespace details {
       // Forward declaration of implementation struct for TVL-primitive "to_ostream".

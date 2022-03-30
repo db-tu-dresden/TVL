@@ -16,12 +16,12 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file lib/generated/definitions/ls/ls_avx2.hpp
+ * @file lib/generated/definitions/ls/ls_scalar.hpp
  * @date 30.03.2022
- * @brief Load/Store primitives. Implementation for avx2
+ * @brief Load/Store primitives. Implementation for scalar
  */
-#ifndef TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_LS_LS_AVX2_HPP
-#define TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_LS_LS_AVX2_HPP
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_LS_LS_SCALAR_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_LS_LS_SCALAR_HPP
 
 #include "../../declarations/ls.hpp"
 namespace tvl {
@@ -29,13 +29,13 @@ namespace tvl {
       /**
        * @brief: Template specialization of implementation for "load".
        * @details:
-       * Target Extension: avx2.
-       *        Data Type: int64_t
-       *  Extension Flags: ['avx']
+       * Target Extension: scalar.
+       *        Data Type: T
+       *  Extension Flags: []
        */
-      template<ImplementationDegreeOfFreedom Idof>
-         struct load_impl<simd<int64_t, avx2>, Idof> {
-            using Vec = simd< int64_t, avx2  >;
+      template<typename T, ImplementationDegreeOfFreedom Idof>
+         struct load_impl<simd<T, scalar>, Idof> {
+            using Vec = simd< T, scalar  >;
             static constexpr bool native_supported() {
                return true;
             }
@@ -44,21 +44,21 @@ namespace tvl {
             static typename Vec::register_type apply(
                typename Vec::base_type const *  memory
             ) {
-               return _mm256_load_si256( reinterpret_cast< __m256i const * >( memory ) );
+               return *memory;
             }
          };
-   } // end of namespace details for template specialization of load_impl for avx2 using int64_t.
+   } // end of namespace details for template specialization of load_impl for scalar using T.
    namespace details {
       /**
        * @brief: Template specialization of implementation for "loadu".
        * @details:
-       * Target Extension: avx2.
-       *        Data Type: int64_t
-       *  Extension Flags: ['avx']
+       * Target Extension: scalar.
+       *        Data Type: T
+       *  Extension Flags: []
        */
-      template<ImplementationDegreeOfFreedom Idof>
-         struct loadu_impl<simd<int64_t, avx2>, Idof> {
-            using Vec = simd< int64_t, avx2  >;
+      template<typename T, ImplementationDegreeOfFreedom Idof>
+         struct loadu_impl<simd<T, scalar>, Idof> {
+            using Vec = simd< T, scalar  >;
             static constexpr bool native_supported() {
                return true;
             }
@@ -67,21 +67,21 @@ namespace tvl {
             static typename Vec::register_type apply(
                typename Vec::base_type const *  memory
             ) {
-               return _mm256_loadu_si256( reinterpret_cast< __m256i const * >( memory ) );
+               return *memory;
             }
          };
-   } // end of namespace details for template specialization of loadu_impl for avx2 using int64_t.
+   } // end of namespace details for template specialization of loadu_impl for scalar using T.
    namespace details {
       /**
        * @brief: Template specialization of implementation for "set1".
        * @details:
-       * Target Extension: avx2.
-       *        Data Type: int64_t
-       *  Extension Flags: ['avx']
+       * Target Extension: scalar.
+       *        Data Type: T
+       *  Extension Flags: []
        */
-      template<ImplementationDegreeOfFreedom Idof>
-         struct set1_impl<simd<int64_t, avx2>, Idof> {
-            using Vec = simd< int64_t, avx2  >;
+      template<typename T, ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<T, scalar>, Idof> {
+            using Vec = simd< T, scalar  >;
             static constexpr bool native_supported() {
                return true;
             }
@@ -90,57 +90,32 @@ namespace tvl {
             static typename Vec::register_type apply(
                typename Vec::base_type  value
             ) {
-               return _mm256_set1_epi64x( value );
+               return value;
             }
          };
-   } // end of namespace details for template specialization of set1_impl for avx2 using int64_t.
+   } // end of namespace details for template specialization of set1_impl for scalar using T.
    namespace details {
       /**
-       * @brief: Template specialization of implementation for "set".
+       * @brief: Template specialization of implementation for "gather".
        * @details:
-       * Target Extension: avx2.
-       *        Data Type: uint64_t
-       *  Extension Flags: ['avx2']
+       * Target Extension: scalar.
+       *        Data Type: T
+       *  Extension Flags: []
        */
-      template<ImplementationDegreeOfFreedom Idof>
-         struct set_impl<simd<uint64_t, avx2>, Idof> {
-            using Vec = simd< uint64_t, avx2  >;
+      template<typename T, ImplementationDegreeOfFreedom Idof>
+         struct gather_impl<simd<T, scalar>, Idof> {
+            using Vec = simd< T, scalar  >;
             static constexpr bool native_supported() {
                return true;
             }
-            template< typename... Ts >
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               Ts... args
+               typename Vec::register_type  source, typename Vec::base_type const *  memory, typename Vec::register_type  index, typename Vec::mask_type  mask
             ) {
-               return _mm256_set_epi64x( args... );
+               return (mask&1)==1 ? memory[index] : source;
             }
          };
-   } // end of namespace details for template specialization of set_impl for avx2 using uint64_t.
-   namespace details {
-      /**
-       * @brief: Template specialization of implementation for "set".
-       * @details:
-       * Target Extension: avx2.
-       *        Data Type: int64_t
-       *  Extension Flags: ['avx2']
-       */
-      template<ImplementationDegreeOfFreedom Idof>
-         struct set_impl<simd<int64_t, avx2>, Idof> {
-            using Vec = simd< int64_t, avx2  >;
-            static constexpr bool native_supported() {
-               return true;
-            }
-            template< typename... Ts >
-            [[nodiscard]] 
-            TVL_FORCE_INLINE 
-            static typename Vec::register_type apply(
-               Ts... args
-            ) {
-               return _mm256_set_epi64x( args... );
-            }
-         };
-   } // end of namespace details for template specialization of set_impl for avx2 using int64_t.
+   } // end of namespace details for template specialization of gather_impl for scalar using T.
 } // end of namespace tvl
-#endif //TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_LS_LS_AVX2_HPP
+#endif //TUD_D2RG_TVL_LIB_GENERATED_DEFINITIONS_LS_LS_SCALAR_HPP

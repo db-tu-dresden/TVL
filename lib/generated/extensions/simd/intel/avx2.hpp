@@ -28,32 +28,16 @@ namespace tvl {
       template<Arithmetic BaseType, std::size_t VectorSizeInBits = 256>
          struct types {
             using default_size_in_bits = std::integral_constant< std::size_t, VectorSizeInBits >;
-            using register_t __attribute__ ((
-            __vector_size__ (
-               VectorSizeInBits/sizeof(
+            using register_t __attribute__((__vector_size__(VectorSizeInBits/8),__may_alias__,__aligned__(VectorSizeInBits/8))) =
+               TVL_DEP_TYPE(
+                  (std::is_integral_v< BaseType >),
+                  long long,
                   TVL_DEP_TYPE(
-                     (std::is_integral_v< BaseType >),
-                     long long,
-                     TVL_DEP_TYPE(
-                        (sizeof( BaseType ) == 4),
-                        float,
-                        double
-                     )
+                     (sizeof( BaseType ) == 4),
+                     float,
+                     double
                   )
-               )
-            ), 
-            __may_alias__, 
-            __aligned__(VectorSizeInBits/sizeof(char))
-            )) =
-               TVL_DEP_TYPE(
-               (std::is_integral_v< BaseType >),
-               long long,
-               TVL_DEP_TYPE(
-                  (sizeof( BaseType ) == 4),
-                  float,
-                  double
-               )
-            );
+               );
             using mask_t =
                register_t;
          };
