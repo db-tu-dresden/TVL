@@ -22,9 +22,15 @@
 #ifndef TUD_D2RG_TVL_LIB_GENERATED_TVL_GENERATED_HPP
 #define TUD_D2RG_TVL_LIB_GENERATED_TVL_GENERATED_HPP
 
+#include "extensions/scalar.hpp"
 #include "extensions/simd/intel/sse.hpp"
-#include "definitions/ls/ls_sse.hpp"
-#include "definitions/io/io_sse.hpp"
-#include "definitions/mask/mask_sse.hpp"
 #include "definitions/compare/compare_sse.hpp"
+#include "definitions/binary/binary_sse.hpp"
+#include "definitions/binary/binary_scalar.hpp"
+#include "definitions/mask/mask_sse.hpp"
+#include "definitions/io/io_sse.hpp"
+#include "definitions/ls/ls_sse.hpp"
+#include "definitions/ls/ls_scalar.hpp"
+#include "definitions/calc/calc_sse.hpp"
+#include "definitions/calc/calc_scalar.hpp"
 #endif //TUD_D2RG_TVL_LIB_GENERATED_TVL_GENERATED_HPP

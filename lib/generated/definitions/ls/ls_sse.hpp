@@ -30,6 +30,167 @@ namespace tvl {
        * @brief: Template specialization of implementation for "load".
        * @details:
        * Target Extension: sse.
+       *        Data Type: uint8_t
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct load_impl<simd<uint8_t, sse>, Idof> {
+            using Vec = simd< uint8_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return _mm_load_si128( reinterpret_cast< __m128i const * >( memory ) );
+            }
+         };
+   } // end of namespace details for template specialization of load_impl for sse using uint8_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "load".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: uint16_t
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct load_impl<simd<uint16_t, sse>, Idof> {
+            using Vec = simd< uint16_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return _mm_load_si128( reinterpret_cast< __m128i const * >( memory ) );
+            }
+         };
+   } // end of namespace details for template specialization of load_impl for sse using uint16_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "load".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: uint32_t
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct load_impl<simd<uint32_t, sse>, Idof> {
+            using Vec = simd< uint32_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return _mm_load_si128( reinterpret_cast< __m128i const * >( memory ) );
+            }
+         };
+   } // end of namespace details for template specialization of load_impl for sse using uint32_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "load".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: uint64_t
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct load_impl<simd<uint64_t, sse>, Idof> {
+            using Vec = simd< uint64_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return _mm_load_si128( reinterpret_cast< __m128i const * >( memory ) );
+            }
+         };
+   } // end of namespace details for template specialization of load_impl for sse using uint64_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "load".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: int8_t
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct load_impl<simd<int8_t, sse>, Idof> {
+            using Vec = simd< int8_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return _mm_load_si128( reinterpret_cast< __m128i const * >( memory ) );
+            }
+         };
+   } // end of namespace details for template specialization of load_impl for sse using int8_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "load".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: int16_t
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct load_impl<simd<int16_t, sse>, Idof> {
+            using Vec = simd< int16_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return _mm_load_si128( reinterpret_cast< __m128i const * >( memory ) );
+            }
+         };
+   } // end of namespace details for template specialization of load_impl for sse using int16_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "load".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: int32_t
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct load_impl<simd<int32_t, sse>, Idof> {
+            using Vec = simd< int32_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return _mm_load_si128( reinterpret_cast< __m128i const * >( memory ) );
+            }
+         };
+   } // end of namespace details for template specialization of load_impl for sse using int32_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "load".
+       * @details:
+       * Target Extension: sse.
        *        Data Type: int64_t
        *  Extension Flags: ['sse2']
        */
@@ -48,6 +209,52 @@ namespace tvl {
             }
          };
    } // end of namespace details for template specialization of load_impl for sse using int64_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "load".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: float
+       *  Extension Flags: ['sse']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct load_impl<simd<float, sse>, Idof> {
+            using Vec = simd< float, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return _mm_load_ps(memory);
+            }
+         };
+   } // end of namespace details for template specialization of load_impl for sse using float.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "load".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: double
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct load_impl<simd<double, sse>, Idof> {
+            using Vec = simd< double, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return _mm_load_pd(memory);
+            }
+         };
+   } // end of namespace details for template specialization of load_impl for sse using double.
    namespace details {
       /**
        * @brief: Template specialization of implementation for "loadu".
@@ -73,6 +280,213 @@ namespace tvl {
    } // end of namespace details for template specialization of loadu_impl for sse using int64_t.
    namespace details {
       /**
+       * @brief: Template specialization of implementation for "loadu".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: float
+       *  Extension Flags: ['sse']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct loadu_impl<simd<float, sse>, Idof> {
+            using Vec = simd< float, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return _mm_loadu_ps(memory);
+            }
+         };
+   } // end of namespace details for template specialization of loadu_impl for sse using float.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "loadu".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: double
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct loadu_impl<simd<double, sse>, Idof> {
+            using Vec = simd< double, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type const *  memory
+            ) {
+               return _mm_loadu_pd(memory);
+            }
+         };
+   } // end of namespace details for template specialization of loadu_impl for sse using double.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: uint8_t
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<uint8_t, sse>, Idof> {
+            using Vec = simd< uint8_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return _mm_set1_epi8(value);
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for sse using uint8_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: uint16_t
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<uint16_t, sse>, Idof> {
+            using Vec = simd< uint16_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return _mm_set1_epi16(value);
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for sse using uint16_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: uint32_t
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<uint32_t, sse>, Idof> {
+            using Vec = simd< uint32_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return _mm_set1_epi32(value);
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for sse using uint32_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: int8_t
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<int8_t, sse>, Idof> {
+            using Vec = simd< int8_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return _mm_set1_epi8(value);
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for sse using int8_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: int16_t
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<int16_t, sse>, Idof> {
+            using Vec = simd< int16_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return _mm_set1_epi16(value);
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for sse using int16_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: int32_t
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<int32_t, sse>, Idof> {
+            using Vec = simd< int32_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return _mm_set1_epi32(value);
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for sse using int32_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: uint64_t
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<uint64_t, sse>, Idof> {
+            using Vec = simd< uint64_t, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return _mm_set1_epi64x(value);
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for sse using uint64_t.
+   namespace details {
+      /**
        * @brief: Template specialization of implementation for "set1".
        * @details:
        * Target Extension: sse.
@@ -90,10 +504,56 @@ namespace tvl {
             static typename Vec::register_type apply(
                typename Vec::base_type  value
             ) {
-               return _mm_set1_epi64x( value );
+               return _mm_set1_epi64x(value);
             }
          };
    } // end of namespace details for template specialization of set1_impl for sse using int64_t.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: float
+       *  Extension Flags: ['sse']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<float, sse>, Idof> {
+            using Vec = simd< float, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return _mm_set1_ps(value);
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for sse using float.
+   namespace details {
+      /**
+       * @brief: Template specialization of implementation for "set1".
+       * @details:
+       * Target Extension: sse.
+       *        Data Type: double
+       *  Extension Flags: ['sse2']
+       */
+      template<ImplementationDegreeOfFreedom Idof>
+         struct set1_impl<simd<double, sse>, Idof> {
+            using Vec = simd< double, sse  >;
+            static constexpr bool native_supported() {
+               return true;
+            }
+            [[nodiscard]] 
+            TVL_FORCE_INLINE 
+            static typename Vec::register_type apply(
+               typename Vec::base_type  value
+            ) {
+               return _mm_set1_pd(value);
+            }
+         };
+   } // end of namespace details for template specialization of set1_impl for sse using double.
    namespace details {
       /**
        * @brief: Template specialization of implementation for "gather".
