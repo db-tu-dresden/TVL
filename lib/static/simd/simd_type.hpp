@@ -16,22 +16,26 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLGen/TVLGen/lib/static/simd/simd_type.hpp
- * @date 23.03.2022
+ * @file lib/static/simd/simd_type.hpp
+ * @date 30.03.2022
  * @brief TODO.
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_SIMD_SIMD_TYPE_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_SIMD_SIMD_TYPE_HPP
+#ifndef TUD_D2RG_TVL_LIB_STATIC_SIMD_SIMD_TYPE_HPP
+#define TUD_D2RG_TVL_LIB_STATIC_SIMD_SIMD_TYPE_HPP
 
 #include "../utils/type_concepts.hpp"
 #include "../utils/type_helper.hpp"
 #include "simd_type_concepts.hpp"
-
 namespace tvl {
    template<
       Arithmetic BaseType,
+
+#ifdef TVL_USE_CONCEPTS
       TargetExtension< BaseType > TargetExtensionType,
-      std::size_t VectorSizeInBits = TargetExtensionType::default_size_in_bits::value
+#else
+      class TargetExtensionType,
+#endif
+      std::size_t VectorSizeInBits = TargetExtensionType::template types< BaseType >::default_size_in_bits::value
    >
    struct simd {
       using base_type = BaseType;
@@ -64,7 +68,5 @@ namespace tvl {
       }
    };
 
-   
 } // end of namespace tvl
-
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_SIMD_SIMD_TYPE_HPP
+#endif //TUD_D2RG_TVL_LIB_STATIC_SIMD_SIMD_TYPE_HPP

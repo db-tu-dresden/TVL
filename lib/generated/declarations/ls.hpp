@@ -16,79 +16,79 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLGen/TVLGen/lib/generated/declarations/ls.hpp
- * @date 23.03.2022
+ * @file lib/generated/declarations/ls.hpp
+ * @date 30.03.2022
  * @brief Load/Store primitives.
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DECLARATIONS_LS_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DECLARATIONS_LS_HPP
-
+#ifndef TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_LS_HPP
+#define TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_LS_HPP
 
 namespace tvl {
    namespace details {
-      template< VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof >
-      struct load_impl{};
-   } // end namespace details
+      // Forward declaration of implementation struct for TVL-primitive "load".
+      template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
+         struct load_impl{};
+   }
    /*
     * @brief Loads data from aligned memory into a vector register.
     * @details todo.
     * @param memory Aligned memory which should be transferred into a vector register.
     * @return Vector containing the loaded data.
     */
-   template< VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround >
+   template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
    [[nodiscard]] 
    TVL_FORCE_INLINE typename Vec::register_type load(
-      typename Vec::base_type const *  memory
+      typename Vec::base_type const * memory
    ) {
       return details::load_impl< Vec, Idof >::apply(
          memory
       );
    }
-   
    namespace details {
-      template< VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof >
-      struct loadu_impl{};
-   } // end namespace details
+      // Forward declaration of implementation struct for TVL-primitive "loadu".
+      template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
+         struct loadu_impl{};
+   }
    /*
     * @brief Loads data from (un)aligned memory into a vector register.
     * @details todo.
     * @param memory (Un)aligned memory which should be transferred into a vector register.
     * @return Vector containing the loaded data.
     */
-   template< VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround >
+   template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
    [[nodiscard]] 
    TVL_FORCE_INLINE typename Vec::register_type loadu(
-      typename Vec::base_type const *  memory
+      typename Vec::base_type const * memory
    ) {
       return details::loadu_impl< Vec, Idof >::apply(
          memory
       );
    }
-   
    namespace details {
-      template< VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof >
-      struct set1_impl{};
-   } // end namespace details
+      // Forward declaration of implementation struct for TVL-primitive "set1".
+      template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
+         struct set1_impl{};
+   }
    /*
     * @brief Broadcasts a single value into all lanes of a vector register.
     * @details todo.
     * @param value Value which should be broadcasted.
     * @return Vector containing the same value in all lanes.
     */
-   template< VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround >
+   template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
    [[nodiscard]] 
    TVL_FORCE_INLINE typename Vec::register_type set1(
-      typename Vec::base_type  value
+      typename Vec::base_type value
    ) {
       return details::set1_impl< Vec, Idof >::apply(
          value
       );
    }
-   
    namespace details {
-      template< VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof >
-      struct gather_impl{};
-   } // end namespace details
+      // Forward declaration of implementation struct for TVL-primitive "gather".
+      template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
+         struct gather_impl{};
+   }
    /*
     * @brief Transfers data from arbitrary locations into a vector register.
     * @details todo.
@@ -98,19 +98,14 @@ namespace tvl {
     * @param mask Mask indicating which lanes should be gathered.
     * @return Vector containing gathered data.
     */
-   template< VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround >
+   template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
    [[nodiscard]] 
    TVL_FORCE_INLINE typename Vec::register_type gather(
-      typename Vec::register_type  source, 
-      typename Vec::base_type const *  memory, 
-      typename Vec::register_type  index, 
-      typename Vec::mask_type  mask
+      typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::register_type index, typename Vec::mask_type mask
    ) {
       return details::gather_impl< Vec, Idof >::apply(
          source, memory, index, mask
       );
    }
-   
 } // end of namespace tvl
-
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_GENERATED_DECLARATIONS_LS_HPP
+#endif //TUD_D2RG_TVL_LIB_GENERATED_DECLARATIONS_LS_HPP

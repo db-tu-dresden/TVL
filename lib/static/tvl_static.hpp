@@ -16,12 +16,12 @@
  * limitations under the License.                                           *
  *==========================================================================*/
 /*
- * @file /home/runner/work/TVLGen/TVLGen/lib/static/tvl_static.hpp
- * @date 23.03.2022
+ * @file lib/static/tvl_static.hpp
+ * @date 30.03.2022
  * @brief Internal static header which includes all static headers.
  */
-#ifndef TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_TVL_STATIC_HPP
-#define TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_TVL_STATIC_HPP
+#ifndef TUD_D2RG_TVL_LIB_STATIC_TVL_STATIC_HPP
+#define TUD_D2RG_TVL_LIB_STATIC_TVL_STATIC_HPP
 
 #include "simd/simd_type_concepts.hpp"
 #include "simd/simd_type.hpp"
@@ -29,5 +29,4 @@
 #include "utils/preprocessor.hpp"
 #include "utils/type_helper.hpp"
 #include "utils/type_concepts.hpp"
-
-#endif //TUD_D2RG_TVL__HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_STATIC_TVL_STATIC_HPP
+#endif //TUD_D2RG_TVL_LIB_STATIC_TVL_STATIC_HPP
