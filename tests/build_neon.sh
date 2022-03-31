@@ -1,4 +1,5 @@
 #!/bin/bash
+python3 $(pwd)/../generator/tvlgen.py -o $(pwd)/../lib -c $(pwd)/../generator/config -d $(pwd)/../generator/primitive_data --targets neon
 
 if [ -z "$CXX" ]; then
   CXX="g++"
