@@ -22,7 +22,7 @@
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : fcfbe18 (fcfbe18f11282e1c45aac61384b956ec0542f43b)
+ * Git-Commit    : 2f759bb (2f759bba5004ee2d2fcec3b410bca4c93de5cf19)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -37,7 +37,7 @@
 #include "generated/tvl_generated.hpp"
 namespace tvl {
    #ifndef TVL_GIT_VERSION_STR
-   #   define TVL_GIT_VERSION_STR "git@github.com:db-tu-dresden/TVLGen.git:/main@fcfbe18, git@github.com:db-tu-dresden/TVLPrimitiveData.git:/main@1e8135e"
+   #   define TVL_GIT_VERSION_STR "git@github.com:db-tu-dresden/TVLGen.git:/main@2f759bb, git@github.com:db-tu-dresden/TVLPrimitiveData.git:/main@1e8135e"
    #endif
 } // end of namespace tvl
 #endif //TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_TVLINTRIN_HPP

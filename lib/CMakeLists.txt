@@ -15,53 +15,53 @@ target_sources(tvl
    INTERFACE include/static/utils/preprocessor.hpp
    INTERFACE include/generated/tvl_generated.hpp
    INTERFACE include/generated/extensions/simd/arm/neon.hpp
-   INTERFACE include/generated/extensions/simd/intel/avx512.hpp
-   INTERFACE include/generated/extensions/simd/intel/sse.hpp
-   INTERFACE include/generated/extensions/simt/cuda.hpp
    INTERFACE include/generated/extensions/scalar.hpp
+   INTERFACE include/generated/extensions/simd/intel/avx512.hpp
+   INTERFACE include/generated/extensions/simt/cuda.hpp
    INTERFACE include/generated/extensions/simd/intel/avx2.hpp
-   INTERFACE include/generated/declarations/io.hpp
+   INTERFACE include/generated/extensions/simd/intel/sse.hpp
    INTERFACE include/generated/declarations/memory.hpp
-   INTERFACE include/generated/declarations/compare.hpp
+   INTERFACE include/generated/declarations/io.hpp
    INTERFACE include/generated/declarations/binary.hpp
-   INTERFACE include/generated/declarations/calc.hpp
    INTERFACE include/generated/declarations/mask.hpp
+   INTERFACE include/generated/declarations/calc.hpp
    INTERFACE include/generated/declarations/ls.hpp
-   INTERFACE include/generated/definitions/io/io_avx512.hpp
-   INTERFACE include/generated/definitions/io/io_avx2.hpp
-   INTERFACE include/generated/definitions/io/io_sse.hpp
-   INTERFACE include/generated/definitions/io/io_neon.hpp
+   INTERFACE include/generated/declarations/compare.hpp
    INTERFACE include/generated/definitions/memory/memory_avx512.hpp
    INTERFACE include/generated/definitions/memory/memory_avx2.hpp
    INTERFACE include/generated/definitions/memory/memory_sse.hpp
    INTERFACE include/generated/definitions/memory/memory_scalar.hpp
-   INTERFACE include/generated/definitions/compare/compare_avx512.hpp
-   INTERFACE include/generated/definitions/compare/compare_avx2.hpp
-   INTERFACE include/generated/definitions/compare/compare_sse.hpp
-   INTERFACE include/generated/definitions/compare/compare_neon.hpp
-   INTERFACE include/generated/definitions/compare/compare_scalar.hpp
+   INTERFACE include/generated/definitions/io/io_avx512.hpp
+   INTERFACE include/generated/definitions/io/io_avx2.hpp
+   INTERFACE include/generated/definitions/io/io_sse.hpp
+   INTERFACE include/generated/definitions/io/io_neon.hpp
    INTERFACE include/generated/definitions/binary/binary_avx512.hpp
    INTERFACE include/generated/definitions/binary/binary_avx2.hpp
    INTERFACE include/generated/definitions/binary/binary_sse.hpp
    INTERFACE include/generated/definitions/binary/binary_neon.hpp
    INTERFACE include/generated/definitions/binary/binary_scalar.hpp
+   INTERFACE include/generated/definitions/mask/mask_avx512.hpp
+   INTERFACE include/generated/definitions/mask/mask_avx2.hpp
+   INTERFACE include/generated/definitions/mask/mask_sse.hpp
+   INTERFACE include/generated/definitions/mask/mask_neon.hpp
    INTERFACE include/generated/definitions/calc/calc_cuda.hpp
    INTERFACE include/generated/definitions/calc/calc_avx512.hpp
    INTERFACE include/generated/definitions/calc/calc_avx2.hpp
    INTERFACE include/generated/definitions/calc/calc_sse.hpp
    INTERFACE include/generated/definitions/calc/calc_neon.hpp
    INTERFACE include/generated/definitions/calc/calc_scalar.hpp
-   INTERFACE include/generated/definitions/mask/mask_avx512.hpp
-   INTERFACE include/generated/definitions/mask/mask_avx2.hpp
-   INTERFACE include/generated/definitions/mask/mask_sse.hpp
-   INTERFACE include/generated/definitions/mask/mask_neon.hpp
    INTERFACE include/generated/definitions/ls/ls_avx512.hpp
    INTERFACE include/generated/definitions/ls/ls_avx2.hpp
    INTERFACE include/generated/definitions/ls/ls_sse.hpp
    INTERFACE include/generated/definitions/ls/ls_neon.hpp
    INTERFACE include/generated/definitions/ls/ls_scalar.hpp
+   INTERFACE include/generated/definitions/compare/compare_avx512.hpp
+   INTERFACE include/generated/definitions/compare/compare_avx2.hpp
+   INTERFACE include/generated/definitions/compare/compare_sse.hpp
+   INTERFACE include/generated/definitions/compare/compare_neon.hpp
+   INTERFACE include/generated/definitions/compare/compare_scalar.hpp
 )
 target_include_directories(tvl INTERFACE include/)
-target_compile_options(tvl INTERFACE -msse4.1 -msse2 -mneon -mavx -msse3 -mavx512f -mavx2 -mavx512dq -msse -mavx512bw -mavx512vl -mssse3 -msse4.2 -Wdeprecated-declarations)
+target_compile_options(tvl INTERFACE -msse -mavx -mneon -mavx512dq -mavx2 -mavx512bw -mssse3 -mavx512f -msse4.1 -msse4.2 -mavx512vl -msse2 -msse3 -Wdeprecated-declarations)
 target_compile_definitions(tvl INTERFACE TVL_USE_CONCEPTS)
 add_subdirectory(src/test)
