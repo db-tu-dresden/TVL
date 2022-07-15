@@ -4,6 +4,15 @@
 #include "../../lib/include/tvlintrin.hpp"
 #include "matrix.h"
 
+/**
+ * @brief Classic multiplication of an n*m and m*n matrix
+ * 
+ * @tparam VectorExtension The TVL extension to be used
+ * @tparam T The data type of the elements inside the matrices
+ * @param a The first matrix of the multiplication
+ * @param b The second matrix of the multiplication. Required to be in transposed form
+ * @param matrix_out The matrix to store the result of the multiplication
+ */
 template< typename VectorExtension, typename T >
 void matrix_mult( matrix_t< T >* a, matrix_t< T >* b, matrix_t< T >* matrix_out ) {
    using namespace tvl;

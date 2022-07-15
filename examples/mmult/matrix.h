@@ -11,20 +11,29 @@
 
 /**
  * @brief
- * @tparam T
- * Data Organization:
+ * Row major data organization:
  * Assuming 2 cols, 3 rows:
  * [ x0, x1 ]
  * [ x2, x3 ]
  * [ x4, x5 ]
  * --> [x0, x1, x2, x3, x4, x5, ... ]
+ * @tparam T The stored datatype inside the matrix
  */
 template <typename T>
 struct matrix_t {
-    /* Normal Matrix Info */
+    // Data array pointer
     T* data;
+    // Row count of the matrix
     std::size_t rows;
+    // Column count of the matrix
     std::size_t cols;
+
+    /**
+     * @brief Construct a new matrix t object
+     *
+     * @param dim_x Row count of the matrix
+     * @param dim_y Column count of the matrix
+     */
 
     matrix_t(std::size_t dim_x, std::size_t dim_y) : data{(T*)aligned_alloc(64, dim_x * dim_y * sizeof(T))},
                                                      rows{dim_x},
@@ -33,12 +42,16 @@ struct matrix_t {
         clear();
     }
 
+    /**
+     * @brief Destroy the matrix t object
+     *
+     */
     ~matrix_t() {
         del();
     }
 
     /**
-     * @brief
+     * @brief Transform the matrix from A to A^T.
      * Assuming 2 cols, 3 rows --> 3 cols, 2 rows
      * [ x0, x1 ]
      * [ x2, x3 ]
@@ -63,11 +76,22 @@ struct matrix_t {
         std::swap(rows, cols);
     }
 
+    /**
+     * @brief Get a certain row from the matrix
+     *
+     * @tparam T The data type of the stored values
+     * @param row_idx The index of the requested row
+     * @return The pointer to the beginning of the row
+     */
     T* get_row(const std::size_t row_idx) const {
         return data + (row_idx * cols);
     }
 
-    /* https://www.geeksforgeeks.org/kahan-summation-algorithm/ */
+    /**
+     * @brief The Kahan summation formula for deterministically adding numerous floating point values
+     * see also https://www.geeksforgeeks.org/kahan-summation-algorithm/
+     * @return The sum of all elements in the matrix
+     */
     double kahanSum() const {
         double sum = 0.0;
 
@@ -94,24 +118,50 @@ struct matrix_t {
         return sum;
     }
 
+    /**
+     * @brief Calculate the checksum of the matrix
+     *
+     * @return The checksum of the matrix
+     */
     double checksum() const {
         return kahanSum();
     }
 
+    /**
+     * @brief Set the value of a specific matrix cell
+     *
+     * @tparam template-parameter-name description
+     * @param row The row of the value
+     * @param col The column of the value
+     * @param val The value to be set at matrix[ row ][ col ]
+     */
     void set_value(const std::size_t row, const std::size_t col, const T val) {
         data[(row * cols) + col] = val;
     }
 
+    /**
+     * @brief Create a deep copy of the matrix
+     *
+     * @return A pointer to a matrix_t object, containing the exact same data as the calling object.
+     */
     matrix_t<T>* copy() const {
         matrix_t<T>* tmp = new matrix_t<T>(rows, cols);
         memcpy(tmp->data, data, rows * cols * sizeof(T));
         return tmp;
     }
 
+    /**
+     * @brief Set all matrix elements to 0
+     *
+     */
     void clear() {
         memset(data, 0, rows * cols * sizeof(T));
     }
 
+    /**
+     * @brief Free the internal data array
+     *
+     */
     void del() {
         if (data != nullptr) {
             free(data);
@@ -119,6 +169,9 @@ struct matrix_t {
         }
     }
 
+    /**
+     * @brief Determine the type of the to-be-used data distribution engine based on the given data type
+     */
     template <class D>
     using uniform_distribution =
         typename std::conditional_t<
@@ -129,6 +182,13 @@ struct matrix_t {
                 std::uniform_int_distribution<D>,
                 void> >;
 
+    /**
+     * @brief Create values and insert them into the matrix
+     *
+     * @param seed Initialize the random number generator
+     * @param zero_probability Ratio of 0-values in the matrix
+     * @param debug If set, zero probability is ignored
+     */
     void fill(const std::size_t seed, const double zero_probability, const bool debug = false) {
         std::mt19937_64 rng;
         // initialize the random number generator with time-dependent seed
@@ -159,10 +219,19 @@ struct matrix_t {
         }
     }
 
+    /**
+     * @brief Get the estimated memory consumption
+     *
+     * @return Bytes stored inside the matrix object
+     */
     std::size_t get_estimated_memory_consumption() const {
         return (rows * cols) * sizeof(T) + 2 * sizeof(T);
     }
 
+    /**
+     * @brief Print the matrix to stdout
+     *
+     */
     void print() const {
         using namespace std;
         std::cout << "Printing matrix. Rows: " << rows << " Cols: " << cols << std::endl;

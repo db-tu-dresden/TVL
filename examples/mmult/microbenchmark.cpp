@@ -11,6 +11,12 @@
 #include "mult_scalar.h"
 #include "mult_vectorized.h"
 
+/**
+* @brief Execute a function several times and measure its execution time.
+* @param f The function to be benchmarked
+* @param num_iters Benchmark iterations
+* @return The median runtime of all executions
+*/
 size_t benchmark_hres(std::function<void()> f, size_t num_iters) {
     std::vector<size_t> times(num_iters);
     for (auto& time : times) {
@@ -43,23 +49,35 @@ size_t benchmark_hres(std::function<void()> f, size_t num_iters) {
     return median;
 }
 
+/**
+* @brief Compute TVL-vectorized and classic scalar matrix multiplication
+* @tparam my_base The data type to be stored inside the matrices, e.g. float, int32_t, ...
+* @param n Dimension 1 of an n*m matrix
+* @param m Dimension 2 of an n*m matrix
+* @param benchmark_runs Repeat the test this many times
+*/
 template <typename my_base>
 void run_vecs(const size_t n, const size_t m, const size_t benchmark_runs = 5) {
+    // Create matrix a, b and the result matrix. Matrixes are stored in a contiguous array in row major format.
     matrix_t<my_base>* matrix_a = new matrix_t<my_base>(n, m);
     matrix_t<my_base>* matrix_b = new matrix_t<my_base>(m, n);
     matrix_t<my_base>* matrix_out = new matrix_t<my_base>(matrix_a->rows, matrix_b->cols);
 
+    // Fill the matrixes with a certain seed and a pre-determined ratio of zero-values
     matrix_a->fill(1337421337, 0.2);
     matrix_b->fill(1337421337, 0.2);
 
+    // Transpose matrix b such that is vectorized processible
     auto matrix_b_t = matrix_b->copy();
     matrix_b_t->transpose();
 
+    // For convenience
     using namespace tvl;
     using tvl_scalar = simd<my_base, scalar>;
     using tvl_sse = simd<my_base, sse, 128>;
     using tvl_avx2 = simd<my_base, avx2>;
 
+    // Result containers
     std::vector<double> checksums;
     std::vector<size_t> runtimes;
     std::vector<std::string> idents;
@@ -113,27 +131,33 @@ void run_vecs(const size_t n, const size_t m, const size_t benchmark_runs = 5) {
     std::cout << " >" << std::endl
               << std::endl;
 
+    // Pretty printed result output
     std::stringstream ss;
+    const size_t width_eight = 8;
     for (size_t i = 0; i < idents.size(); ++i) {
-        ss << std::setw(std::max(static_cast<size_t>(8), static_cast<size_t>(idents[i].size()))) << idents[i] << "\t";
+        const size_t width_ident = static_cast<size_t>(idents[i].size());
+        ss << std::setw(std::max(width_eight, width_ident)) << idents[i] << "\t";
     }
     ss << std::endl;
     for (size_t i = 0; i < idents.size(); ++i) {
-        ss << std::setw(std::max(static_cast<size_t>(8), static_cast<size_t>(idents[i].size()))) << runtimes[i] << "\t";
+        const size_t width_ident = static_cast<size_t>(idents[i].size());
+        ss << std::setw(std::max(width_eight, width_ident)) << runtimes[i] << "\t";
     }
     ss << std::endl << std::endl;
-
     std::cout << ss.str() << std::flush;
+
+    // Cleanup
     delete matrix_a;
     delete matrix_b;
     delete matrix_out;
 }
 
 int main(void) {
+    // Elements per matrix dimension. For illustration, we create quadratic matrices
     const size_t elem_count = 512;
+    // Repetition count for each benchmark
     const size_t benchmark_runs = 5;
 
-    std::vector<size_t> tvl_times;
     const size_t n = elem_count;
     const size_t m = elem_count;
 
