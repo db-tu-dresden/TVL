@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/extensions/simd/intel/avx512.hpp
- * \date 2022-07-15
+ * \date 2022-07-18
  * \brief Definition of the SIMD TargetExtension avx512.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 2f759bb (2f759bba5004ee2d2fcec3b410bca4c93de5cf19)
+ * Git-Commit    : d245ef8 (d245ef8e8a48a9e67c8e31391323e827e26229eb)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -84,6 +84,8 @@ namespace tvl {
                      )
                   )
                );
+            using imask_t =
+               mask_t;
          };
    };
 } // end of namespace tvl
