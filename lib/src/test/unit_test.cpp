@@ -17,7 +17,7 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/src/test/unit_test.cpp
- * \date 2022-07-18
+ * \date 2022-07-20
  * \brief Unit test file for TVL Primitives using Catch2
  * \note
  *
@@ -325,12 +325,12 @@ TEST_CASE("Testing primitive hadd for sse", "[hadd],[sse]") {
       CHECK(test_hadd_default<simd<double, sse>>());
       CHECK(test_hadd_default<simd<float, sse>>());
       CHECK(test_hadd_default<simd<int16_t, sse>>());
-      WARN("Primitive hadd<simd<int32_t, sse>> not implementend.");
-      WARN("Primitive hadd<simd<int64_t, sse>> not implementend.");
+      WARN("Primitive hadd<simd<int32_t, sse>> not implemented.");
+      WARN("Primitive hadd<simd<int64_t, sse>> not implemented.");
       CHECK(test_hadd_default<simd<int8_t, sse>>());
       CHECK(test_hadd_default<simd<uint16_t, sse>>());
-      WARN("Primitive hadd<simd<uint32_t, sse>> not implementend.");
-      WARN("Primitive hadd<simd<uint64_t, sse>> not implementend.");
+      WARN("Primitive hadd<simd<uint32_t, sse>> not implemented.");
+      WARN("Primitive hadd<simd<uint64_t, sse>> not implemented.");
       CHECK(test_hadd_default<simd<uint8_t, sse>>());
    }
 }
