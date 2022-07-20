@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/compare/compare_sse.hpp
- * \date 2022-07-18
+ * \date 2022-07-20
  * \brief Compare primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : d245ef8 (d245ef8e8a48a9e67c8e31391323e827e26229eb)
+ * Git-Commit    : 6e0d9db (6e0d9db4a214b4db8eedbf84c806d01f3372705d)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
