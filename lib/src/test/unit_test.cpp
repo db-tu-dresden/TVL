@@ -17,7 +17,7 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/src/test/unit_test.cpp
- * \date 2022-07-18
+ * \date 2022-07-20
  * \brief Unit test file for TVL Primitives using Catch2
  * \note
  *
@@ -337,16 +337,16 @@ TEST_CASE("Testing primitive hadd for scalar", "[hadd],[scalar]") {
 TEST_CASE("Testing primitive store for neon", "[store],[neon]") {
    using namespace tvl;
    SECTION("default") {
-      WARN("Primitive store<simd<double, neon>> not implementend.");
-      WARN("Primitive store<simd<float, neon>> not implementend.");
-      WARN("Primitive store<simd<int16_t, neon>> not implementend.");
-      WARN("Primitive store<simd<int32_t, neon>> not implementend.");
+      WARN("Primitive store<simd<double, neon>> not implemented.");
+      WARN("Primitive store<simd<float, neon>> not implemented.");
+      WARN("Primitive store<simd<int16_t, neon>> not implemented.");
+      WARN("Primitive store<simd<int32_t, neon>> not implemented.");
       CHECK(test_store_default<simd<int64_t, neon>>());
-      WARN("Primitive store<simd<int8_t, neon>> not implementend.");
-      WARN("Primitive store<simd<uint16_t, neon>> not implementend.");
-      WARN("Primitive store<simd<uint32_t, neon>> not implementend.");
-      WARN("Primitive store<simd<uint64_t, neon>> not implementend.");
-      WARN("Primitive store<simd<uint8_t, neon>> not implementend.");
+      WARN("Primitive store<simd<int8_t, neon>> not implemented.");
+      WARN("Primitive store<simd<uint16_t, neon>> not implemented.");
+      WARN("Primitive store<simd<uint32_t, neon>> not implemented.");
+      WARN("Primitive store<simd<uint64_t, neon>> not implemented.");
+      WARN("Primitive store<simd<uint8_t, neon>> not implemented.");
    }
 }
 TEST_CASE("Testing primitive store for scalar", "[store],[scalar]") {
@@ -367,16 +367,16 @@ TEST_CASE("Testing primitive store for scalar", "[store],[scalar]") {
 TEST_CASE("Testing primitive storeu for neon", "[storeu],[neon]") {
    using namespace tvl;
    SECTION("default") {
-      WARN("Primitive storeu<simd<double, neon>> not implementend.");
-      WARN("Primitive storeu<simd<float, neon>> not implementend.");
-      WARN("Primitive storeu<simd<int16_t, neon>> not implementend.");
-      WARN("Primitive storeu<simd<int32_t, neon>> not implementend.");
+      WARN("Primitive storeu<simd<double, neon>> not implemented.");
+      WARN("Primitive storeu<simd<float, neon>> not implemented.");
+      WARN("Primitive storeu<simd<int16_t, neon>> not implemented.");
+      WARN("Primitive storeu<simd<int32_t, neon>> not implemented.");
       CHECK(test_storeu_default<simd<int64_t, neon>>());
-      WARN("Primitive storeu<simd<int8_t, neon>> not implementend.");
-      WARN("Primitive storeu<simd<uint16_t, neon>> not implementend.");
-      WARN("Primitive storeu<simd<uint32_t, neon>> not implementend.");
-      WARN("Primitive storeu<simd<uint64_t, neon>> not implementend.");
-      WARN("Primitive storeu<simd<uint8_t, neon>> not implementend.");
+      WARN("Primitive storeu<simd<int8_t, neon>> not implemented.");
+      WARN("Primitive storeu<simd<uint16_t, neon>> not implemented.");
+      WARN("Primitive storeu<simd<uint32_t, neon>> not implemented.");
+      WARN("Primitive storeu<simd<uint64_t, neon>> not implemented.");
+      WARN("Primitive storeu<simd<uint8_t, neon>> not implemented.");
    }
 }
 TEST_CASE("Testing primitive storeu for scalar", "[storeu],[scalar]") {
@@ -397,16 +397,16 @@ TEST_CASE("Testing primitive storeu for scalar", "[storeu],[scalar]") {
 TEST_CASE("Testing primitive load for neon", "[load],[neon]") {
    using namespace tvl;
    SECTION("default") {
-      WARN("Primitive load<simd<double, neon>> not implementend.");
-      WARN("Primitive load<simd<float, neon>> not implementend.");
-      WARN("Primitive load<simd<int16_t, neon>> not implementend.");
-      WARN("Primitive load<simd<int32_t, neon>> not implementend.");
+      WARN("Primitive load<simd<double, neon>> not implemented.");
+      WARN("Primitive load<simd<float, neon>> not implemented.");
+      WARN("Primitive load<simd<int16_t, neon>> not implemented.");
+      WARN("Primitive load<simd<int32_t, neon>> not implemented.");
       CHECK(test_load_default<simd<int64_t, neon>>());
-      WARN("Primitive load<simd<int8_t, neon>> not implementend.");
-      WARN("Primitive load<simd<uint16_t, neon>> not implementend.");
-      WARN("Primitive load<simd<uint32_t, neon>> not implementend.");
-      WARN("Primitive load<simd<uint64_t, neon>> not implementend.");
-      WARN("Primitive load<simd<uint8_t, neon>> not implementend.");
+      WARN("Primitive load<simd<int8_t, neon>> not implemented.");
+      WARN("Primitive load<simd<uint16_t, neon>> not implemented.");
+      WARN("Primitive load<simd<uint32_t, neon>> not implemented.");
+      WARN("Primitive load<simd<uint64_t, neon>> not implemented.");
+      WARN("Primitive load<simd<uint8_t, neon>> not implemented.");
    }
 }
 TEST_CASE("Testing primitive load for scalar", "[load],[scalar]") {
@@ -477,28 +477,28 @@ TEST_CASE("Testing primitive set for scalar", "[set],[scalar]") {
 TEST_CASE("Testing primitive add for neon", "[add],[neon]") {
    using namespace tvl;
    SECTION("running_sum_w_epsilon") {
-      WARN("Primitive add<simd<double, neon>> not implementend.");
-      WARN("Primitive add<simd<float, neon>> not implementend.");
-      WARN("Primitive add<simd<int16_t, neon>> not implementend.");
-      WARN("Primitive add<simd<int32_t, neon>> not implementend.");
+      WARN("Primitive add<simd<double, neon>> not implemented.");
+      WARN("Primitive add<simd<float, neon>> not implemented.");
+      WARN("Primitive add<simd<int16_t, neon>> not implemented.");
+      WARN("Primitive add<simd<int32_t, neon>> not implemented.");
       CHECK(test_add_running_sum_w_epsilon<simd<int64_t, neon>>());
-      WARN("Primitive add<simd<int8_t, neon>> not implementend.");
-      WARN("Primitive add<simd<uint16_t, neon>> not implementend.");
-      WARN("Primitive add<simd<uint32_t, neon>> not implementend.");
-      WARN("Primitive add<simd<uint64_t, neon>> not implementend.");
-      WARN("Primitive add<simd<uint8_t, neon>> not implementend.");
+      WARN("Primitive add<simd<int8_t, neon>> not implemented.");
+      WARN("Primitive add<simd<uint16_t, neon>> not implemented.");
+      WARN("Primitive add<simd<uint32_t, neon>> not implemented.");
+      WARN("Primitive add<simd<uint64_t, neon>> not implemented.");
+      WARN("Primitive add<simd<uint8_t, neon>> not implemented.");
    }
    SECTION("zero_cornercase") {
-      WARN("Primitive add<simd<double, neon>> not implementend.");
-      WARN("Primitive add<simd<float, neon>> not implementend.");
-      WARN("Primitive add<simd<int16_t, neon>> not implementend.");
-      WARN("Primitive add<simd<int32_t, neon>> not implementend.");
+      WARN("Primitive add<simd<double, neon>> not implemented.");
+      WARN("Primitive add<simd<float, neon>> not implemented.");
+      WARN("Primitive add<simd<int16_t, neon>> not implemented.");
+      WARN("Primitive add<simd<int32_t, neon>> not implemented.");
       CHECK(test_add_zero_cornercase<simd<int64_t, neon>>());
-      WARN("Primitive add<simd<int8_t, neon>> not implementend.");
-      WARN("Primitive add<simd<uint16_t, neon>> not implementend.");
-      WARN("Primitive add<simd<uint32_t, neon>> not implementend.");
-      WARN("Primitive add<simd<uint64_t, neon>> not implementend.");
-      WARN("Primitive add<simd<uint8_t, neon>> not implementend.");
+      WARN("Primitive add<simd<int8_t, neon>> not implemented.");
+      WARN("Primitive add<simd<uint16_t, neon>> not implemented.");
+      WARN("Primitive add<simd<uint32_t, neon>> not implemented.");
+      WARN("Primitive add<simd<uint64_t, neon>> not implemented.");
+      WARN("Primitive add<simd<uint8_t, neon>> not implemented.");
    }
 }
 TEST_CASE("Testing primitive add for scalar", "[add],[scalar]") {
