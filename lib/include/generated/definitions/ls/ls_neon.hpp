@@ -23,7 +23,7 @@
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 8c16c1c (8c16c1c178d9ae00eca1e7a680490792455e271e)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -53,7 +53,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return vld1q_s64(memory);
             }
@@ -76,7 +76,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return vld1q_u8(memory);
             }
@@ -99,7 +99,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return vld1q_u16(memory);
             }
@@ -122,7 +122,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return vld1q_u32(memory);
             }
@@ -145,7 +145,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return vld1q_u64(memory);
             }
@@ -168,7 +168,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return vld1q_s8(memory);
             }
@@ -191,7 +191,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return vld1q_s16(memory);
             }
@@ -214,7 +214,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return vld1q_s32(memory);
             }
@@ -237,7 +237,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return vld1q_s64(memory);
             }
@@ -260,7 +260,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return vld1q_f32(memory);
             }
@@ -283,7 +283,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return vld1q_f64(memory);
             }
@@ -306,7 +306,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                vst1q_s64(memory, data);
             }
@@ -329,7 +329,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                vst1q_s64(memory, data);
             }
@@ -352,7 +352,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return vdupq_n_u8( value );
             }
@@ -375,7 +375,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return vdupq_n_u16( value );
             }
@@ -398,7 +398,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return vdupq_n_u32( value );
             }
@@ -421,7 +421,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return vdupq_n_u64( value );
             }
@@ -444,7 +444,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return vdupq_n_s8( value );
             }
@@ -467,7 +467,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return vdupq_n_s16( value );
             }
@@ -490,7 +490,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return vdupq_n_s32( value );
             }
@@ -513,7 +513,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return vdupq_n_s64( value );
             }
@@ -536,7 +536,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return vdupq_n_f32( value );
             }
@@ -559,7 +559,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return vdupq_n_f64( value );
             }
@@ -582,7 +582,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::offset_register_type index, typename Vec::mask_type mask
+                typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::offset_register_type index, typename Vec::mask_type mask
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive gather is not supported by your hardware natively while it is forced by using native" );
                auto tmp = vdupq_n_s64( ( mask[ 0 ] == 0 ) ? source[ 0 ] : memory[ index[ 0 ][ 0 ] ] );

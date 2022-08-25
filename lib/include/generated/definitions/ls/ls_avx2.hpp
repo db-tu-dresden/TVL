@@ -23,7 +23,7 @@
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 8c16c1c (8c16c1c178d9ae00eca1e7a680490792455e271e)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -53,7 +53,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_load_si256(reinterpret_cast<__m256i const *>(memory));
             }
@@ -76,7 +76,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_load_si256(reinterpret_cast<__m256i const *>(memory));
             }
@@ -99,7 +99,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_load_si256(reinterpret_cast<__m256i const *>(memory));
             }
@@ -122,7 +122,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_load_si256(reinterpret_cast<__m256i const *>(memory));
             }
@@ -145,7 +145,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_load_si256(reinterpret_cast<__m256i const *>(memory));
             }
@@ -168,7 +168,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_load_si256(reinterpret_cast<__m256i const *>(memory));
             }
@@ -191,7 +191,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_load_si256(reinterpret_cast<__m256i const *>(memory));
             }
@@ -214,7 +214,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_load_si256(reinterpret_cast<__m256i const *>(memory));
             }
@@ -237,7 +237,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_load_ps(memory);
             }
@@ -260,7 +260,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_load_pd(memory);
             }
@@ -283,7 +283,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_loadu_si256( reinterpret_cast< __m256i const * >( memory ) );
             }
@@ -306,7 +306,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_loadu_si256( reinterpret_cast< __m256i const * >( memory ) );
             }
@@ -329,7 +329,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_loadu_si256( reinterpret_cast< __m256i const * >( memory ) );
             }
@@ -352,7 +352,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_loadu_si256( reinterpret_cast< __m256i const * >( memory ) );
             }
@@ -375,7 +375,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_loadu_si256( reinterpret_cast< __m256i const * >( memory ) );
             }
@@ -398,7 +398,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_loadu_si256( reinterpret_cast< __m256i const * >( memory ) );
             }
@@ -421,7 +421,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_loadu_si256( reinterpret_cast< __m256i const * >( memory ) );
             }
@@ -444,7 +444,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_loadu_si256( reinterpret_cast< __m256i const * >( memory ) );
             }
@@ -467,7 +467,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_loadu_ps(memory);
             }
@@ -490,7 +490,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type const * memory
+                typename Vec::base_type const * memory
             ) {
                return _mm256_loadu_pd(memory);
             }
@@ -513,7 +513,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_store_si256(reinterpret_cast<__m256i *>(memory), data);
             }
@@ -536,7 +536,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_store_si256(reinterpret_cast<__m256i *>(memory), data);
             }
@@ -559,7 +559,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_store_si256(reinterpret_cast<__m256i *>(memory), data);
             }
@@ -582,7 +582,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_store_si256(reinterpret_cast<__m256i *>(memory), data);
             }
@@ -605,7 +605,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_store_si256(reinterpret_cast<__m256i *>(memory), data);
             }
@@ -628,7 +628,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_store_si256(reinterpret_cast<__m256i *>(memory), data);
             }
@@ -651,7 +651,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_store_si256(reinterpret_cast<__m256i *>(memory), data);
             }
@@ -674,7 +674,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_store_si256(reinterpret_cast<__m256i *>(memory), data);
             }
@@ -697,7 +697,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_store_ps(memory, data);
             }
@@ -720,7 +720,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_store_pd(memory, data);
             }
@@ -743,7 +743,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_storeu_si256(reinterpret_cast<__m256i *>(memory), data);
             }
@@ -766,7 +766,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_storeu_si256(reinterpret_cast<__m256i *>(memory), data);
             }
@@ -789,7 +789,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_storeu_si256(reinterpret_cast<__m256i *>(memory), data);
             }
@@ -812,7 +812,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_storeu_si256(reinterpret_cast<__m256i *>(memory), data);
             }
@@ -835,7 +835,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_storeu_si256(reinterpret_cast<__m256i *>(memory), data);
             }
@@ -858,7 +858,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_storeu_si256(reinterpret_cast<__m256i *>(memory), data);
             }
@@ -881,7 +881,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_storeu_si256(reinterpret_cast<__m256i *>(memory), data);
             }
@@ -904,7 +904,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_storeu_si256(reinterpret_cast<__m256i *>(memory), data);
             }
@@ -927,7 +927,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_storeu_ps(memory, data);
             }
@@ -950,7 +950,7 @@ namespace tvl {
             
             TVL_FORCE_INLINE 
             static void apply(
-               typename Vec::base_type * memory, typename Vec::register_type data
+                typename Vec::base_type * memory, typename Vec::register_type data
             ) {
                _mm256_storeu_pd(memory, data);
             }
@@ -973,7 +973,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return _mm256_set1_epi8(value);
             }
@@ -996,7 +996,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return _mm256_set1_epi16(value);
             }
@@ -1019,7 +1019,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return _mm256_set1_epi32(value);
             }
@@ -1042,7 +1042,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return _mm256_set1_epi8(value);
             }
@@ -1065,7 +1065,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return _mm256_set1_epi16(value);
             }
@@ -1088,7 +1088,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return _mm256_set1_epi32(value);
             }
@@ -1111,7 +1111,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return _mm256_set1_epi64x(value);
             }
@@ -1134,7 +1134,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return _mm256_set1_epi64x(value);
             }
@@ -1157,7 +1157,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return _mm256_set1_ps(value);
             }
@@ -1180,7 +1180,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::base_type value
+                typename Vec::base_type value
             ) {
                return _mm256_set1_pd(value);
             }
@@ -1203,7 +1203,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::offset_register_type index, typename Vec::mask_type mask
+                typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::offset_register_type index, typename Vec::mask_type mask
             ) {
                return _mm256_mask_i64gather_epi64( source, reinterpret_cast< long long int const * >( memory ), index[0], mask, 8 );
             }

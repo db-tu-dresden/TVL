@@ -23,7 +23,7 @@
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 8c16c1c (8c16c1c178d9ae00eca1e7a680490792455e271e)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -54,7 +54,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm512_cmpeq_epi8_mask(vec_a, vec_b);
             }
@@ -78,7 +78,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm512_cmpeq_epi8_mask(vec_a, vec_b);
             }
@@ -102,7 +102,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm512_cmpeq_epi16_mask(vec_a, vec_b);
             }
@@ -126,7 +126,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm512_cmpeq_epi16_mask(vec_a, vec_b);
             }
@@ -150,7 +150,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm512_cmpeq_epi32_mask(vec_a, vec_b);
             }
@@ -174,7 +174,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm512_cmpeq_epi32_mask(vec_a, vec_b);
             }
@@ -198,7 +198,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm512_cmpeq_epi64_mask(vec_a, vec_b);
             }
@@ -222,7 +222,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm512_cmpeq_epi64_mask(vec_a, vec_b);
             }
@@ -245,7 +245,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm512_cmpeq_ps_mask(vec_a, vec_b);
             }
@@ -268,7 +268,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm512_cmpeq_pd_mask(vec_a, vec_b);
             }
@@ -291,7 +291,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_data, typename Vec::register_type vec_min, typename Vec::register_type vec_max
+                typename Vec::register_type vec_data, typename Vec::register_type vec_min, typename Vec::register_type vec_max
             ) {
                return _mm512_cmple_epu64_mask( vec_min, vec_data ) & _mm512_cmpge_epu64_mask( vec_max, vec_data );
             }

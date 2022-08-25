@@ -23,7 +23,7 @@
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 8c16c1c (8c16c1c178d9ae00eca1e7a680490792455e271e)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -53,7 +53,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return _mm256_and_si256(a, b);
             }
@@ -76,7 +76,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return _mm256_and_si256(a, b);
             }
@@ -99,7 +99,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return _mm256_and_si256(a, b);
             }
@@ -122,7 +122,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return _mm256_and_si256(a, b);
             }
@@ -145,7 +145,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return _mm256_and_si256(a, b);
             }
@@ -168,7 +168,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return _mm256_and_si256(a, b);
             }
@@ -191,7 +191,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return _mm256_and_si256(a, b);
             }
@@ -214,7 +214,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return _mm256_and_si256(a, b);
             }
@@ -237,7 +237,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive binary_and is not supported by your hardware natively while it is forced by using native" );
                return _mm256_and_pd(_mm512_castsi256_pd(a),_mm512_castsi256_pd(b));
@@ -261,7 +261,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive binary_and is not supported by your hardware natively while it is forced by using native" );
                return _mm256_and_pd(_mm512_castsi256_pd(a),_mm512_castsi256_pd(b));
@@ -285,7 +285,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive binary_and is not supported by your hardware natively while it is forced by using native" );
                return _mm256_and_pd(_mm512_castsi256_pd(a),_mm512_castsi256_pd(b));
@@ -309,7 +309,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive binary_and is not supported by your hardware natively while it is forced by using native" );
                return _mm256_and_pd(_mm512_castsi256_pd(a),_mm512_castsi256_pd(b));
@@ -333,7 +333,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive binary_and is not supported by your hardware natively while it is forced by using native" );
                return _mm256_and_pd(_mm512_castsi256_pd(a),_mm512_castsi256_pd(b));
@@ -357,7 +357,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive binary_and is not supported by your hardware natively while it is forced by using native" );
                return _mm256_and_pd(_mm512_castsi256_pd(a),_mm512_castsi256_pd(b));
@@ -381,7 +381,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive binary_and is not supported by your hardware natively while it is forced by using native" );
                return _mm256_and_pd(_mm512_castsi256_pd(a),_mm512_castsi256_pd(b));
@@ -405,7 +405,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive binary_and is not supported by your hardware natively while it is forced by using native" );
                return _mm256_and_pd(_mm512_castsi256_pd(a),_mm512_castsi256_pd(b));
@@ -429,7 +429,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return _mm256_and_ps(a,b);
             }
@@ -452,7 +452,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return _mm256_and_pd(a,b);
             }

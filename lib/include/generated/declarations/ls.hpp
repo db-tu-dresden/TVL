@@ -23,7 +23,7 @@
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 8c16c1c (8c16c1c178d9ae00eca1e7a680490792455e271e)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -48,7 +48,7 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::register_type load(
-         typename Vec::base_type const * memory
+          typename Vec::base_type const * memory
       ) {
          return functors::load<Vec, Idof>::apply(
             memory
@@ -67,7 +67,7 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::register_type loadu(
-         typename Vec::base_type const * memory
+          typename Vec::base_type const * memory
       ) {
          return functors::loadu<Vec, Idof>::apply(
             memory
@@ -86,10 +86,10 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       TVL_FORCE_INLINE void store(
-         typename Vec::base_type * memory, typename Vec::register_type data
+          typename Vec::base_type * memory, typename Vec::register_type data
       ) {
          functors::store<Vec, Idof>::apply(
-            memory, data
+            memory,data
          );
       }
    namespace functors {
@@ -105,10 +105,10 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       TVL_FORCE_INLINE void storeu(
-         typename Vec::base_type * memory, typename Vec::register_type data
+          typename Vec::base_type * memory, typename Vec::register_type data
       ) {
          functors::storeu<Vec, Idof>::apply(
-            memory, data
+            memory,data
          );
       }
    namespace functors {
@@ -124,7 +124,7 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::register_type set1(
-         typename Vec::base_type value
+          typename Vec::base_type value
       ) {
          return functors::set1<Vec, Idof>::apply(
             value
@@ -146,10 +146,10 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::register_type gather(
-         typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::offset_register_type index, typename Vec::mask_type mask
+          typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::offset_register_type index, typename Vec::mask_type mask
       ) {
          return functors::gather<Vec, Idof>::apply(
-            source, memory, index, mask
+            source,memory,index,mask
          );
       }
    namespace functors {

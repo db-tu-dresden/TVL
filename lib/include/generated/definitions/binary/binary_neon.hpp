@@ -23,7 +23,7 @@
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 8c16c1c (8c16c1c178d9ae00eca1e7a680490792455e271e)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -53,7 +53,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return vandq_u8( a, b );
             }
@@ -76,7 +76,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return vandq_u16( a, b );
             }
@@ -99,7 +99,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return vandq_u32( a, b );
             }
@@ -122,7 +122,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return vandq_u64( a, b );
             }
@@ -145,7 +145,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return vandq_s8( a, b );
             }
@@ -168,7 +168,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return vandq_s16( a, b );
             }
@@ -191,7 +191,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return vandq_s32( a, b );
             }
@@ -214,7 +214,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return vandq_s64( a, b );
             }
@@ -237,7 +237,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return vreinterpretq_f32_u32(vandq_u32( vreinterpretq_u32_f32(a),vreinterpretq_u32_f32(b)));
             }
@@ -260,7 +260,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type a, typename Vec::register_type b
+                typename Vec::register_type a, typename Vec::register_type b
             ) {
                return vreinterpretq_f64_u64(vandq_u64( vreinterpretq_u64_f64(a),vreinterpretq_u64_f64(b)));
             }

@@ -23,7 +23,7 @@
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 8c16c1c (8c16c1c178d9ae00eca1e7a680490792455e271e)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -53,7 +53,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::mask_type vec_mask
+                typename Vec::mask_type vec_mask
             ) {
                return _mm_movemask_pd( _mm_castsi128_pd( vec_mask ) );
             }
@@ -76,7 +76,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type vec
+                typename Vec::register_type vec
             ) {
                return _mm_movemask_pd( _mm_castsi128_pd( vec ) );
             }
@@ -99,7 +99,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::mask_type mask
+                typename Vec::mask_type mask
             ) {
                return mask; //mask is a vector already.
             }
@@ -122,7 +122,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::base_type mask
+                typename Vec::base_type mask
             ) {
                return mask & 0x3;
             }

@@ -23,7 +23,7 @@
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 8c16c1c (8c16c1c178d9ae00eca1e7a680490792455e271e)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -48,7 +48,7 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::base_type to_integral(
-         typename Vec::mask_type vec_mask
+          typename Vec::mask_type vec_mask
       ) {
          return functors::to_integral<Vec, Idof>::apply(
             vec_mask
@@ -67,7 +67,7 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::base_type get_msb(
-         typename Vec::register_type vec
+          typename Vec::register_type vec
       ) {
          return functors::get_msb<Vec, Idof>::apply(
             vec
@@ -86,7 +86,7 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::register_type to_vector(
-         typename Vec::mask_type mask
+          typename Vec::mask_type mask
       ) {
          return functors::to_vector<Vec, Idof>::apply(
             mask
@@ -105,7 +105,7 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::base_type mask_reduce(
-         typename Vec::base_type mask
+          typename Vec::base_type mask
       ) {
          return functors::mask_reduce<Vec, Idof>::apply(
             mask
