@@ -17,17 +17,17 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/static/simd/simd_type_concepts.hpp
- * \date 2022-08-22
+ * \date 2022-08-25
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 33a0eb3 (33a0eb31c7a217c98ec419fc8513495dcb595d69)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
  *   Git-Branch    : main
- *   Git-Commit    : 1e8135e (1e8135e36797c1a05bca927343985b30550ae4bf)
+ *   Git-Commit    : be13979 (be139799c677e3ddb66ae930c197c81312c29456)
  *
  */
 #ifndef TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_STATIC_SIMD_SIMD_TYPE_CONCEPTS_HPP
@@ -39,7 +39,7 @@ namespace tvl {
    
 #ifdef TVL_USE_CONCEPTS
    template< typename T, typename U >
-   concept TargetExtension = TVLArithmetic< U > && requires {
+   concept TargetExtension = TVLArithmetic<U> && requires {
       typename T:: template types< U >;
       typename T:: template types< U >::default_size_in_bits;
       typename T:: template types< U >::register_t;
@@ -58,7 +58,7 @@ namespace tvl {
       { T::vector_mask_ratio() } -> std::same_as< std::size_t >;
       { T::mask_shift() } -> std::same_as< std::size_t >;
    } &&
-      TVLArithmetic< typename T::base_type > &&
+      TVLArithmetic<typename T::base_type> &&
       TargetExtension< typename T::target_extension, typename T::base_type > &&
       ( T::vector_size_b() > 0 ) &&
       ( T::vector_size_B() > 0 ) &&
