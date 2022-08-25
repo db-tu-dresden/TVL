@@ -23,7 +23,7 @@
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 8c16c1c (8c16c1c178d9ae00eca1e7a680490792455e271e)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -49,7 +49,7 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::base_type * allocate(
-         std::size_t count_bytes
+          std::size_t count_bytes
       ) {
          return functors::allocate<Vec, Idof>::apply(
             count_bytes
@@ -69,10 +69,10 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::base_type * allocate_aligned(
-         std::size_t count_bytes, std::size_t alignment
+          std::size_t count_bytes, [[maybe_unused]] std::size_t alignment
       ) {
          return functors::allocate_aligned<Vec, Idof>::apply(
-            count_bytes, alignment
+            count_bytes,alignment
          );
       }
    namespace functors {
@@ -87,7 +87,7 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       TVL_FORCE_INLINE void deallocate(
-         typename Vec::base_type * ptr
+          typename Vec::base_type * ptr
       ) {
          functors::deallocate<Vec, Idof>::apply(
             ptr
@@ -108,10 +108,10 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       TVL_FORCE_INLINE void memory_cp(
-         typename Vec::base_type * dst, typename Vec::base_type const * src, std::size_t count_bytes, int copy_kind=0
+          typename Vec::base_type * dst, typename Vec::base_type const * src, std::size_t count_bytes, [[maybe_unused]] int copy_kind=0
       ) {
          functors::memory_cp<Vec, Idof>::apply(
-            dst, src, count_bytes, copy_kind
+            dst,src,count_bytes,copy_kind
          );
       }
 } // end of namespace tvl

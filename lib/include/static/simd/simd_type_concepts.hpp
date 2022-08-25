@@ -22,7 +22,7 @@
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 8c16c1c (8c16c1c178d9ae00eca1e7a680490792455e271e)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -39,7 +39,7 @@ namespace tvl {
    
 #ifdef TVL_USE_CONCEPTS
    template< typename T, typename U >
-   concept TargetExtension = TVLArithmetic< U > && requires {
+   concept TargetExtension = TVLArithmetic<U> && requires {
       typename T:: template types< U >;
       typename T:: template types< U >::default_size_in_bits;
       typename T:: template types< U >::register_t;
@@ -58,7 +58,7 @@ namespace tvl {
       { T::vector_mask_ratio() } -> std::same_as< std::size_t >;
       { T::mask_shift() } -> std::same_as< std::size_t >;
    } &&
-      TVLArithmetic< typename T::base_type > &&
+      TVLArithmetic<typename T::base_type> &&
       TargetExtension< typename T::target_extension, typename T::base_type > &&
       ( T::vector_size_b() > 0 ) &&
       ( T::vector_size_B() > 0 ) &&

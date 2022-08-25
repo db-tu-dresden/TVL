@@ -23,7 +23,7 @@
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 8c16c1c (8c16c1c178d9ae00eca1e7a680490792455e271e)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -56,7 +56,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm_add_epi8(vec_a, vec_b);
             }
@@ -80,7 +80,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm_add_epi16(vec_a, vec_b);
             }
@@ -104,7 +104,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm_add_epi32(vec_a, vec_b);
             }
@@ -128,7 +128,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm_add_epi64(vec_a, vec_b);
             }
@@ -152,7 +152,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm_add_epi8(vec_a, vec_b);
             }
@@ -176,7 +176,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm_add_epi16(vec_a, vec_b);
             }
@@ -200,7 +200,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm_add_epi32(vec_a, vec_b);
             }
@@ -224,7 +224,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm_add_epi64(vec_a, vec_b);
             }
@@ -247,7 +247,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm_add_ps(vec_a, vec_b);
             }
@@ -270,7 +270,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm_add_pd(vec_a, vec_b);
             }
@@ -293,7 +293,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm_mul_ps(vec_a, vec_b);
             }
@@ -316,7 +316,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm_mul_pd(vec_a, vec_b);
             }
@@ -340,7 +340,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm_mullo_epi16(vec_a, vec_b);
             }
@@ -364,7 +364,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm_mullo_epi16(vec_a, vec_b);
             }
@@ -388,7 +388,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm_mullo_epi32(vec_a, vec_b);
             }
@@ -412,7 +412,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return _mm_mullo_epi32(vec_a, vec_b);
             }
@@ -435,7 +435,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_a;
@@ -466,7 +466,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_a;
@@ -497,7 +497,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_a;
@@ -528,7 +528,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_a;
@@ -559,7 +559,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type value
+                typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
                return _mm_cvtsd_f64(value) + _mm_cvtsd_f64(_mm_castsi128_pd(_mm_bsrli_si128(_mm_castpd_si128(value),sizeof(double))));
@@ -583,7 +583,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type value
+                typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
                auto res = _mm_hadd_ps(value, value);
@@ -608,7 +608,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type value
+                typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer;
@@ -638,7 +638,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type value
+                typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer;
@@ -668,7 +668,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type value
+                typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer;
@@ -698,7 +698,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type value
+                typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer;

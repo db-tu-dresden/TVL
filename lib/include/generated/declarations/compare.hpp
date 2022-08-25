@@ -23,7 +23,7 @@
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 8c16c1c (8c16c1c178d9ae00eca1e7a680490792455e271e)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -49,10 +49,10 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::mask_type equal(
-         typename Vec::register_type vec_a, typename Vec::register_type vec_b
+          typename Vec::register_type vec_a, typename Vec::register_type vec_b
       ) {
          return functors::equal<Vec, Idof>::apply(
-            vec_a, vec_b
+            vec_a,vec_b
          );
       }
    namespace functors {
@@ -70,10 +70,10 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::mask_type between_inclusive(
-         typename Vec::register_type vec_data, typename Vec::register_type vec_min, typename Vec::register_type vec_max
+          typename Vec::register_type vec_data, typename Vec::register_type vec_min, typename Vec::register_type vec_max
       ) {
          return functors::between_inclusive<Vec, Idof>::apply(
-            vec_data, vec_min, vec_max
+            vec_data,vec_min,vec_max
          );
       }
 } // end of namespace tvl
