@@ -17,18 +17,18 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/declarations/memory.hpp
- * \date 2022-08-22
+ * \date 2022-08-25
  * \brief Memory related primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 33a0eb3 (33a0eb31c7a217c98ec419fc8513495dcb595d69)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
  *   Git-Branch    : main
- *   Git-Commit    : 1e8135e (1e8135e36797c1a05bca927343985b30550ae4bf)
+ *   Git-Commit    : be13979 (be139799c677e3ddb66ae930c197c81312c29456)
  *
  */
 #ifndef TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_GENERATED_DECLARATIONS_MEMORY_HPP
@@ -49,7 +49,7 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::base_type * allocate(
-         std::size_t count_bytes
+          std::size_t count_bytes
       ) {
          return functors::allocate<Vec, Idof>::apply(
             count_bytes
@@ -69,10 +69,10 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::base_type * allocate_aligned(
-         std::size_t count_bytes, std::size_t alignment
+          std::size_t count_bytes, [[maybe_unused]] std::size_t alignment
       ) {
          return functors::allocate_aligned<Vec, Idof>::apply(
-            count_bytes, alignment
+            count_bytes,alignment
          );
       }
    namespace functors {
@@ -87,7 +87,7 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       TVL_FORCE_INLINE void deallocate(
-         typename Vec::base_type * ptr
+          typename Vec::base_type * ptr
       ) {
          functors::deallocate<Vec, Idof>::apply(
             ptr
@@ -108,10 +108,10 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       TVL_FORCE_INLINE void memory_cp(
-         typename Vec::base_type * dst, typename Vec::base_type const * src, std::size_t count_bytes, int copy_kind=0
+          typename Vec::base_type * dst, typename Vec::base_type const * src, std::size_t count_bytes, [[maybe_unused]] int copy_kind=0
       ) {
          functors::memory_cp<Vec, Idof>::apply(
-            dst, src, count_bytes, copy_kind
+            dst,src,count_bytes,copy_kind
          );
       }
 } // end of namespace tvl

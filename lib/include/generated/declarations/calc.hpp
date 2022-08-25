@@ -17,18 +17,18 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/declarations/calc.hpp
- * \date 2022-08-22
+ * \date 2022-08-25
  * \brief This file contains arithmetic primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 33a0eb3 (33a0eb31c7a217c98ec419fc8513495dcb595d69)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
  *   Git-Branch    : main
- *   Git-Commit    : 1e8135e (1e8135e36797c1a05bca927343985b30550ae4bf)
+ *   Git-Commit    : be13979 (be139799c677e3ddb66ae930c197c81312c29456)
  *
  */
 #ifndef TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_GENERATED_DECLARATIONS_CALC_HPP
@@ -49,10 +49,10 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::register_type add(
-         typename Vec::register_type vec_a, typename Vec::register_type vec_b
+          typename Vec::register_type vec_a, typename Vec::register_type vec_b
       ) {
          return functors::add<Vec, Idof>::apply(
-            vec_a, vec_b
+            vec_a,vec_b
          );
       }
    namespace functors {
@@ -69,10 +69,10 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::register_type mul(
-         typename Vec::register_type vec_a, typename Vec::register_type vec_b
+          typename Vec::register_type vec_a, typename Vec::register_type vec_b
       ) {
          return functors::mul<Vec, Idof>::apply(
-            vec_a, vec_b
+            vec_a,vec_b
          );
       }
    namespace functors {
@@ -88,7 +88,7 @@ namespace tvl {
     */
    template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof = workaround>
       [[nodiscard]] TVL_FORCE_INLINE typename Vec::base_type hadd(
-         typename Vec::register_type value
+          typename Vec::register_type value
       ) {
          return functors::hadd<Vec, Idof>::apply(
             value

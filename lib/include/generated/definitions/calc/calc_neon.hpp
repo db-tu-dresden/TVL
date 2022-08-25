@@ -17,18 +17,18 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/calc/calc_neon.hpp
- * \date 2022-08-22
+ * \date 2022-08-25
  * \brief This file contains arithmetic primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 33a0eb3 (33a0eb31c7a217c98ec419fc8513495dcb595d69)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
  *   Git-Branch    : main
- *   Git-Commit    : 1e8135e (1e8135e36797c1a05bca927343985b30550ae4bf)
+ *   Git-Commit    : be13979 (be139799c677e3ddb66ae930c197c81312c29456)
  *
  */
 #ifndef TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_GENERATED_DEFINITIONS_CALC_CALC_NEON_HPP
@@ -53,7 +53,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vaddq_u8( vec_a, vec_b );
             }
@@ -76,7 +76,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vaddq_u16( vec_a, vec_b );
             }
@@ -99,7 +99,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vaddq_u32( vec_a, vec_b );
             }
@@ -122,7 +122,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vaddq_u64( vec_a, vec_b );
             }
@@ -145,7 +145,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vaddq_s8( vec_a, vec_b );
             }
@@ -168,7 +168,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vaddq_s16( vec_a, vec_b );
             }
@@ -191,7 +191,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vaddq_s32( vec_a, vec_b );
             }
@@ -214,7 +214,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vaddq_s64( vec_a, vec_b );
             }
@@ -237,7 +237,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vaddq_f32( vec_a, vec_b );
             }
@@ -260,7 +260,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vaddq_f64( vec_a, vec_b );
             }
@@ -283,7 +283,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vmulq_u8( vec_a, vec_b );
             }
@@ -306,7 +306,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vmulq_u16( vec_a, vec_b );
             }
@@ -329,7 +329,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vmulq_u32( vec_a, vec_b );
             }
@@ -352,7 +352,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vmulq_s8( vec_a, vec_b );
             }
@@ -375,7 +375,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vmulq_s16( vec_a, vec_b );
             }
@@ -398,7 +398,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vmulq_s32( vec_a, vec_b );
             }
@@ -421,7 +421,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vmulq_f32( vec_a, vec_b );
             }
@@ -444,7 +444,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vmulq_f64( vec_a, vec_b );
             }
@@ -467,7 +467,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
                //Found this on stackoverflow. This seems like an overkill. Maybe an extract and scalar multiply would do the trick more efficient.
@@ -496,7 +496,7 @@ namespace tvl {
             [[nodiscard]] TVL_NO_NATIVE_SUPPORT_WARNING
             TVL_FORCE_INLINE 
             static typename Vec::register_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
                //Found this on stackoverflow. This seems like an overkill. Maybe an extract and scalar multiply would do the trick more efficient.
@@ -525,7 +525,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type value
+                typename Vec::register_type value
             ) {
                return vaddvq_u8( value );
             }
@@ -548,7 +548,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type value
+                typename Vec::register_type value
             ) {
                return vaddvq_u16( value );
             }
@@ -571,7 +571,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type value
+                typename Vec::register_type value
             ) {
                return vaddvq_u32( value );
             }
@@ -594,7 +594,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type value
+                typename Vec::register_type value
             ) {
                return vaddvq_u64( value );
             }
@@ -617,7 +617,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type value
+                typename Vec::register_type value
             ) {
                return vaddvq_s8( value );
             }
@@ -640,7 +640,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type value
+                typename Vec::register_type value
             ) {
                return vaddvq_s16( value );
             }
@@ -663,7 +663,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type value
+                typename Vec::register_type value
             ) {
                return vaddvq_s32( value );
             }
@@ -686,7 +686,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type value
+                typename Vec::register_type value
             ) {
                return vaddvq_s64( value );
             }
@@ -709,7 +709,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type value
+                typename Vec::register_type value
             ) {
                return vaddvq_f32( value );
             }
@@ -732,7 +732,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::base_type apply(
-               typename Vec::register_type value
+                typename Vec::register_type value
             ) {
                return vaddvq_f64( value );
             }

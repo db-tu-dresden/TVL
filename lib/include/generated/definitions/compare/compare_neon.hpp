@@ -17,18 +17,18 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/compare/compare_neon.hpp
- * \date 2022-08-22
+ * \date 2022-08-25
  * \brief Compare primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 33a0eb3 (33a0eb31c7a217c98ec419fc8513495dcb595d69)
+ * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
  *   Git-Branch    : main
- *   Git-Commit    : 1e8135e (1e8135e36797c1a05bca927343985b30550ae4bf)
+ *   Git-Commit    : be13979 (be139799c677e3ddb66ae930c197c81312c29456)
  *
  */
 #ifndef TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_GENERATED_DEFINITIONS_COMPARE_COMPARE_NEON_HPP
@@ -53,7 +53,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vceqq_s8(vec_a, vec_b);
             }
@@ -76,7 +76,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vceqq_u8(vec_a, vec_b);
             }
@@ -99,7 +99,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vceqq_s16(vec_a, vec_b);
             }
@@ -122,7 +122,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vceqq_u16(vec_a, vec_b);
             }
@@ -145,7 +145,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vceqq_s32(vec_a, vec_b);
             }
@@ -168,7 +168,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vceqq_u32(vec_a, vec_b);
             }
@@ -191,7 +191,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vceqq_s64(vec_a, vec_b);
             }
@@ -214,7 +214,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vceqq_u64(vec_a, vec_b);
             }
@@ -237,7 +237,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vceqq_f32(vec_a, vec_b);
             }
@@ -260,7 +260,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_a, typename Vec::register_type vec_b
+                typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                return vceqq_f64(vec_a, vec_b);
             }
@@ -283,7 +283,7 @@ namespace tvl {
             [[nodiscard]] 
             TVL_FORCE_INLINE 
             static typename Vec::mask_type apply(
-               typename Vec::register_type vec_data, typename Vec::register_type vec_min, typename Vec::register_type vec_max
+                typename Vec::register_type vec_data, typename Vec::register_type vec_min, typename Vec::register_type vec_max
             ) {
                return vandq_u64( vcgeq_s64( vec_data, vec_min ), vcleq_s64( vec_data, vec_max ) );
             }
