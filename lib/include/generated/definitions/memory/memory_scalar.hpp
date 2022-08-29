@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/memory/memory_scalar.hpp
- * \date 2022-08-25
+ * \date 2022-08-29
  * \brief Memory related primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
+ * Git-Commit    : c3bb1cc (c3bb1cc4fb2ae9daa751818c70ca8ee915793e3a)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -31,12 +31,14 @@
  *   Git-Commit    : be13979 (be139799c677e3ddb66ae930c197c81312c29456)
  *
  */
+
 #ifndef TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_GENERATED_DEFINITIONS_MEMORY_MEMORY_SCALAR_HPP
 #define TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_GENERATED_DEFINITIONS_MEMORY_MEMORY_SCALAR_HPP
 
 #include "../../declarations/memory.hpp"
 namespace tvl {
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -45,8 +47,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<uint8_t, scalar>, Idof> {
-            using Vec = simd<uint8_t, scalar>;
+         struct allocate<simd<uint8_t, scalar>
+, Idof> {
+            using Vec = simd<uint8_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -59,7 +63,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate for scalar using uint8_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -68,8 +73,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<uint16_t, scalar>, Idof> {
-            using Vec = simd<uint16_t, scalar>;
+         struct allocate<simd<uint16_t, scalar>
+, Idof> {
+            using Vec = simd<uint16_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -82,7 +89,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate for scalar using uint16_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -91,8 +99,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<uint32_t, scalar>, Idof> {
-            using Vec = simd<uint32_t, scalar>;
+         struct allocate<simd<uint32_t, scalar>
+, Idof> {
+            using Vec = simd<uint32_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -105,7 +115,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate for scalar using uint32_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -114,8 +125,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<uint64_t, scalar>, Idof> {
-            using Vec = simd<uint64_t, scalar>;
+         struct allocate<simd<uint64_t, scalar>
+, Idof> {
+            using Vec = simd<uint64_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -128,7 +141,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate for scalar using uint64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -137,8 +151,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<int8_t, scalar>, Idof> {
-            using Vec = simd<int8_t, scalar>;
+         struct allocate<simd<int8_t, scalar>
+, Idof> {
+            using Vec = simd<int8_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -151,7 +167,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate for scalar using int8_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -160,8 +177,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<int16_t, scalar>, Idof> {
-            using Vec = simd<int16_t, scalar>;
+         struct allocate<simd<int16_t, scalar>
+, Idof> {
+            using Vec = simd<int16_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -174,7 +193,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate for scalar using int16_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -183,8 +203,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<int32_t, scalar>, Idof> {
-            using Vec = simd<int32_t, scalar>;
+         struct allocate<simd<int32_t, scalar>
+, Idof> {
+            using Vec = simd<int32_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -197,7 +219,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate for scalar using int32_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -206,8 +229,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<int64_t, scalar>, Idof> {
-            using Vec = simd<int64_t, scalar>;
+         struct allocate<simd<int64_t, scalar>
+, Idof> {
+            using Vec = simd<int64_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -220,7 +245,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate for scalar using int64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -229,8 +255,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<float, scalar>, Idof> {
-            using Vec = simd<float, scalar>;
+         struct allocate<simd<float, scalar>
+, Idof> {
+            using Vec = simd<float, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -243,7 +271,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate for scalar using float.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -252,8 +281,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<double, scalar>, Idof> {
-            using Vec = simd<double, scalar>;
+         struct allocate<simd<double, scalar>
+, Idof> {
+            using Vec = simd<double, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -266,7 +297,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate for scalar using double.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -275,8 +307,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<uint8_t, scalar>, Idof> {
-            using Vec = simd<uint8_t, scalar>;
+         struct allocate_aligned<simd<uint8_t, scalar>
+, Idof> {
+            using Vec = simd<uint8_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -289,7 +323,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for scalar using uint8_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -298,8 +333,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<uint16_t, scalar>, Idof> {
-            using Vec = simd<uint16_t, scalar>;
+         struct allocate_aligned<simd<uint16_t, scalar>
+, Idof> {
+            using Vec = simd<uint16_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -312,7 +349,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for scalar using uint16_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -321,8 +359,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<uint32_t, scalar>, Idof> {
-            using Vec = simd<uint32_t, scalar>;
+         struct allocate_aligned<simd<uint32_t, scalar>
+, Idof> {
+            using Vec = simd<uint32_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -335,7 +375,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for scalar using uint32_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -344,8 +385,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<uint64_t, scalar>, Idof> {
-            using Vec = simd<uint64_t, scalar>;
+         struct allocate_aligned<simd<uint64_t, scalar>
+, Idof> {
+            using Vec = simd<uint64_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -358,7 +401,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for scalar using uint64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -367,8 +411,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<int8_t, scalar>, Idof> {
-            using Vec = simd<int8_t, scalar>;
+         struct allocate_aligned<simd<int8_t, scalar>
+, Idof> {
+            using Vec = simd<int8_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -381,7 +427,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for scalar using int8_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -390,8 +437,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<int16_t, scalar>, Idof> {
-            using Vec = simd<int16_t, scalar>;
+         struct allocate_aligned<simd<int16_t, scalar>
+, Idof> {
+            using Vec = simd<int16_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -404,7 +453,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for scalar using int16_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -413,8 +463,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<int32_t, scalar>, Idof> {
-            using Vec = simd<int32_t, scalar>;
+         struct allocate_aligned<simd<int32_t, scalar>
+, Idof> {
+            using Vec = simd<int32_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -427,7 +479,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for scalar using int32_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -436,8 +489,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<int64_t, scalar>, Idof> {
-            using Vec = simd<int64_t, scalar>;
+         struct allocate_aligned<simd<int64_t, scalar>
+, Idof> {
+            using Vec = simd<int64_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -450,7 +505,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for scalar using int64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -459,8 +515,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<float, scalar>, Idof> {
-            using Vec = simd<float, scalar>;
+         struct allocate_aligned<simd<float, scalar>
+, Idof> {
+            using Vec = simd<float, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -473,7 +531,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for scalar using float.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -482,8 +541,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<double, scalar>, Idof> {
-            using Vec = simd<double, scalar>;
+         struct allocate_aligned<simd<double, scalar>
+, Idof> {
+            using Vec = simd<double, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -496,7 +557,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for scalar using double.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -505,8 +567,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<uint8_t, scalar>, Idof> {
-            using Vec = simd<uint8_t, scalar>;
+         struct deallocate<simd<uint8_t, scalar>
+, Idof> {
+            using Vec = simd<uint8_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -519,7 +583,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of deallocate for scalar using uint8_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -528,8 +593,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<uint16_t, scalar>, Idof> {
-            using Vec = simd<uint16_t, scalar>;
+         struct deallocate<simd<uint16_t, scalar>
+, Idof> {
+            using Vec = simd<uint16_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -542,7 +609,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of deallocate for scalar using uint16_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -551,8 +619,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<uint32_t, scalar>, Idof> {
-            using Vec = simd<uint32_t, scalar>;
+         struct deallocate<simd<uint32_t, scalar>
+, Idof> {
+            using Vec = simd<uint32_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -565,7 +635,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of deallocate for scalar using uint32_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -574,8 +645,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<uint64_t, scalar>, Idof> {
-            using Vec = simd<uint64_t, scalar>;
+         struct deallocate<simd<uint64_t, scalar>
+, Idof> {
+            using Vec = simd<uint64_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -588,7 +661,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of deallocate for scalar using uint64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -597,8 +671,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<int8_t, scalar>, Idof> {
-            using Vec = simd<int8_t, scalar>;
+         struct deallocate<simd<int8_t, scalar>
+, Idof> {
+            using Vec = simd<int8_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -611,7 +687,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of deallocate for scalar using int8_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -620,8 +697,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<int16_t, scalar>, Idof> {
-            using Vec = simd<int16_t, scalar>;
+         struct deallocate<simd<int16_t, scalar>
+, Idof> {
+            using Vec = simd<int16_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -634,7 +713,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of deallocate for scalar using int16_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -643,8 +723,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<int32_t, scalar>, Idof> {
-            using Vec = simd<int32_t, scalar>;
+         struct deallocate<simd<int32_t, scalar>
+, Idof> {
+            using Vec = simd<int32_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -657,7 +739,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of deallocate for scalar using int32_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -666,8 +749,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<int64_t, scalar>, Idof> {
-            using Vec = simd<int64_t, scalar>;
+         struct deallocate<simd<int64_t, scalar>
+, Idof> {
+            using Vec = simd<int64_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -680,7 +765,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of deallocate for scalar using int64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -689,8 +775,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<float, scalar>, Idof> {
-            using Vec = simd<float, scalar>;
+         struct deallocate<simd<float, scalar>
+, Idof> {
+            using Vec = simd<float, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -703,7 +791,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of deallocate for scalar using float.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -712,8 +801,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<double, scalar>, Idof> {
-            using Vec = simd<double, scalar>;
+         struct deallocate<simd<double, scalar>
+, Idof> {
+            using Vec = simd<double, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -726,7 +817,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of deallocate for scalar using double.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -735,8 +827,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<uint8_t, scalar>, Idof> {
-            using Vec = simd<uint8_t, scalar>;
+         struct memory_cp<simd<uint8_t, scalar>
+, Idof> {
+            using Vec = simd<uint8_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -749,7 +843,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for scalar using uint8_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -758,8 +853,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<uint16_t, scalar>, Idof> {
-            using Vec = simd<uint16_t, scalar>;
+         struct memory_cp<simd<uint16_t, scalar>
+, Idof> {
+            using Vec = simd<uint16_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -772,7 +869,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for scalar using uint16_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -781,8 +879,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<uint32_t, scalar>, Idof> {
-            using Vec = simd<uint32_t, scalar>;
+         struct memory_cp<simd<uint32_t, scalar>
+, Idof> {
+            using Vec = simd<uint32_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -795,7 +895,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for scalar using uint32_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -804,8 +905,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<uint64_t, scalar>, Idof> {
-            using Vec = simd<uint64_t, scalar>;
+         struct memory_cp<simd<uint64_t, scalar>
+, Idof> {
+            using Vec = simd<uint64_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -818,7 +921,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for scalar using uint64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -827,8 +931,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<int8_t, scalar>, Idof> {
-            using Vec = simd<int8_t, scalar>;
+         struct memory_cp<simd<int8_t, scalar>
+, Idof> {
+            using Vec = simd<int8_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -841,7 +947,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for scalar using int8_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -850,8 +957,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<int16_t, scalar>, Idof> {
-            using Vec = simd<int16_t, scalar>;
+         struct memory_cp<simd<int16_t, scalar>
+, Idof> {
+            using Vec = simd<int16_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -864,7 +973,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for scalar using int16_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -873,8 +983,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<int32_t, scalar>, Idof> {
-            using Vec = simd<int32_t, scalar>;
+         struct memory_cp<simd<int32_t, scalar>
+, Idof> {
+            using Vec = simd<int32_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -887,7 +999,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for scalar using int32_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -896,8 +1009,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<int64_t, scalar>, Idof> {
-            using Vec = simd<int64_t, scalar>;
+         struct memory_cp<simd<int64_t, scalar>
+, Idof> {
+            using Vec = simd<int64_t, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -910,7 +1025,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for scalar using int64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -919,8 +1035,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<float, scalar>, Idof> {
-            using Vec = simd<float, scalar>;
+         struct memory_cp<simd<float, scalar>
+, Idof> {
+            using Vec = simd<float, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -933,7 +1051,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for scalar using float.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -942,8 +1061,10 @@ namespace tvl {
        *  Extension Flags: []
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<double, scalar>, Idof> {
-            using Vec = simd<double, scalar>;
+         struct memory_cp<simd<double, scalar>
+, Idof> {
+            using Vec = simd<double, scalar>
+;
             static constexpr bool native_supported() {
                return true;
             }

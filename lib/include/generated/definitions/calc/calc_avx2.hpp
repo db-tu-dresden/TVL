@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/calc/calc_avx2.hpp
- * \date 2022-08-25
+ * \date 2022-08-29
  * \brief This file contains arithmetic primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
+ * Git-Commit    : c3bb1cc (c3bb1cc4fb2ae9daa751818c70ca8ee915793e3a)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -31,6 +31,7 @@
  *   Git-Commit    : be13979 (be139799c677e3ddb66ae930c197c81312c29456)
  *
  */
+
 #ifndef TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_GENERATED_DEFINITIONS_CALC_CALC_AVX2_HPP
 #define TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_GENERATED_DEFINITIONS_CALC_CALC_AVX2_HPP
 
@@ -38,7 +39,8 @@
 #include <cstddef>
 #include "../../declarations/calc.hpp"
 namespace tvl {
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -48,8 +50,10 @@ namespace tvl {
        * @note: Signed addition.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct add<simd<uint8_t, avx2>, Idof> {
-            using Vec = simd<uint8_t, avx2>;
+         struct add<simd<uint8_t, avx2>
+, Idof> {
+            using Vec = simd<uint8_t, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -62,7 +66,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of add for avx2 using uint8_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -72,8 +77,10 @@ namespace tvl {
        * @note: Signed addition.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct add<simd<uint16_t, avx2>, Idof> {
-            using Vec = simd<uint16_t, avx2>;
+         struct add<simd<uint16_t, avx2>
+, Idof> {
+            using Vec = simd<uint16_t, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -86,7 +93,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of add for avx2 using uint16_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -96,8 +104,10 @@ namespace tvl {
        * @note: Signed addition.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct add<simd<uint32_t, avx2>, Idof> {
-            using Vec = simd<uint32_t, avx2>;
+         struct add<simd<uint32_t, avx2>
+, Idof> {
+            using Vec = simd<uint32_t, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -110,7 +120,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of add for avx2 using uint32_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -120,8 +131,10 @@ namespace tvl {
        * @note: Signed addition.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct add<simd<uint64_t, avx2>, Idof> {
-            using Vec = simd<uint64_t, avx2>;
+         struct add<simd<uint64_t, avx2>
+, Idof> {
+            using Vec = simd<uint64_t, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -134,7 +147,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of add for avx2 using uint64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -144,8 +158,10 @@ namespace tvl {
        * @note: Signed addition.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct add<simd<int8_t, avx2>, Idof> {
-            using Vec = simd<int8_t, avx2>;
+         struct add<simd<int8_t, avx2>
+, Idof> {
+            using Vec = simd<int8_t, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -158,7 +174,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of add for avx2 using int8_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -168,8 +185,10 @@ namespace tvl {
        * @note: Signed addition.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct add<simd<int16_t, avx2>, Idof> {
-            using Vec = simd<int16_t, avx2>;
+         struct add<simd<int16_t, avx2>
+, Idof> {
+            using Vec = simd<int16_t, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -182,7 +201,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of add for avx2 using int16_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -192,8 +212,10 @@ namespace tvl {
        * @note: Signed addition.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct add<simd<int32_t, avx2>, Idof> {
-            using Vec = simd<int32_t, avx2>;
+         struct add<simd<int32_t, avx2>
+, Idof> {
+            using Vec = simd<int32_t, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -206,7 +228,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of add for avx2 using int32_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -216,8 +239,10 @@ namespace tvl {
        * @note: Signed addition.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct add<simd<int64_t, avx2>, Idof> {
-            using Vec = simd<int64_t, avx2>;
+         struct add<simd<int64_t, avx2>
+, Idof> {
+            using Vec = simd<int64_t, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -230,7 +255,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of add for avx2 using int64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -239,8 +265,10 @@ namespace tvl {
        *  Extension Flags: ['avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct add<simd<float, avx2>, Idof> {
-            using Vec = simd<float, avx2>;
+         struct add<simd<float, avx2>
+, Idof> {
+            using Vec = simd<float, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -253,7 +281,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of add for avx2 using float.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -262,8 +291,10 @@ namespace tvl {
        *  Extension Flags: ['avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct add<simd<double, avx2>, Idof> {
-            using Vec = simd<double, avx2>;
+         struct add<simd<double, avx2>
+, Idof> {
+            using Vec = simd<double, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -276,7 +307,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of add for avx2 using double.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mul".
        * @details:
@@ -285,8 +317,10 @@ namespace tvl {
        *  Extension Flags: ['avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mul<simd<float, avx2>, Idof> {
-            using Vec = simd<float, avx2>;
+         struct mul<simd<float, avx2>
+, Idof> {
+            using Vec = simd<float, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -299,7 +333,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of mul for avx2 using float.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mul".
        * @details:
@@ -308,8 +343,10 @@ namespace tvl {
        *  Extension Flags: ['avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mul<simd<double, avx2>, Idof> {
-            using Vec = simd<double, avx2>;
+         struct mul<simd<double, avx2>
+, Idof> {
+            using Vec = simd<double, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -322,7 +359,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of mul for avx2 using double.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mul".
        * @details:
@@ -332,8 +370,10 @@ namespace tvl {
        * @note: Signed multiplication.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mul<simd<uint16_t, avx2>, Idof> {
-            using Vec = simd<uint16_t, avx2>;
+         struct mul<simd<uint16_t, avx2>
+, Idof> {
+            using Vec = simd<uint16_t, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -346,7 +386,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of mul for avx2 using uint16_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mul".
        * @details:
@@ -356,8 +397,10 @@ namespace tvl {
        * @note: Signed multiplication.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mul<simd<int16_t, avx2>, Idof> {
-            using Vec = simd<int16_t, avx2>;
+         struct mul<simd<int16_t, avx2>
+, Idof> {
+            using Vec = simd<int16_t, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -370,7 +413,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of mul for avx2 using int16_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mul".
        * @details:
@@ -380,8 +424,10 @@ namespace tvl {
        * @note: Signed multiplication.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mul<simd<uint32_t, avx2>, Idof> {
-            using Vec = simd<uint32_t, avx2>;
+         struct mul<simd<uint32_t, avx2>
+, Idof> {
+            using Vec = simd<uint32_t, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -394,7 +440,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of mul for avx2 using uint32_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mul".
        * @details:
@@ -404,8 +451,10 @@ namespace tvl {
        * @note: Signed multiplication.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mul<simd<int32_t, avx2>, Idof> {
-            using Vec = simd<int32_t, avx2>;
+         struct mul<simd<int32_t, avx2>
+, Idof> {
+            using Vec = simd<int32_t, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -418,7 +467,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of mul for avx2 using int32_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mul".
        * @details:
@@ -428,8 +478,10 @@ namespace tvl {
        * @note: Signed multiplication.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mul<simd<uint64_t, avx2>, Idof> {
-            using Vec = simd<uint64_t, avx2>;
+         struct mul<simd<uint64_t, avx2>
+, Idof> {
+            using Vec = simd<uint64_t, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -442,7 +494,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of mul for avx2 using uint64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mul".
        * @details:
@@ -452,8 +505,10 @@ namespace tvl {
        * @note: Signed multiplication.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mul<simd<int64_t, avx2>, Idof> {
-            using Vec = simd<int64_t, avx2>;
+         struct mul<simd<int64_t, avx2>
+, Idof> {
+            using Vec = simd<int64_t, avx2>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -466,7 +521,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of mul for avx2 using int64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mul".
        * @details:
@@ -475,8 +531,10 @@ namespace tvl {
        *  Extension Flags: ['avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mul<simd<uint8_t, avx2>, Idof> {
-            using Vec = simd<uint8_t, avx2>;
+         struct mul<simd<uint8_t, avx2>
+, Idof> {
+            using Vec = simd<uint8_t, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -497,7 +555,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of mul for avx2 using uint8_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mul".
        * @details:
@@ -506,8 +565,10 @@ namespace tvl {
        *  Extension Flags: ['avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mul<simd<int8_t, avx2>, Idof> {
-            using Vec = simd<int8_t, avx2>;
+         struct mul<simd<int8_t, avx2>
+, Idof> {
+            using Vec = simd<int8_t, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -528,7 +589,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of mul for avx2 using int8_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mul".
        * @details:
@@ -537,8 +599,10 @@ namespace tvl {
        *  Extension Flags: ['avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mul<simd<uint16_t, avx2>, Idof> {
-            using Vec = simd<uint16_t, avx2>;
+         struct mul<simd<uint16_t, avx2>
+, Idof> {
+            using Vec = simd<uint16_t, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -559,7 +623,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of mul for avx2 using uint16_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mul".
        * @details:
@@ -568,8 +633,10 @@ namespace tvl {
        *  Extension Flags: ['avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mul<simd<int16_t, avx2>, Idof> {
-            using Vec = simd<int16_t, avx2>;
+         struct mul<simd<int16_t, avx2>
+, Idof> {
+            using Vec = simd<int16_t, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -590,7 +657,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of mul for avx2 using int16_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mul".
        * @details:
@@ -599,8 +667,10 @@ namespace tvl {
        *  Extension Flags: ['avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mul<simd<uint32_t, avx2>, Idof> {
-            using Vec = simd<uint32_t, avx2>;
+         struct mul<simd<uint32_t, avx2>
+, Idof> {
+            using Vec = simd<uint32_t, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -621,7 +691,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of mul for avx2 using uint32_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mul".
        * @details:
@@ -630,8 +701,10 @@ namespace tvl {
        *  Extension Flags: ['avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mul<simd<int32_t, avx2>, Idof> {
-            using Vec = simd<int32_t, avx2>;
+         struct mul<simd<int32_t, avx2>
+, Idof> {
+            using Vec = simd<int32_t, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -652,7 +725,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of mul for avx2 using int32_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mul".
        * @details:
@@ -661,8 +735,10 @@ namespace tvl {
        *  Extension Flags: ['avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mul<simd<uint64_t, avx2>, Idof> {
-            using Vec = simd<uint64_t, avx2>;
+         struct mul<simd<uint64_t, avx2>
+, Idof> {
+            using Vec = simd<uint64_t, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -683,7 +759,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of mul for avx2 using uint64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mul".
        * @details:
@@ -692,8 +769,10 @@ namespace tvl {
        *  Extension Flags: ['avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mul<simd<int64_t, avx2>, Idof> {
-            using Vec = simd<int64_t, avx2>;
+         struct mul<simd<int64_t, avx2>
+, Idof> {
+            using Vec = simd<int64_t, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -714,7 +793,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of mul for avx2 using int64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "hadd".
        * @details:
@@ -723,8 +803,10 @@ namespace tvl {
        *  Extension Flags: ['sse2', 'sse3', 'avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct hadd<simd<double, avx2>, Idof> {
-            using Vec = simd<double, avx2>;
+         struct hadd<simd<double, avx2>
+, Idof> {
+            using Vec = simd<double, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -743,7 +825,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of hadd for avx2 using double.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "hadd".
        * @details:
@@ -752,8 +835,10 @@ namespace tvl {
        *  Extension Flags: ['sse', 'sse2', 'sse3', 'avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct hadd<simd<float, avx2>, Idof> {
-            using Vec = simd<float, avx2>;
+         struct hadd<simd<float, avx2>
+, Idof> {
+            using Vec = simd<float, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -771,7 +856,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of hadd for avx2 using float.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "hadd".
        * @details:
@@ -781,8 +867,10 @@ namespace tvl {
        * @note: Signed Addition.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct hadd<simd<uint64_t, avx2>, Idof> {
-            using Vec = simd<uint64_t, avx2>;
+         struct hadd<simd<uint64_t, avx2>
+, Idof> {
+            using Vec = simd<uint64_t, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -800,7 +888,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of hadd for avx2 using uint64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "hadd".
        * @details:
@@ -810,8 +899,10 @@ namespace tvl {
        * @note: Signed Addition.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct hadd<simd<int64_t, avx2>, Idof> {
-            using Vec = simd<int64_t, avx2>;
+         struct hadd<simd<int64_t, avx2>
+, Idof> {
+            using Vec = simd<int64_t, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -829,7 +920,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of hadd for avx2 using int64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "hadd".
        * @details:
@@ -839,8 +931,10 @@ namespace tvl {
        * @note: Signed Addition.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct hadd<simd<uint32_t, avx2>, Idof> {
-            using Vec = simd<uint32_t, avx2>;
+         struct hadd<simd<uint32_t, avx2>
+, Idof> {
+            using Vec = simd<uint32_t, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -858,7 +952,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of hadd for avx2 using uint32_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "hadd".
        * @details:
@@ -868,8 +963,10 @@ namespace tvl {
        * @note: Signed Addition.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct hadd<simd<int32_t, avx2>, Idof> {
-            using Vec = simd<int32_t, avx2>;
+         struct hadd<simd<int32_t, avx2>
+, Idof> {
+            using Vec = simd<int32_t, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -887,7 +984,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of hadd for avx2 using int32_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "hadd".
        * @details:
@@ -896,8 +994,10 @@ namespace tvl {
        *  Extension Flags: ['avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct hadd<simd<uint8_t, avx2>, Idof> {
-            using Vec = simd<uint8_t, avx2>;
+         struct hadd<simd<uint8_t, avx2>
+, Idof> {
+            using Vec = simd<uint8_t, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -917,7 +1017,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of hadd for avx2 using uint8_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "hadd".
        * @details:
@@ -926,8 +1027,10 @@ namespace tvl {
        *  Extension Flags: ['avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct hadd<simd<int8_t, avx2>, Idof> {
-            using Vec = simd<int8_t, avx2>;
+         struct hadd<simd<int8_t, avx2>
+, Idof> {
+            using Vec = simd<int8_t, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -947,7 +1050,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of hadd for avx2 using int8_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "hadd".
        * @details:
@@ -956,8 +1060,10 @@ namespace tvl {
        *  Extension Flags: ['avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct hadd<simd<uint16_t, avx2>, Idof> {
-            using Vec = simd<uint16_t, avx2>;
+         struct hadd<simd<uint16_t, avx2>
+, Idof> {
+            using Vec = simd<uint16_t, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
@@ -977,7 +1083,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of hadd for avx2 using uint16_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "hadd".
        * @details:
@@ -986,8 +1093,10 @@ namespace tvl {
        *  Extension Flags: ['avx']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct hadd<simd<int16_t, avx2>, Idof> {
-            using Vec = simd<int16_t, avx2>;
+         struct hadd<simd<int16_t, avx2>
+, Idof> {
+            using Vec = simd<int16_t, avx2>
+;
             static constexpr bool native_supported() {
                return false;
             }
