@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/mask/mask_sse.hpp
- * \date 2022-08-25
+ * \date 2022-08-29
  * \brief Mask related primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
+ * Git-Commit    : c3bb1cc (c3bb1cc4fb2ae9daa751818c70ca8ee915793e3a)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -31,12 +31,14 @@
  *   Git-Commit    : be13979 (be139799c677e3ddb66ae930c197c81312c29456)
  *
  */
+
 #ifndef TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_GENERATED_DEFINITIONS_MASK_MASK_SSE_HPP
 #define TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_GENERATED_DEFINITIONS_MASK_MASK_SSE_HPP
 
 #include "../../declarations/mask.hpp"
 namespace tvl {
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "to_integral".
        * @details:
@@ -45,8 +47,10 @@ namespace tvl {
        *  Extension Flags: ['sse2']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct to_integral<simd<int64_t, sse>, Idof> {
-            using Vec = simd<int64_t, sse>;
+         struct to_integral<simd<int64_t, sse>
+, Idof> {
+            using Vec = simd<int64_t, sse>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -59,7 +63,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of to_integral for sse using int64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "get_msb".
        * @details:
@@ -68,8 +73,10 @@ namespace tvl {
        *  Extension Flags: ['sse2']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct get_msb<simd<int64_t, sse>, Idof> {
-            using Vec = simd<int64_t, sse>;
+         struct get_msb<simd<int64_t, sse>
+, Idof> {
+            using Vec = simd<int64_t, sse>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -82,7 +89,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of get_msb for sse using int64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "to_vector".
        * @details:
@@ -91,8 +99,10 @@ namespace tvl {
        *  Extension Flags: ['sse2']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct to_vector<simd<int64_t, sse>, Idof> {
-            using Vec = simd<int64_t, sse>;
+         struct to_vector<simd<int64_t, sse>
+, Idof> {
+            using Vec = simd<int64_t, sse>
+;
             static constexpr bool native_supported() {
                return true;
             }
@@ -105,7 +115,8 @@ namespace tvl {
             }
          };
    } // end of namespace functors for template specialization of to_vector for sse using int64_t.
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "mask_reduce".
        * @details:
@@ -114,8 +125,10 @@ namespace tvl {
        *  Extension Flags: ['sse2']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct mask_reduce<simd<int64_t, sse>, Idof> {
-            using Vec = simd<int64_t, sse>;
+         struct mask_reduce<simd<int64_t, sse>
+, Idof> {
+            using Vec = simd<int64_t, sse>
+;
             static constexpr bool native_supported() {
                return true;
             }

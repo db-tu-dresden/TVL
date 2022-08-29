@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/io/io_sse.hpp
- * \date 2022-08-25
+ * \date 2022-08-29
  * \brief Input/Output primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : 09e790d (09e790d9cc40c4de3fbe683afe9241a803f25915)
+ * Git-Commit    : c3bb1cc (c3bb1cc4fb2ae9daa751818c70ca8ee915793e3a)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -31,12 +31,14 @@
  *   Git-Commit    : be13979 (be139799c677e3ddb66ae930c197c81312c29456)
  *
  */
+
 #ifndef TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_GENERATED_DEFINITIONS_IO_IO_SSE_HPP
 #define TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_GENERATED_DEFINITIONS_IO_IO_SSE_HPP
 
 #include "../../declarations/io.hpp"
 namespace tvl {
-   namespace functors {
+   
+namespace functors {
       /**
        * @brief: Template specialization of implementation for "to_ostream".
        * @details:
@@ -45,8 +47,10 @@ namespace tvl {
        *  Extension Flags: ['sse2']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct to_ostream<simd<int64_t, sse>, Idof> {
-            using Vec = simd<int64_t, sse>;
+         struct to_ostream<simd<int64_t, sse>
+, Idof> {
+            using Vec = simd<int64_t, sse>
+;
             static constexpr bool native_supported() {
                return true;
             }
