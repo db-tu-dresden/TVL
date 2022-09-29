@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/binary/binary_avx512.hpp
- * \date 2022-08-29
+ * \date 2022-09-29
  * \brief Bit manipulation primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : c3bb1cc (c3bb1cc4fb2ae9daa751818c70ca8ee915793e3a)
+ * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -37,8 +37,7 @@
 
 #include "../../declarations/binary.hpp"
 namespace tvl {
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "binary_and".
        * @details:
@@ -47,10 +46,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct binary_and<simd<uint8_t, avx512>
-, Idof> {
-            using Vec = simd<uint8_t, avx512>
-;
+         struct binary_and<simd<uint8_t, avx512>, Idof> {
+            using Vec = simd<uint8_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -63,8 +60,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of binary_and for avx512 using uint8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "binary_and".
        * @details:
@@ -73,10 +69,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct binary_and<simd<uint16_t, avx512>
-, Idof> {
-            using Vec = simd<uint16_t, avx512>
-;
+         struct binary_and<simd<uint16_t, avx512>, Idof> {
+            using Vec = simd<uint16_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -89,8 +83,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of binary_and for avx512 using uint16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "binary_and".
        * @details:
@@ -99,10 +92,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct binary_and<simd<uint32_t, avx512>
-, Idof> {
-            using Vec = simd<uint32_t, avx512>
-;
+         struct binary_and<simd<uint32_t, avx512>, Idof> {
+            using Vec = simd<uint32_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -115,8 +106,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of binary_and for avx512 using uint32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "binary_and".
        * @details:
@@ -125,10 +115,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct binary_and<simd<uint64_t, avx512>
-, Idof> {
-            using Vec = simd<uint64_t, avx512>
-;
+         struct binary_and<simd<uint64_t, avx512>, Idof> {
+            using Vec = simd<uint64_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -141,8 +129,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of binary_and for avx512 using uint64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "binary_and".
        * @details:
@@ -151,10 +138,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct binary_and<simd<int8_t, avx512>
-, Idof> {
-            using Vec = simd<int8_t, avx512>
-;
+         struct binary_and<simd<int8_t, avx512>, Idof> {
+            using Vec = simd<int8_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -167,8 +152,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of binary_and for avx512 using int8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "binary_and".
        * @details:
@@ -177,10 +161,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct binary_and<simd<int16_t, avx512>
-, Idof> {
-            using Vec = simd<int16_t, avx512>
-;
+         struct binary_and<simd<int16_t, avx512>, Idof> {
+            using Vec = simd<int16_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -193,8 +175,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of binary_and for avx512 using int16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "binary_and".
        * @details:
@@ -203,10 +184,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct binary_and<simd<int32_t, avx512>
-, Idof> {
-            using Vec = simd<int32_t, avx512>
-;
+         struct binary_and<simd<int32_t, avx512>, Idof> {
+            using Vec = simd<int32_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -219,8 +198,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of binary_and for avx512 using int32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "binary_and".
        * @details:
@@ -229,10 +207,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct binary_and<simd<int64_t, avx512>
-, Idof> {
-            using Vec = simd<int64_t, avx512>
-;
+         struct binary_and<simd<int64_t, avx512>, Idof> {
+            using Vec = simd<int64_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -245,8 +221,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of binary_and for avx512 using int64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "binary_and".
        * @details:
@@ -255,10 +230,8 @@ namespace functors {
        *  Extension Flags: ['avx512dq']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct binary_and<simd<float, avx512>
-, Idof> {
-            using Vec = simd<float, avx512>
-;
+         struct binary_and<simd<float, avx512>, Idof> {
+            using Vec = simd<float, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -271,8 +244,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of binary_and for avx512 using float.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "binary_and".
        * @details:
@@ -281,10 +253,8 @@ namespace functors {
        *  Extension Flags: ['avx512dq']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct binary_and<simd<double, avx512>
-, Idof> {
-            using Vec = simd<double, avx512>
-;
+         struct binary_and<simd<double, avx512>, Idof> {
+            using Vec = simd<double, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -297,8 +267,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of binary_and for avx512 using double.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "binary_and".
        * @details:
@@ -307,10 +276,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct binary_and<simd<float, avx512>
-, Idof> {
-            using Vec = simd<float, avx512>
-;
+         struct binary_and<simd<float, avx512>, Idof> {
+            using Vec = simd<float, avx512>;
             static constexpr bool native_supported() {
                return false;
             }
@@ -324,8 +291,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of binary_and for avx512 using float.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "binary_and".
        * @details:
@@ -334,10 +300,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct binary_and<simd<double, avx512>
-, Idof> {
-            using Vec = simd<double, avx512>
-;
+         struct binary_and<simd<double, avx512>, Idof> {
+            using Vec = simd<double, avx512>;
             static constexpr bool native_supported() {
                return false;
             }

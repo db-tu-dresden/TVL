@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/memory/memory_avx512.hpp
- * \date 2022-08-29
+ * \date 2022-09-29
  * \brief Memory related primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : c3bb1cc (c3bb1cc4fb2ae9daa751818c70ca8ee915793e3a)
+ * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -37,8 +37,7 @@
 
 #include "../../declarations/memory.hpp"
 namespace tvl {
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -47,10 +46,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<uint8_t, avx512>
-, Idof> {
-            using Vec = simd<uint8_t, avx512>
-;
+         struct allocate<simd<uint8_t, avx512>, Idof> {
+            using Vec = simd<uint8_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -63,8 +60,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate for avx512 using uint8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -73,10 +69,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<uint16_t, avx512>
-, Idof> {
-            using Vec = simd<uint16_t, avx512>
-;
+         struct allocate<simd<uint16_t, avx512>, Idof> {
+            using Vec = simd<uint16_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -89,8 +83,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate for avx512 using uint16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -99,10 +92,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<uint32_t, avx512>
-, Idof> {
-            using Vec = simd<uint32_t, avx512>
-;
+         struct allocate<simd<uint32_t, avx512>, Idof> {
+            using Vec = simd<uint32_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -115,8 +106,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate for avx512 using uint32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -125,10 +115,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<uint64_t, avx512>
-, Idof> {
-            using Vec = simd<uint64_t, avx512>
-;
+         struct allocate<simd<uint64_t, avx512>, Idof> {
+            using Vec = simd<uint64_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -141,8 +129,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate for avx512 using uint64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -151,10 +138,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<int8_t, avx512>
-, Idof> {
-            using Vec = simd<int8_t, avx512>
-;
+         struct allocate<simd<int8_t, avx512>, Idof> {
+            using Vec = simd<int8_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -167,8 +152,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate for avx512 using int8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -177,10 +161,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<int16_t, avx512>
-, Idof> {
-            using Vec = simd<int16_t, avx512>
-;
+         struct allocate<simd<int16_t, avx512>, Idof> {
+            using Vec = simd<int16_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -193,8 +175,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate for avx512 using int16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -203,10 +184,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<int32_t, avx512>
-, Idof> {
-            using Vec = simd<int32_t, avx512>
-;
+         struct allocate<simd<int32_t, avx512>, Idof> {
+            using Vec = simd<int32_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -219,8 +198,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate for avx512 using int32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -229,10 +207,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<int64_t, avx512>
-, Idof> {
-            using Vec = simd<int64_t, avx512>
-;
+         struct allocate<simd<int64_t, avx512>, Idof> {
+            using Vec = simd<int64_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -245,8 +221,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate for avx512 using int64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -255,10 +230,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<float, avx512>
-, Idof> {
-            using Vec = simd<float, avx512>
-;
+         struct allocate<simd<float, avx512>, Idof> {
+            using Vec = simd<float, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -271,8 +244,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate for avx512 using float.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate".
        * @details:
@@ -281,10 +253,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate<simd<double, avx512>
-, Idof> {
-            using Vec = simd<double, avx512>
-;
+         struct allocate<simd<double, avx512>, Idof> {
+            using Vec = simd<double, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -297,8 +267,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate for avx512 using double.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -307,10 +276,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<uint8_t, avx512>
-, Idof> {
-            using Vec = simd<uint8_t, avx512>
-;
+         struct allocate_aligned<simd<uint8_t, avx512>, Idof> {
+            using Vec = simd<uint8_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -323,8 +290,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for avx512 using uint8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -333,10 +299,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<uint16_t, avx512>
-, Idof> {
-            using Vec = simd<uint16_t, avx512>
-;
+         struct allocate_aligned<simd<uint16_t, avx512>, Idof> {
+            using Vec = simd<uint16_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -349,8 +313,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for avx512 using uint16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -359,10 +322,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<uint32_t, avx512>
-, Idof> {
-            using Vec = simd<uint32_t, avx512>
-;
+         struct allocate_aligned<simd<uint32_t, avx512>, Idof> {
+            using Vec = simd<uint32_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -375,8 +336,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for avx512 using uint32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -385,10 +345,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<uint64_t, avx512>
-, Idof> {
-            using Vec = simd<uint64_t, avx512>
-;
+         struct allocate_aligned<simd<uint64_t, avx512>, Idof> {
+            using Vec = simd<uint64_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -401,8 +359,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for avx512 using uint64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -411,10 +368,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<int8_t, avx512>
-, Idof> {
-            using Vec = simd<int8_t, avx512>
-;
+         struct allocate_aligned<simd<int8_t, avx512>, Idof> {
+            using Vec = simd<int8_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -427,8 +382,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for avx512 using int8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -437,10 +391,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<int16_t, avx512>
-, Idof> {
-            using Vec = simd<int16_t, avx512>
-;
+         struct allocate_aligned<simd<int16_t, avx512>, Idof> {
+            using Vec = simd<int16_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -453,8 +405,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for avx512 using int16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -463,10 +414,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<int32_t, avx512>
-, Idof> {
-            using Vec = simd<int32_t, avx512>
-;
+         struct allocate_aligned<simd<int32_t, avx512>, Idof> {
+            using Vec = simd<int32_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -479,8 +428,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for avx512 using int32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -489,10 +437,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<int64_t, avx512>
-, Idof> {
-            using Vec = simd<int64_t, avx512>
-;
+         struct allocate_aligned<simd<int64_t, avx512>, Idof> {
+            using Vec = simd<int64_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -505,8 +451,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for avx512 using int64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -515,10 +460,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<float, avx512>
-, Idof> {
-            using Vec = simd<float, avx512>
-;
+         struct allocate_aligned<simd<float, avx512>, Idof> {
+            using Vec = simd<float, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -531,8 +474,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for avx512 using float.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "allocate_aligned".
        * @details:
@@ -541,10 +483,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct allocate_aligned<simd<double, avx512>
-, Idof> {
-            using Vec = simd<double, avx512>
-;
+         struct allocate_aligned<simd<double, avx512>, Idof> {
+            using Vec = simd<double, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -557,8 +497,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of allocate_aligned for avx512 using double.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -567,10 +506,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<uint8_t, avx512>
-, Idof> {
-            using Vec = simd<uint8_t, avx512>
-;
+         struct deallocate<simd<uint8_t, avx512>, Idof> {
+            using Vec = simd<uint8_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -583,8 +520,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of deallocate for avx512 using uint8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -593,10 +529,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<uint16_t, avx512>
-, Idof> {
-            using Vec = simd<uint16_t, avx512>
-;
+         struct deallocate<simd<uint16_t, avx512>, Idof> {
+            using Vec = simd<uint16_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -609,8 +543,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of deallocate for avx512 using uint16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -619,10 +552,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<uint32_t, avx512>
-, Idof> {
-            using Vec = simd<uint32_t, avx512>
-;
+         struct deallocate<simd<uint32_t, avx512>, Idof> {
+            using Vec = simd<uint32_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -635,8 +566,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of deallocate for avx512 using uint32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -645,10 +575,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<uint64_t, avx512>
-, Idof> {
-            using Vec = simd<uint64_t, avx512>
-;
+         struct deallocate<simd<uint64_t, avx512>, Idof> {
+            using Vec = simd<uint64_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -661,8 +589,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of deallocate for avx512 using uint64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -671,10 +598,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<int8_t, avx512>
-, Idof> {
-            using Vec = simd<int8_t, avx512>
-;
+         struct deallocate<simd<int8_t, avx512>, Idof> {
+            using Vec = simd<int8_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -687,8 +612,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of deallocate for avx512 using int8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -697,10 +621,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<int16_t, avx512>
-, Idof> {
-            using Vec = simd<int16_t, avx512>
-;
+         struct deallocate<simd<int16_t, avx512>, Idof> {
+            using Vec = simd<int16_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -713,8 +635,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of deallocate for avx512 using int16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -723,10 +644,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<int32_t, avx512>
-, Idof> {
-            using Vec = simd<int32_t, avx512>
-;
+         struct deallocate<simd<int32_t, avx512>, Idof> {
+            using Vec = simd<int32_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -739,8 +658,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of deallocate for avx512 using int32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -749,10 +667,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<int64_t, avx512>
-, Idof> {
-            using Vec = simd<int64_t, avx512>
-;
+         struct deallocate<simd<int64_t, avx512>, Idof> {
+            using Vec = simd<int64_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -765,8 +681,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of deallocate for avx512 using int64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -775,10 +690,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<float, avx512>
-, Idof> {
-            using Vec = simd<float, avx512>
-;
+         struct deallocate<simd<float, avx512>, Idof> {
+            using Vec = simd<float, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -791,8 +704,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of deallocate for avx512 using float.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "deallocate".
        * @details:
@@ -801,10 +713,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct deallocate<simd<double, avx512>
-, Idof> {
-            using Vec = simd<double, avx512>
-;
+         struct deallocate<simd<double, avx512>, Idof> {
+            using Vec = simd<double, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -817,8 +727,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of deallocate for avx512 using double.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -827,10 +736,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<uint8_t, avx512>
-, Idof> {
-            using Vec = simd<uint8_t, avx512>
-;
+         struct memory_cp<simd<uint8_t, avx512>, Idof> {
+            using Vec = simd<uint8_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -843,8 +750,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for avx512 using uint8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -853,10 +759,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<uint16_t, avx512>
-, Idof> {
-            using Vec = simd<uint16_t, avx512>
-;
+         struct memory_cp<simd<uint16_t, avx512>, Idof> {
+            using Vec = simd<uint16_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -869,8 +773,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for avx512 using uint16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -879,10 +782,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<uint32_t, avx512>
-, Idof> {
-            using Vec = simd<uint32_t, avx512>
-;
+         struct memory_cp<simd<uint32_t, avx512>, Idof> {
+            using Vec = simd<uint32_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -895,8 +796,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for avx512 using uint32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -905,10 +805,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<uint64_t, avx512>
-, Idof> {
-            using Vec = simd<uint64_t, avx512>
-;
+         struct memory_cp<simd<uint64_t, avx512>, Idof> {
+            using Vec = simd<uint64_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -921,8 +819,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for avx512 using uint64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -931,10 +828,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<int8_t, avx512>
-, Idof> {
-            using Vec = simd<int8_t, avx512>
-;
+         struct memory_cp<simd<int8_t, avx512>, Idof> {
+            using Vec = simd<int8_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -947,8 +842,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for avx512 using int8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -957,10 +851,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<int16_t, avx512>
-, Idof> {
-            using Vec = simd<int16_t, avx512>
-;
+         struct memory_cp<simd<int16_t, avx512>, Idof> {
+            using Vec = simd<int16_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -973,8 +865,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for avx512 using int16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -983,10 +874,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<int32_t, avx512>
-, Idof> {
-            using Vec = simd<int32_t, avx512>
-;
+         struct memory_cp<simd<int32_t, avx512>, Idof> {
+            using Vec = simd<int32_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -999,8 +888,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for avx512 using int32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -1009,10 +897,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<int64_t, avx512>
-, Idof> {
-            using Vec = simd<int64_t, avx512>
-;
+         struct memory_cp<simd<int64_t, avx512>, Idof> {
+            using Vec = simd<int64_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -1025,8 +911,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for avx512 using int64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -1035,10 +920,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<float, avx512>
-, Idof> {
-            using Vec = simd<float, avx512>
-;
+         struct memory_cp<simd<float, avx512>, Idof> {
+            using Vec = simd<float, avx512>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -1051,8 +934,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of memory_cp for avx512 using float.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "memory_cp".
        * @details:
@@ -1061,10 +943,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct memory_cp<simd<double, avx512>
-, Idof> {
-            using Vec = simd<double, avx512>
-;
+         struct memory_cp<simd<double, avx512>, Idof> {
+            using Vec = simd<double, avx512>;
             static constexpr bool native_supported() {
                return true;
             }

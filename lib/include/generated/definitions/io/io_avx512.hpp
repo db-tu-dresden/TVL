@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/io/io_avx512.hpp
- * \date 2022-08-29
+ * \date 2022-09-29
  * \brief Input/Output primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : c3bb1cc (c3bb1cc4fb2ae9daa751818c70ca8ee915793e3a)
+ * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -37,8 +37,7 @@
 
 #include "../../declarations/io.hpp"
 namespace tvl {
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "to_ostream".
        * @details:
@@ -47,10 +46,8 @@ namespace functors {
        *  Extension Flags: ['avx512f']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct to_ostream<simd<int64_t, avx512>
-, Idof> {
-            using Vec = simd<int64_t, avx512>
-;
+         struct to_ostream<simd<int64_t, avx512>, Idof> {
+            using Vec = simd<int64_t, avx512>;
             static constexpr bool native_supported() {
                return true;
             }

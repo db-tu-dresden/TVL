@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/calc/calc_cuda.hpp
- * \date 2022-08-29
+ * \date 2022-09-29
  * \brief This file contains arithmetic primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : c3bb1cc (c3bb1cc4fb2ae9daa751818c70ca8ee915793e3a)
+ * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -37,8 +37,7 @@
 
 #include "../../declarations/calc.hpp"
 namespace tvl {
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -47,10 +46,8 @@ namespace functors {
        *  Extension Flags: ['cuda']
        */
       template<std::size_t VectorSize, ImplementationDegreeOfFreedom Idof>
-         struct add<simd<uint8_t, cuda, VectorSize>
-, Idof> {
-            using Vec = simd<uint8_t, cuda, VectorSize>
-;
+         struct add<simd<uint8_t, cuda, VectorSize>, Idof> {
+            using Vec = simd<uint8_t, cuda, VectorSize>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -66,8 +63,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of add for cuda using uint8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -76,10 +72,8 @@ namespace functors {
        *  Extension Flags: ['cuda']
        */
       template<std::size_t VectorSize, ImplementationDegreeOfFreedom Idof>
-         struct add<simd<uint16_t, cuda, VectorSize>
-, Idof> {
-            using Vec = simd<uint16_t, cuda, VectorSize>
-;
+         struct add<simd<uint16_t, cuda, VectorSize>, Idof> {
+            using Vec = simd<uint16_t, cuda, VectorSize>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -95,8 +89,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of add for cuda using uint16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -105,10 +98,8 @@ namespace functors {
        *  Extension Flags: ['cuda']
        */
       template<std::size_t VectorSize, ImplementationDegreeOfFreedom Idof>
-         struct add<simd<uint32_t, cuda, VectorSize>
-, Idof> {
-            using Vec = simd<uint32_t, cuda, VectorSize>
-;
+         struct add<simd<uint32_t, cuda, VectorSize>, Idof> {
+            using Vec = simd<uint32_t, cuda, VectorSize>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -124,8 +115,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of add for cuda using uint32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -134,10 +124,8 @@ namespace functors {
        *  Extension Flags: ['cuda']
        */
       template<std::size_t VectorSize, ImplementationDegreeOfFreedom Idof>
-         struct add<simd<uint64_t, cuda, VectorSize>
-, Idof> {
-            using Vec = simd<uint64_t, cuda, VectorSize>
-;
+         struct add<simd<uint64_t, cuda, VectorSize>, Idof> {
+            using Vec = simd<uint64_t, cuda, VectorSize>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -153,8 +141,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of add for cuda using uint64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -163,10 +150,8 @@ namespace functors {
        *  Extension Flags: ['cuda']
        */
       template<std::size_t VectorSize, ImplementationDegreeOfFreedom Idof>
-         struct add<simd<int8_t, cuda, VectorSize>
-, Idof> {
-            using Vec = simd<int8_t, cuda, VectorSize>
-;
+         struct add<simd<int8_t, cuda, VectorSize>, Idof> {
+            using Vec = simd<int8_t, cuda, VectorSize>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -182,8 +167,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of add for cuda using int8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -192,10 +176,8 @@ namespace functors {
        *  Extension Flags: ['cuda']
        */
       template<std::size_t VectorSize, ImplementationDegreeOfFreedom Idof>
-         struct add<simd<int16_t, cuda, VectorSize>
-, Idof> {
-            using Vec = simd<int16_t, cuda, VectorSize>
-;
+         struct add<simd<int16_t, cuda, VectorSize>, Idof> {
+            using Vec = simd<int16_t, cuda, VectorSize>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -211,8 +193,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of add for cuda using int16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -221,10 +202,8 @@ namespace functors {
        *  Extension Flags: ['cuda']
        */
       template<std::size_t VectorSize, ImplementationDegreeOfFreedom Idof>
-         struct add<simd<int32_t, cuda, VectorSize>
-, Idof> {
-            using Vec = simd<int32_t, cuda, VectorSize>
-;
+         struct add<simd<int32_t, cuda, VectorSize>, Idof> {
+            using Vec = simd<int32_t, cuda, VectorSize>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -240,8 +219,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of add for cuda using int32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -250,10 +228,8 @@ namespace functors {
        *  Extension Flags: ['cuda']
        */
       template<std::size_t VectorSize, ImplementationDegreeOfFreedom Idof>
-         struct add<simd<int64_t, cuda, VectorSize>
-, Idof> {
-            using Vec = simd<int64_t, cuda, VectorSize>
-;
+         struct add<simd<int64_t, cuda, VectorSize>, Idof> {
+            using Vec = simd<int64_t, cuda, VectorSize>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -269,8 +245,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of add for cuda using int64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -279,10 +254,8 @@ namespace functors {
        *  Extension Flags: ['cuda']
        */
       template<std::size_t VectorSize, ImplementationDegreeOfFreedom Idof>
-         struct add<simd<float, cuda, VectorSize>
-, Idof> {
-            using Vec = simd<float, cuda, VectorSize>
-;
+         struct add<simd<float, cuda, VectorSize>, Idof> {
+            using Vec = simd<float, cuda, VectorSize>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -298,8 +271,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of add for cuda using float.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "add".
        * @details:
@@ -308,10 +280,8 @@ namespace functors {
        *  Extension Flags: ['cuda']
        */
       template<std::size_t VectorSize, ImplementationDegreeOfFreedom Idof>
-         struct add<simd<double, cuda, VectorSize>
-, Idof> {
-            using Vec = simd<double, cuda, VectorSize>
-;
+         struct add<simd<double, cuda, VectorSize>, Idof> {
+            using Vec = simd<double, cuda, VectorSize>;
             static constexpr bool native_supported() {
                return true;
             }
