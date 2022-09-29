@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/ls/ls_neon.hpp
- * \date 2022-08-29
+ * \date 2022-09-29
  * \brief Load/Store primitives
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : c3bb1cc (c3bb1cc4fb2ae9daa751818c70ca8ee915793e3a)
+ * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -37,8 +37,7 @@
 
 #include "../../declarations/ls.hpp"
 namespace tvl {
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "load".
        * @details:
@@ -47,10 +46,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct load<simd<int64_t, neon>
-, Idof> {
-            using Vec = simd<int64_t, neon>
-;
+         struct load<simd<int64_t, neon>, Idof> {
+            using Vec = simd<int64_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -63,8 +60,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of load for neon using int64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "loadu".
        * @details:
@@ -73,10 +69,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct loadu<simd<uint8_t, neon>
-, Idof> {
-            using Vec = simd<uint8_t, neon>
-;
+         struct loadu<simd<uint8_t, neon>, Idof> {
+            using Vec = simd<uint8_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -89,8 +83,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of loadu for neon using uint8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "loadu".
        * @details:
@@ -99,10 +92,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct loadu<simd<uint16_t, neon>
-, Idof> {
-            using Vec = simd<uint16_t, neon>
-;
+         struct loadu<simd<uint16_t, neon>, Idof> {
+            using Vec = simd<uint16_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -115,8 +106,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of loadu for neon using uint16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "loadu".
        * @details:
@@ -125,10 +115,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct loadu<simd<uint32_t, neon>
-, Idof> {
-            using Vec = simd<uint32_t, neon>
-;
+         struct loadu<simd<uint32_t, neon>, Idof> {
+            using Vec = simd<uint32_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -141,8 +129,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of loadu for neon using uint32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "loadu".
        * @details:
@@ -151,10 +138,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct loadu<simd<uint64_t, neon>
-, Idof> {
-            using Vec = simd<uint64_t, neon>
-;
+         struct loadu<simd<uint64_t, neon>, Idof> {
+            using Vec = simd<uint64_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -167,8 +152,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of loadu for neon using uint64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "loadu".
        * @details:
@@ -177,10 +161,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct loadu<simd<int8_t, neon>
-, Idof> {
-            using Vec = simd<int8_t, neon>
-;
+         struct loadu<simd<int8_t, neon>, Idof> {
+            using Vec = simd<int8_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -193,8 +175,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of loadu for neon using int8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "loadu".
        * @details:
@@ -203,10 +184,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct loadu<simd<int16_t, neon>
-, Idof> {
-            using Vec = simd<int16_t, neon>
-;
+         struct loadu<simd<int16_t, neon>, Idof> {
+            using Vec = simd<int16_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -219,8 +198,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of loadu for neon using int16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "loadu".
        * @details:
@@ -229,10 +207,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct loadu<simd<int32_t, neon>
-, Idof> {
-            using Vec = simd<int32_t, neon>
-;
+         struct loadu<simd<int32_t, neon>, Idof> {
+            using Vec = simd<int32_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -245,8 +221,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of loadu for neon using int32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "loadu".
        * @details:
@@ -255,10 +230,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct loadu<simd<int64_t, neon>
-, Idof> {
-            using Vec = simd<int64_t, neon>
-;
+         struct loadu<simd<int64_t, neon>, Idof> {
+            using Vec = simd<int64_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -271,8 +244,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of loadu for neon using int64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "loadu".
        * @details:
@@ -281,10 +253,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct loadu<simd<float, neon>
-, Idof> {
-            using Vec = simd<float, neon>
-;
+         struct loadu<simd<float, neon>, Idof> {
+            using Vec = simd<float, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -297,8 +267,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of loadu for neon using float.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "loadu".
        * @details:
@@ -307,10 +276,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct loadu<simd<double, neon>
-, Idof> {
-            using Vec = simd<double, neon>
-;
+         struct loadu<simd<double, neon>, Idof> {
+            using Vec = simd<double, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -323,8 +290,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of loadu for neon using double.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "store".
        * @details:
@@ -333,10 +299,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct store<simd<int64_t, neon>
-, Idof> {
-            using Vec = simd<int64_t, neon>
-;
+         struct store<simd<int64_t, neon>, Idof> {
+            using Vec = simd<int64_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -349,8 +313,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of store for neon using int64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "storeu".
        * @details:
@@ -359,10 +322,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct storeu<simd<int64_t, neon>
-, Idof> {
-            using Vec = simd<int64_t, neon>
-;
+         struct storeu<simd<int64_t, neon>, Idof> {
+            using Vec = simd<int64_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -375,8 +336,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of storeu for neon using int64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "set1".
        * @details:
@@ -385,10 +345,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct set1<simd<uint8_t, neon>
-, Idof> {
-            using Vec = simd<uint8_t, neon>
-;
+         struct set1<simd<uint8_t, neon>, Idof> {
+            using Vec = simd<uint8_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -401,8 +359,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of set1 for neon using uint8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "set1".
        * @details:
@@ -411,10 +368,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct set1<simd<uint16_t, neon>
-, Idof> {
-            using Vec = simd<uint16_t, neon>
-;
+         struct set1<simd<uint16_t, neon>, Idof> {
+            using Vec = simd<uint16_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -427,8 +382,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of set1 for neon using uint16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "set1".
        * @details:
@@ -437,10 +391,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct set1<simd<uint32_t, neon>
-, Idof> {
-            using Vec = simd<uint32_t, neon>
-;
+         struct set1<simd<uint32_t, neon>, Idof> {
+            using Vec = simd<uint32_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -453,8 +405,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of set1 for neon using uint32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "set1".
        * @details:
@@ -463,10 +414,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct set1<simd<uint64_t, neon>
-, Idof> {
-            using Vec = simd<uint64_t, neon>
-;
+         struct set1<simd<uint64_t, neon>, Idof> {
+            using Vec = simd<uint64_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -479,8 +428,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of set1 for neon using uint64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "set1".
        * @details:
@@ -489,10 +437,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct set1<simd<int8_t, neon>
-, Idof> {
-            using Vec = simd<int8_t, neon>
-;
+         struct set1<simd<int8_t, neon>, Idof> {
+            using Vec = simd<int8_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -505,8 +451,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of set1 for neon using int8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "set1".
        * @details:
@@ -515,10 +460,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct set1<simd<int16_t, neon>
-, Idof> {
-            using Vec = simd<int16_t, neon>
-;
+         struct set1<simd<int16_t, neon>, Idof> {
+            using Vec = simd<int16_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -531,8 +474,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of set1 for neon using int16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "set1".
        * @details:
@@ -541,10 +483,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct set1<simd<int32_t, neon>
-, Idof> {
-            using Vec = simd<int32_t, neon>
-;
+         struct set1<simd<int32_t, neon>, Idof> {
+            using Vec = simd<int32_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -557,8 +497,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of set1 for neon using int32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "set1".
        * @details:
@@ -567,10 +506,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct set1<simd<int64_t, neon>
-, Idof> {
-            using Vec = simd<int64_t, neon>
-;
+         struct set1<simd<int64_t, neon>, Idof> {
+            using Vec = simd<int64_t, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -583,8 +520,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of set1 for neon using int64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "set1".
        * @details:
@@ -593,10 +529,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct set1<simd<float, neon>
-, Idof> {
-            using Vec = simd<float, neon>
-;
+         struct set1<simd<float, neon>, Idof> {
+            using Vec = simd<float, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -609,8 +543,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of set1 for neon using float.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "set1".
        * @details:
@@ -619,10 +552,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct set1<simd<double, neon>
-, Idof> {
-            using Vec = simd<double, neon>
-;
+         struct set1<simd<double, neon>, Idof> {
+            using Vec = simd<double, neon>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -635,8 +566,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of set1 for neon using double.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "gather".
        * @details:
@@ -645,10 +575,8 @@ namespace functors {
        *  Extension Flags: ['neon']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct gather<simd<int64_t, neon>
-, Idof> {
-            using Vec = simd<int64_t, neon>
-;
+         struct gather<simd<int64_t, neon>, Idof> {
+            using Vec = simd<int64_t, neon>;
             static constexpr bool native_supported() {
                return false;
             }
