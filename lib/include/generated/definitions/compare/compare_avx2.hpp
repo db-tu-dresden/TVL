@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/compare/compare_avx2.hpp
- * \date 2022-08-29
+ * \date 2022-09-29
  * \brief Compare primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : c3bb1cc (c3bb1cc4fb2ae9daa751818c70ca8ee915793e3a)
+ * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -37,8 +37,7 @@
 
 #include "../../declarations/compare.hpp"
 namespace tvl {
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "equal".
        * @details:
@@ -48,10 +47,8 @@ namespace functors {
        * @note: Signed comparison.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct equal<simd<int8_t, avx2>
-, Idof> {
-            using Vec = simd<int8_t, avx2>
-;
+         struct equal<simd<int8_t, avx2>, Idof> {
+            using Vec = simd<int8_t, avx2>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -64,8 +61,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of equal for avx2 using int8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "equal".
        * @details:
@@ -75,10 +71,8 @@ namespace functors {
        * @note: Signed comparison.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct equal<simd<uint8_t, avx2>
-, Idof> {
-            using Vec = simd<uint8_t, avx2>
-;
+         struct equal<simd<uint8_t, avx2>, Idof> {
+            using Vec = simd<uint8_t, avx2>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -91,8 +85,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of equal for avx2 using uint8_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "equal".
        * @details:
@@ -102,10 +95,8 @@ namespace functors {
        * @note: Signed comparison.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct equal<simd<int16_t, avx2>
-, Idof> {
-            using Vec = simd<int16_t, avx2>
-;
+         struct equal<simd<int16_t, avx2>, Idof> {
+            using Vec = simd<int16_t, avx2>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -118,8 +109,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of equal for avx2 using int16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "equal".
        * @details:
@@ -129,10 +119,8 @@ namespace functors {
        * @note: Signed comparison.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct equal<simd<uint16_t, avx2>
-, Idof> {
-            using Vec = simd<uint16_t, avx2>
-;
+         struct equal<simd<uint16_t, avx2>, Idof> {
+            using Vec = simd<uint16_t, avx2>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -145,8 +133,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of equal for avx2 using uint16_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "equal".
        * @details:
@@ -156,10 +143,8 @@ namespace functors {
        * @note: Signed comparison.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct equal<simd<int32_t, avx2>
-, Idof> {
-            using Vec = simd<int32_t, avx2>
-;
+         struct equal<simd<int32_t, avx2>, Idof> {
+            using Vec = simd<int32_t, avx2>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -172,8 +157,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of equal for avx2 using int32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "equal".
        * @details:
@@ -183,10 +167,8 @@ namespace functors {
        * @note: Signed comparison.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct equal<simd<uint32_t, avx2>
-, Idof> {
-            using Vec = simd<uint32_t, avx2>
-;
+         struct equal<simd<uint32_t, avx2>, Idof> {
+            using Vec = simd<uint32_t, avx2>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -199,8 +181,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of equal for avx2 using uint32_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "equal".
        * @details:
@@ -210,10 +191,8 @@ namespace functors {
        * @note: Signed comparison.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct equal<simd<int64_t, avx2>
-, Idof> {
-            using Vec = simd<int64_t, avx2>
-;
+         struct equal<simd<int64_t, avx2>, Idof> {
+            using Vec = simd<int64_t, avx2>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -226,8 +205,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of equal for avx2 using int64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "equal".
        * @details:
@@ -237,10 +215,8 @@ namespace functors {
        * @note: Signed comparison.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct equal<simd<uint64_t, avx2>
-, Idof> {
-            using Vec = simd<uint64_t, avx2>
-;
+         struct equal<simd<uint64_t, avx2>, Idof> {
+            using Vec = simd<uint64_t, avx2>;
             static constexpr bool native_supported() {
                return true;
             }
@@ -253,8 +229,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of equal for avx2 using uint64_t.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "equal".
        * @details:
@@ -264,10 +239,8 @@ namespace functors {
        * @note: Signed comparison.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct equal<simd<float, avx2>
-, Idof> {
-            using Vec = simd<float, avx2>
-;
+         struct equal<simd<float, avx2>, Idof> {
+            using Vec = simd<float, avx2>;
             static constexpr bool native_supported() {
                return false;
             }
@@ -281,8 +254,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of equal for avx2 using float.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "equal".
        * @details:
@@ -292,10 +264,8 @@ namespace functors {
        * @note: Signed comparison.
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct equal<simd<double, avx2>
-, Idof> {
-            using Vec = simd<double, avx2>
-;
+         struct equal<simd<double, avx2>, Idof> {
+            using Vec = simd<double, avx2>;
             static constexpr bool native_supported() {
                return false;
             }
@@ -309,8 +279,7 @@ namespace functors {
             }
          };
    } // end of namespace functors for template specialization of equal for avx2 using double.
-   
-namespace functors {
+   namespace functors {
       /**
        * @brief: Template specialization of implementation for "between_inclusive".
        * @details:
@@ -319,10 +288,8 @@ namespace functors {
        *  Extension Flags: ['avx2']
        */
       template<ImplementationDegreeOfFreedom Idof>
-         struct between_inclusive<simd<int64_t, avx2>
-, Idof> {
-            using Vec = simd<int64_t, avx2>
-;
+         struct between_inclusive<simd<int64_t, avx2>, Idof> {
+            using Vec = simd<int64_t, avx2>;
             static constexpr bool native_supported() {
                return true;
             }
