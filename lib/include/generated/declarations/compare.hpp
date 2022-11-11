@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/declarations/compare.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief Compare primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -36,7 +36,8 @@
 #define TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_GENERATED_DECLARATIONS_COMPARE_HPP
 
 namespace tvl {
-   namespace functors {
+   
+namespace functors {
       // Forward declaration of implementation struct for TVL-primitive "equal".
       template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
          struct equal{};
@@ -56,7 +57,8 @@ namespace tvl {
             vec_a,vec_b
          );
       }
-   namespace functors {
+   
+namespace functors {
       // Forward declaration of implementation struct for TVL-primitive "between_inclusive".
       template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
          struct between_inclusive{};

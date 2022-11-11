@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/mask/mask_neon.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief Mask related primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -48,6 +48,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct to_integral<simd<int64_t, neon>, Idof> {
             using Vec = simd<int64_t, neon>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -57,6 +58,7 @@ namespace tvl {
                 typename Vec::mask_type vec_mask
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive to_integral is not supported by your hardware natively while it is forced by using native" );
+
                return ( ( vec_mask[ 1 ] >> 62 ) & 0b10 ) | ( vec_mask[ 0 ] >> 63 );
             }
          };
@@ -72,6 +74,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct get_msb<simd<int64_t, neon>, Idof> {
             using Vec = simd<int64_t, neon>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -81,6 +84,7 @@ namespace tvl {
                 typename Vec::register_type vec
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive get_msb is not supported by your hardware natively while it is forced by using native" );
+
                return ( ( vec[ 1 ] >> 62 ) & 0b10 ) | ( vec[ 0 ] >> 63 );
             }
          };
@@ -96,6 +100,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct to_vector<simd<int64_t, neon>, Idof> {
             using Vec = simd<int64_t, neon>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -104,6 +109,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::mask_type mask
             ) {
+
                return vreinterpretq_s64_u64( mask ); //mask is a vector already.
             }
          };
@@ -119,6 +125,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mask_reduce<simd<int64_t, neon>, Idof> {
             using Vec = simd<int64_t, neon>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -127,6 +134,7 @@ namespace tvl {
             static typename Vec::base_type apply(
                 typename Vec::base_type mask
             ) {
+
                return mask & 0x3;
             }
          };

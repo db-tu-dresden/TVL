@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/io/io_neon.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief Input/Output primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -48,6 +48,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct to_ostream<simd<int64_t, neon>, Idof> {
             using Vec = simd<int64_t, neon>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -56,8 +57,9 @@ namespace tvl {
             static std::ostream & apply(
                 std::ostream & out, typename Vec::register_type const data
             ) {
+
                out << data[1]<< "|" << data[0] << "\n";
-return out;
+               return out;
             }
          };
    } // end of namespace functors for template specialization of to_ostream for neon using int64_t.
