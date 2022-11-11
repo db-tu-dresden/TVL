@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/memory/memory_scalar.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief Memory related primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -48,6 +48,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate<simd<uint8_t, scalar>, Idof> {
             using Vec = simd<uint8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -56,6 +57,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -71,6 +73,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate<simd<uint16_t, scalar>, Idof> {
             using Vec = simd<uint16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -79,6 +82,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -94,6 +98,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate<simd<uint32_t, scalar>, Idof> {
             using Vec = simd<uint32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -102,6 +107,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -117,6 +123,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate<simd<uint64_t, scalar>, Idof> {
             using Vec = simd<uint64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -125,6 +132,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -140,6 +148,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate<simd<int8_t, scalar>, Idof> {
             using Vec = simd<int8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -148,6 +157,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -163,6 +173,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate<simd<int16_t, scalar>, Idof> {
             using Vec = simd<int16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -171,6 +182,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -186,6 +198,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate<simd<int32_t, scalar>, Idof> {
             using Vec = simd<int32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -194,6 +207,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -209,6 +223,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate<simd<int64_t, scalar>, Idof> {
             using Vec = simd<int64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -217,6 +232,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -232,6 +248,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate<simd<float, scalar>, Idof> {
             using Vec = simd<float, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -240,6 +257,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -255,6 +273,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate<simd<double, scalar>, Idof> {
             using Vec = simd<double, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -263,6 +282,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -278,6 +298,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate_aligned<simd<uint8_t, scalar>, Idof> {
             using Vec = simd<uint8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -286,6 +307,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes, [[maybe_unused]] std::size_t alignment
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -301,6 +323,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate_aligned<simd<uint16_t, scalar>, Idof> {
             using Vec = simd<uint16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -309,6 +332,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes, [[maybe_unused]] std::size_t alignment
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -324,6 +348,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate_aligned<simd<uint32_t, scalar>, Idof> {
             using Vec = simd<uint32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -332,6 +357,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes, [[maybe_unused]] std::size_t alignment
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -347,6 +373,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate_aligned<simd<uint64_t, scalar>, Idof> {
             using Vec = simd<uint64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -355,6 +382,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes, [[maybe_unused]] std::size_t alignment
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -370,6 +398,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate_aligned<simd<int8_t, scalar>, Idof> {
             using Vec = simd<int8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -378,6 +407,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes, [[maybe_unused]] std::size_t alignment
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -393,6 +423,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate_aligned<simd<int16_t, scalar>, Idof> {
             using Vec = simd<int16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -401,6 +432,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes, [[maybe_unused]] std::size_t alignment
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -416,6 +448,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate_aligned<simd<int32_t, scalar>, Idof> {
             using Vec = simd<int32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -424,6 +457,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes, [[maybe_unused]] std::size_t alignment
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -439,6 +473,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate_aligned<simd<int64_t, scalar>, Idof> {
             using Vec = simd<int64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -447,6 +482,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes, [[maybe_unused]] std::size_t alignment
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -462,6 +498,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate_aligned<simd<float, scalar>, Idof> {
             using Vec = simd<float, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -470,6 +507,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes, [[maybe_unused]] std::size_t alignment
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -485,6 +523,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct allocate_aligned<simd<double, scalar>, Idof> {
             using Vec = simd<double, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -493,6 +532,7 @@ namespace tvl {
             static typename Vec::base_type * apply(
                 std::size_t count_bytes, [[maybe_unused]] std::size_t alignment
             ) {
+
                return reinterpret_cast<typename Vec::base_type*>(malloc(count_bytes));
             }
          };
@@ -508,6 +548,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct deallocate<simd<uint8_t, scalar>, Idof> {
             using Vec = simd<uint8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -516,6 +557,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * ptr
             ) {
+
                return free(ptr);
             }
          };
@@ -531,6 +573,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct deallocate<simd<uint16_t, scalar>, Idof> {
             using Vec = simd<uint16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -539,6 +582,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * ptr
             ) {
+
                return free(ptr);
             }
          };
@@ -554,6 +598,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct deallocate<simd<uint32_t, scalar>, Idof> {
             using Vec = simd<uint32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -562,6 +607,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * ptr
             ) {
+
                return free(ptr);
             }
          };
@@ -577,6 +623,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct deallocate<simd<uint64_t, scalar>, Idof> {
             using Vec = simd<uint64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -585,6 +632,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * ptr
             ) {
+
                return free(ptr);
             }
          };
@@ -600,6 +648,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct deallocate<simd<int8_t, scalar>, Idof> {
             using Vec = simd<int8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -608,6 +657,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * ptr
             ) {
+
                return free(ptr);
             }
          };
@@ -623,6 +673,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct deallocate<simd<int16_t, scalar>, Idof> {
             using Vec = simd<int16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -631,6 +682,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * ptr
             ) {
+
                return free(ptr);
             }
          };
@@ -646,6 +698,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct deallocate<simd<int32_t, scalar>, Idof> {
             using Vec = simd<int32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -654,6 +707,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * ptr
             ) {
+
                return free(ptr);
             }
          };
@@ -669,6 +723,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct deallocate<simd<int64_t, scalar>, Idof> {
             using Vec = simd<int64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -677,6 +732,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * ptr
             ) {
+
                return free(ptr);
             }
          };
@@ -692,6 +748,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct deallocate<simd<float, scalar>, Idof> {
             using Vec = simd<float, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -700,6 +757,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * ptr
             ) {
+
                return free(ptr);
             }
          };
@@ -715,6 +773,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct deallocate<simd<double, scalar>, Idof> {
             using Vec = simd<double, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -723,6 +782,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * ptr
             ) {
+
                return free(ptr);
             }
          };
@@ -738,6 +798,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct memory_cp<simd<uint8_t, scalar>, Idof> {
             using Vec = simd<uint8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -746,6 +807,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * dst, typename Vec::base_type const * src, std::size_t count_bytes, [[maybe_unused]] int copy_kind
             ) {
+
                std::memcpy(reinterpret_cast<void *>(dst), reinterpret_cast<void const *>(src), count_bytes);
             }
          };
@@ -761,6 +823,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct memory_cp<simd<uint16_t, scalar>, Idof> {
             using Vec = simd<uint16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -769,6 +832,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * dst, typename Vec::base_type const * src, std::size_t count_bytes, [[maybe_unused]] int copy_kind
             ) {
+
                std::memcpy(reinterpret_cast<void *>(dst), reinterpret_cast<void const *>(src), count_bytes);
             }
          };
@@ -784,6 +848,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct memory_cp<simd<uint32_t, scalar>, Idof> {
             using Vec = simd<uint32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -792,6 +857,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * dst, typename Vec::base_type const * src, std::size_t count_bytes, [[maybe_unused]] int copy_kind
             ) {
+
                std::memcpy(reinterpret_cast<void *>(dst), reinterpret_cast<void const *>(src), count_bytes);
             }
          };
@@ -807,6 +873,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct memory_cp<simd<uint64_t, scalar>, Idof> {
             using Vec = simd<uint64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -815,6 +882,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * dst, typename Vec::base_type const * src, std::size_t count_bytes, [[maybe_unused]] int copy_kind
             ) {
+
                std::memcpy(reinterpret_cast<void *>(dst), reinterpret_cast<void const *>(src), count_bytes);
             }
          };
@@ -830,6 +898,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct memory_cp<simd<int8_t, scalar>, Idof> {
             using Vec = simd<int8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -838,6 +907,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * dst, typename Vec::base_type const * src, std::size_t count_bytes, [[maybe_unused]] int copy_kind
             ) {
+
                std::memcpy(reinterpret_cast<void *>(dst), reinterpret_cast<void const *>(src), count_bytes);
             }
          };
@@ -853,6 +923,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct memory_cp<simd<int16_t, scalar>, Idof> {
             using Vec = simd<int16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -861,6 +932,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * dst, typename Vec::base_type const * src, std::size_t count_bytes, [[maybe_unused]] int copy_kind
             ) {
+
                std::memcpy(reinterpret_cast<void *>(dst), reinterpret_cast<void const *>(src), count_bytes);
             }
          };
@@ -876,6 +948,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct memory_cp<simd<int32_t, scalar>, Idof> {
             using Vec = simd<int32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -884,6 +957,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * dst, typename Vec::base_type const * src, std::size_t count_bytes, [[maybe_unused]] int copy_kind
             ) {
+
                std::memcpy(reinterpret_cast<void *>(dst), reinterpret_cast<void const *>(src), count_bytes);
             }
          };
@@ -899,6 +973,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct memory_cp<simd<int64_t, scalar>, Idof> {
             using Vec = simd<int64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -907,6 +982,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * dst, typename Vec::base_type const * src, std::size_t count_bytes, [[maybe_unused]] int copy_kind
             ) {
+
                std::memcpy(reinterpret_cast<void *>(dst), reinterpret_cast<void const *>(src), count_bytes);
             }
          };
@@ -922,6 +998,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct memory_cp<simd<float, scalar>, Idof> {
             using Vec = simd<float, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -930,6 +1007,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * dst, typename Vec::base_type const * src, std::size_t count_bytes, [[maybe_unused]] int copy_kind
             ) {
+
                std::memcpy(reinterpret_cast<void *>(dst), reinterpret_cast<void const *>(src), count_bytes);
             }
          };
@@ -945,6 +1023,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct memory_cp<simd<double, scalar>, Idof> {
             using Vec = simd<double, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -953,6 +1032,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * dst, typename Vec::base_type const * src, std::size_t count_bytes, [[maybe_unused]] int copy_kind
             ) {
+
                std::memcpy(reinterpret_cast<void *>(dst), reinterpret_cast<void const *>(src), count_bytes);
             }
          };

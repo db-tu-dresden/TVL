@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/static/simd/simd_type_concepts.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief TODO.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -40,28 +40,33 @@
 namespace tvl {
    
 #ifdef TVL_USE_CONCEPTS
-   template< typename T, typename U >
+   template<typename T, typename U>
    concept TargetExtension = TVLArithmetic<U> && requires {
-      typename T:: template types< U >;
-      typename T:: template types< U >::default_size_in_bits;
-      typename T:: template types< U >::register_t;
-      typename T:: template types< U >::mask_t;
+      typename T:: template types<U>;
+      typename T:: template types<U>::default_size_in_bits;
+      typename T:: template types<U>::register_t;
+      typename T:: template types<U>::mask_t;
    };
-   template< typename T >
+   template<typename T>
    concept VectorProcessingStyle = requires {
       typename T::base_type;
       typename T::target_extension;
       typename T::register_type;
       typename T::mask_type;
-      { T::vector_size_b() } -> std::same_as< std::size_t >;
-      { T::vector_size_B() } -> std::same_as< std::size_t >;
-      { T::vector_element_count() } -> std::same_as< std::size_t >;
-      { T::vector_alignment() } -> std::same_as< std::size_t >;
-      { T::vector_mask_ratio() } -> std::same_as< std::size_t >;
-      { T::mask_shift() } -> std::same_as< std::size_t >;
+      typename T::imask_type;
+      typename T::offset_base_type;
+      typename T::offset_base_register_type;
+      //typename T::offset_register_type;
+      { T::is_register_type_pointer() } -> std::same_as<bool>;
+      { T::vector_size_b() } -> std::same_as<std::size_t>;
+      { T::vector_size_B() } -> std::same_as<std::size_t>;
+      { T::vector_element_count() } -> std::same_as<std::size_t>;
+      { T::vector_alignment() } -> std::same_as<std::size_t>;
+      { T::vector_mask_ratio() } -> std::same_as<std::size_t>;
+      { T::mask_shift() } -> std::same_as<std::size_t>;
    } &&
       TVLArithmetic<typename T::base_type> &&
-      TargetExtension< typename T::target_extension, typename T::base_type > &&
+      TargetExtension<typename T::target_extension, typename T::base_type> &&
       ( T::vector_size_b() > 0 ) &&
       ( T::vector_size_B() > 0 ) &&
       ( T::vector_element_count() > 0 ) &&
@@ -74,8 +79,8 @@ namespace tvl {
    struct native{};
    struct workaround{};
 #ifdef TVL_USE_CONCEPTS
-   template< class T >
-   concept ImplementationDegreeOfFreedom = std::is_same_v< T, native > || std::is_same_v< T, workaround >;
+   template<class T>
+   concept ImplementationDegreeOfFreedom = std::is_same_v<T, native> || std::is_same_v<T, workaround>;
 #else
 #define ImplementationDegreeOfFreedom class
 #endif

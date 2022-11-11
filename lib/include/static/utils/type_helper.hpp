@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/static/utils/type_helper.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief TODO.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -43,7 +43,14 @@
 #include <string>
 #include <cstdlib>
 #include <limits>
+#include <iostream>
 namespace tvl {
+   enum class modifier {
+        HEX,
+        DEC,
+        OCT,
+        BIN
+};
    template< class T >
    std::string type_name( ) {
       typedef typename std::remove_reference< T >::type TR;
@@ -73,5 +80,6 @@ namespace tvl {
    template< typename T >
    struct is_tuple : is_tuple_impl< std::remove_cv_t< T > > { };
    using offset_t = std::size_t;
+   constexpr unsigned cilog2(unsigned val) { return val ? 1 + cilog2(val >> 1) : -1; }
 } // end of namespace tvl
 #endif //TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_STATIC_UTILS_TYPE_HELPER_HPP

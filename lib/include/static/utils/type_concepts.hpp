@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/static/utils/type_concepts.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief TODO.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -44,10 +44,10 @@ namespace tvl {
    concept TVLArithmetic = std::is_arithmetic_v< T >;
 
    template< typename T >
-   concept Tuple = is_tuple< T >::value;
+   concept TVL_Tuple = is_tuple< T >::value;
 #else
 #define TVLArithmetic typename
-#define Tuple typename
+#define TVL_Tuple typename
 #endif
 } // end of namespace tvl
 #endif //TUD_D2RG_TVL_HOME_RUNNER_WORK_TVLGEN_TVLGEN_LIB_INCLUDE_STATIC_UTILS_TYPE_CONCEPTS_HPP
