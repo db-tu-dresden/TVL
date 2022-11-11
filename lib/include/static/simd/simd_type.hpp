@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/static/simd/simd_type.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief TODO.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -57,10 +57,29 @@ namespace tvl {
       using mask_type = typename TargetExtensionType::template types<BaseType, VectorSizeInBits>::mask_t;
       using imask_type = typename TargetExtensionType::template types<BaseType, VectorSizeInBits>::imask_t;
 
-      using offset_register_type = typename TargetExtensionType::template types<offset_t, VectorSizeInBits>::register_t[sizeof(offset_t)/sizeof(BaseType)];
+      using offset_base_type = typename
+         TVL_DEP_TYPE(
+            (sizeof(base_type)==1),
+               uint8_t,
+               TVL_DEP_TYPE(
+                  (sizeof(base_type)==2),
+                     uint16_t,
+                     TVL_DEP_TYPE(
+                        (sizeof(base_type)==4),
+                           uint32_t,
+                           uint64_t
+                     )
+               )
+         );
+      using offset_base_register_type = typename TargetExtensionType::template types<offset_base_type, VectorSizeInBits>::register_t;
+            
+      //using offset_register_type = std::array<typename TargetExtensionType::template types<offset_t, VectorSizeInBits>::register_t, sizeof(offset_t)/sizeof(BaseType)>;
 
       static inline constexpr bool register_type_is_pointer_v = std::is_pointer_v<register_type>;
 
+      static constexpr bool is_register_type_pointer() {
+         return register_type_is_pointer_v;
+      }
       static constexpr /*should be consteval, but clang does not eat this */ std::size_t vector_size_b() {
          return VectorSizeInBits;
       }

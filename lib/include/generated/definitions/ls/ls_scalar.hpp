@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/ls/ls_scalar.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief Load/Store primitives
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -48,6 +48,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct load<simd<uint8_t, scalar>, Idof> {
             using Vec = simd<uint8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -56,6 +57,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -71,6 +73,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct load<simd<uint16_t, scalar>, Idof> {
             using Vec = simd<uint16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -79,6 +82,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -94,6 +98,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct load<simd<uint32_t, scalar>, Idof> {
             using Vec = simd<uint32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -102,6 +107,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -117,6 +123,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct load<simd<uint64_t, scalar>, Idof> {
             using Vec = simd<uint64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -125,6 +132,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -140,6 +148,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct load<simd<int8_t, scalar>, Idof> {
             using Vec = simd<int8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -148,6 +157,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -163,6 +173,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct load<simd<int16_t, scalar>, Idof> {
             using Vec = simd<int16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -171,6 +182,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -186,6 +198,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct load<simd<int32_t, scalar>, Idof> {
             using Vec = simd<int32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -194,6 +207,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -209,6 +223,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct load<simd<int64_t, scalar>, Idof> {
             using Vec = simd<int64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -217,6 +232,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -232,6 +248,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct load<simd<float, scalar>, Idof> {
             using Vec = simd<float, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -240,6 +257,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -255,6 +273,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct load<simd<double, scalar>, Idof> {
             using Vec = simd<double, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -263,6 +282,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -278,6 +298,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct loadu<simd<uint8_t, scalar>, Idof> {
             using Vec = simd<uint8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -286,6 +307,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -301,6 +323,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct loadu<simd<uint16_t, scalar>, Idof> {
             using Vec = simd<uint16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -309,6 +332,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -324,6 +348,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct loadu<simd<uint32_t, scalar>, Idof> {
             using Vec = simd<uint32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -332,6 +357,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -347,6 +373,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct loadu<simd<uint64_t, scalar>, Idof> {
             using Vec = simd<uint64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -355,6 +382,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -370,6 +398,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct loadu<simd<int8_t, scalar>, Idof> {
             using Vec = simd<int8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -378,6 +407,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -393,6 +423,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct loadu<simd<int16_t, scalar>, Idof> {
             using Vec = simd<int16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -401,6 +432,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -416,6 +448,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct loadu<simd<int32_t, scalar>, Idof> {
             using Vec = simd<int32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -424,6 +457,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -439,6 +473,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct loadu<simd<int64_t, scalar>, Idof> {
             using Vec = simd<int64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -447,6 +482,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -462,6 +498,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct loadu<simd<float, scalar>, Idof> {
             using Vec = simd<float, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -470,6 +507,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -485,6 +523,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct loadu<simd<double, scalar>, Idof> {
             using Vec = simd<double, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -493,6 +532,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type const * memory
             ) {
+
                return *memory;
             }
          };
@@ -508,6 +548,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct store<simd<uint8_t, scalar>, Idof> {
             using Vec = simd<uint8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -516,6 +557,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -531,6 +573,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct store<simd<uint16_t, scalar>, Idof> {
             using Vec = simd<uint16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -539,6 +582,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -554,6 +598,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct store<simd<uint32_t, scalar>, Idof> {
             using Vec = simd<uint32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -562,6 +607,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -577,6 +623,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct store<simd<uint64_t, scalar>, Idof> {
             using Vec = simd<uint64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -585,6 +632,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -600,6 +648,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct store<simd<int8_t, scalar>, Idof> {
             using Vec = simd<int8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -608,6 +657,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -623,6 +673,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct store<simd<int16_t, scalar>, Idof> {
             using Vec = simd<int16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -631,6 +682,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -646,6 +698,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct store<simd<int32_t, scalar>, Idof> {
             using Vec = simd<int32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -654,6 +707,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -669,6 +723,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct store<simd<int64_t, scalar>, Idof> {
             using Vec = simd<int64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -677,6 +732,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -692,6 +748,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct store<simd<float, scalar>, Idof> {
             using Vec = simd<float, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -700,6 +757,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -715,6 +773,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct store<simd<double, scalar>, Idof> {
             using Vec = simd<double, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -723,6 +782,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -738,6 +798,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct storeu<simd<uint8_t, scalar>, Idof> {
             using Vec = simd<uint8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -746,6 +807,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -761,6 +823,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct storeu<simd<uint16_t, scalar>, Idof> {
             using Vec = simd<uint16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -769,6 +832,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -784,6 +848,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct storeu<simd<uint32_t, scalar>, Idof> {
             using Vec = simd<uint32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -792,6 +857,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -807,6 +873,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct storeu<simd<uint64_t, scalar>, Idof> {
             using Vec = simd<uint64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -815,6 +882,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -830,6 +898,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct storeu<simd<int8_t, scalar>, Idof> {
             using Vec = simd<int8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -838,6 +907,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -853,6 +923,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct storeu<simd<int16_t, scalar>, Idof> {
             using Vec = simd<int16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -861,6 +932,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -876,6 +948,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct storeu<simd<int32_t, scalar>, Idof> {
             using Vec = simd<int32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -884,6 +957,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -899,6 +973,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct storeu<simd<int64_t, scalar>, Idof> {
             using Vec = simd<int64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -907,6 +982,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -922,6 +998,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct storeu<simd<float, scalar>, Idof> {
             using Vec = simd<float, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -930,6 +1007,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -945,6 +1023,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct storeu<simd<double, scalar>, Idof> {
             using Vec = simd<double, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -953,6 +1032,7 @@ namespace tvl {
             static void apply(
                 typename Vec::base_type * memory, typename Vec::register_type data
             ) {
+
                *memory = data;
             }
          };
@@ -968,6 +1048,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set1<simd<uint8_t, scalar>, Idof> {
             using Vec = simd<uint8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -976,6 +1057,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type value
             ) {
+
                return value;
             }
          };
@@ -991,6 +1073,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set1<simd<uint16_t, scalar>, Idof> {
             using Vec = simd<uint16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -999,6 +1082,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type value
             ) {
+
                return value;
             }
          };
@@ -1014,6 +1098,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set1<simd<uint32_t, scalar>, Idof> {
             using Vec = simd<uint32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1022,6 +1107,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type value
             ) {
+
                return value;
             }
          };
@@ -1037,6 +1123,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set1<simd<uint64_t, scalar>, Idof> {
             using Vec = simd<uint64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1045,6 +1132,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type value
             ) {
+
                return value;
             }
          };
@@ -1060,6 +1148,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set1<simd<int8_t, scalar>, Idof> {
             using Vec = simd<int8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1068,6 +1157,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type value
             ) {
+
                return value;
             }
          };
@@ -1083,6 +1173,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set1<simd<int16_t, scalar>, Idof> {
             using Vec = simd<int16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1091,6 +1182,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type value
             ) {
+
                return value;
             }
          };
@@ -1106,6 +1198,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set1<simd<int32_t, scalar>, Idof> {
             using Vec = simd<int32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1114,6 +1207,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type value
             ) {
+
                return value;
             }
          };
@@ -1129,6 +1223,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set1<simd<int64_t, scalar>, Idof> {
             using Vec = simd<int64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1137,6 +1232,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type value
             ) {
+
                return value;
             }
          };
@@ -1152,6 +1248,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set1<simd<float, scalar>, Idof> {
             using Vec = simd<float, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1160,6 +1257,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type value
             ) {
+
                return value;
             }
          };
@@ -1175,6 +1273,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set1<simd<double, scalar>, Idof> {
             using Vec = simd<double, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1183,6 +1282,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::base_type value
             ) {
+
                return value;
             }
          };
@@ -1198,6 +1298,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct gather<simd<uint8_t, scalar>, Idof> {
             using Vec = simd<uint8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1206,6 +1307,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::offset_register_type index, typename Vec::mask_type mask
             ) {
+
                return (mask&1)==1 ? memory[index[0]] : source;
             }
          };
@@ -1221,6 +1323,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct gather<simd<uint16_t, scalar>, Idof> {
             using Vec = simd<uint16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1229,6 +1332,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::offset_register_type index, typename Vec::mask_type mask
             ) {
+
                return (mask&1)==1 ? memory[index[0]] : source;
             }
          };
@@ -1244,6 +1348,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct gather<simd<uint32_t, scalar>, Idof> {
             using Vec = simd<uint32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1252,6 +1357,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::offset_register_type index, typename Vec::mask_type mask
             ) {
+
                return (mask&1)==1 ? memory[index[0]] : source;
             }
          };
@@ -1267,6 +1373,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct gather<simd<uint64_t, scalar>, Idof> {
             using Vec = simd<uint64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1275,6 +1382,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::offset_register_type index, typename Vec::mask_type mask
             ) {
+
                return (mask&1)==1 ? memory[index[0]] : source;
             }
          };
@@ -1290,6 +1398,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct gather<simd<int8_t, scalar>, Idof> {
             using Vec = simd<int8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1298,6 +1407,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::offset_register_type index, typename Vec::mask_type mask
             ) {
+
                return (mask&1)==1 ? memory[index[0]] : source;
             }
          };
@@ -1313,6 +1423,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct gather<simd<int16_t, scalar>, Idof> {
             using Vec = simd<int16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1321,6 +1432,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::offset_register_type index, typename Vec::mask_type mask
             ) {
+
                return (mask&1)==1 ? memory[index[0]] : source;
             }
          };
@@ -1336,6 +1448,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct gather<simd<int32_t, scalar>, Idof> {
             using Vec = simd<int32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1344,6 +1457,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::offset_register_type index, typename Vec::mask_type mask
             ) {
+
                return (mask&1)==1 ? memory[index[0]] : source;
             }
          };
@@ -1359,6 +1473,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct gather<simd<int64_t, scalar>, Idof> {
             using Vec = simd<int64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1367,6 +1482,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::offset_register_type index, typename Vec::mask_type mask
             ) {
+
                return (mask&1)==1 ? memory[index[0]] : source;
             }
          };
@@ -1382,6 +1498,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct gather<simd<float, scalar>, Idof> {
             using Vec = simd<float, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1390,6 +1507,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::offset_register_type index, typename Vec::mask_type mask
             ) {
+
                return (mask&1)==1 ? memory[index[0]] : source;
             }
          };
@@ -1405,6 +1523,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct gather<simd<double, scalar>, Idof> {
             using Vec = simd<double, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1413,6 +1532,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type source, typename Vec::base_type const * memory, typename Vec::offset_register_type index, typename Vec::mask_type mask
             ) {
+
                return (mask&1)==1 ? memory[index[0]] : source;
             }
          };
@@ -1428,6 +1548,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set<simd<uint8_t, scalar>, Idof> {
             using Vec = simd<uint8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1437,6 +1558,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                Ts... args
             ) {
+
                return std::get<0>(std::make_tuple(args...));
             }
          };
@@ -1452,6 +1574,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set<simd<uint16_t, scalar>, Idof> {
             using Vec = simd<uint16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1461,6 +1584,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                Ts... args
             ) {
+
                return std::get<0>(std::make_tuple(args...));
             }
          };
@@ -1476,6 +1600,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set<simd<uint32_t, scalar>, Idof> {
             using Vec = simd<uint32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1485,6 +1610,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                Ts... args
             ) {
+
                return std::get<0>(std::make_tuple(args...));
             }
          };
@@ -1500,6 +1626,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set<simd<uint64_t, scalar>, Idof> {
             using Vec = simd<uint64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1509,6 +1636,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                Ts... args
             ) {
+
                return std::get<0>(std::make_tuple(args...));
             }
          };
@@ -1524,6 +1652,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set<simd<int8_t, scalar>, Idof> {
             using Vec = simd<int8_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1533,6 +1662,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                Ts... args
             ) {
+
                return std::get<0>(std::make_tuple(args...));
             }
          };
@@ -1548,6 +1678,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set<simd<int16_t, scalar>, Idof> {
             using Vec = simd<int16_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1557,6 +1688,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                Ts... args
             ) {
+
                return std::get<0>(std::make_tuple(args...));
             }
          };
@@ -1572,6 +1704,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set<simd<int32_t, scalar>, Idof> {
             using Vec = simd<int32_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1581,6 +1714,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                Ts... args
             ) {
+
                return std::get<0>(std::make_tuple(args...));
             }
          };
@@ -1596,6 +1730,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set<simd<int64_t, scalar>, Idof> {
             using Vec = simd<int64_t, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1605,6 +1740,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                Ts... args
             ) {
+
                return std::get<0>(std::make_tuple(args...));
             }
          };
@@ -1620,6 +1756,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set<simd<float, scalar>, Idof> {
             using Vec = simd<float, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1629,6 +1766,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                Ts... args
             ) {
+
                return std::get<0>(std::make_tuple(args...));
             }
          };
@@ -1644,6 +1782,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct set<simd<double, scalar>, Idof> {
             using Vec = simd<double, scalar>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -1653,6 +1792,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                Ts... args
             ) {
+
                return std::get<0>(std::make_tuple(args...));
             }
          };

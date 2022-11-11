@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/calc/calc_sse.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief This file contains arithmetic primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -51,6 +51,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<uint8_t, sse>, Idof> {
             using Vec = simd<uint8_t, sse>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -59,6 +60,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm_add_epi8(vec_a, vec_b);
             }
          };
@@ -75,6 +77,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<uint16_t, sse>, Idof> {
             using Vec = simd<uint16_t, sse>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -83,6 +86,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm_add_epi16(vec_a, vec_b);
             }
          };
@@ -99,6 +103,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<uint32_t, sse>, Idof> {
             using Vec = simd<uint32_t, sse>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -107,6 +112,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm_add_epi32(vec_a, vec_b);
             }
          };
@@ -123,6 +129,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<uint64_t, sse>, Idof> {
             using Vec = simd<uint64_t, sse>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -131,6 +138,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm_add_epi64(vec_a, vec_b);
             }
          };
@@ -147,6 +155,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<int8_t, sse>, Idof> {
             using Vec = simd<int8_t, sse>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -155,6 +164,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm_add_epi8(vec_a, vec_b);
             }
          };
@@ -171,6 +181,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<int16_t, sse>, Idof> {
             using Vec = simd<int16_t, sse>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -179,6 +190,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm_add_epi16(vec_a, vec_b);
             }
          };
@@ -195,6 +207,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<int32_t, sse>, Idof> {
             using Vec = simd<int32_t, sse>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -203,6 +216,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm_add_epi32(vec_a, vec_b);
             }
          };
@@ -219,6 +233,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<int64_t, sse>, Idof> {
             using Vec = simd<int64_t, sse>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -227,6 +242,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm_add_epi64(vec_a, vec_b);
             }
          };
@@ -242,6 +258,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<float, sse>, Idof> {
             using Vec = simd<float, sse>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -250,6 +267,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm_add_ps(vec_a, vec_b);
             }
          };
@@ -265,6 +283,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<double, sse>, Idof> {
             using Vec = simd<double, sse>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -273,6 +292,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm_add_pd(vec_a, vec_b);
             }
          };
@@ -288,6 +308,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<float, sse>, Idof> {
             using Vec = simd<float, sse>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -296,6 +317,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm_mul_ps(vec_a, vec_b);
             }
          };
@@ -311,6 +333,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<double, sse>, Idof> {
             using Vec = simd<double, sse>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -319,6 +342,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm_mul_pd(vec_a, vec_b);
             }
          };
@@ -335,6 +359,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<uint16_t, sse>, Idof> {
             using Vec = simd<uint16_t, sse>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -343,6 +368,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm_mullo_epi16(vec_a, vec_b);
             }
          };
@@ -359,6 +385,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<int16_t, sse>, Idof> {
             using Vec = simd<int16_t, sse>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -367,6 +394,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm_mullo_epi16(vec_a, vec_b);
             }
          };
@@ -383,6 +411,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<uint32_t, sse>, Idof> {
             using Vec = simd<uint32_t, sse>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -391,6 +420,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm_mullo_epi32(vec_a, vec_b);
             }
          };
@@ -407,6 +437,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<int32_t, sse>, Idof> {
             using Vec = simd<int32_t, sse>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -415,6 +446,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm_mullo_epi32(vec_a, vec_b);
             }
          };
@@ -430,6 +462,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<uint8_t, sse>, Idof> {
             using Vec = simd<uint8_t, sse>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -439,14 +472,15 @@ namespace tvl {
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_a;
-               alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
-               _mm_store_si128(reinterpret_cast<__m128i*>(buffer_a.data()), vec_a);
-               _mm_store_si128(reinterpret_cast<__m128i*>(buffer_b.data()), vec_b);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  buffer_a[i] *= buffer_b[i];
-               }
-               return _mm_load_si128(reinterpret_cast<__m128i const *>(buffer_a.data()));
+                              alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
+                              _mm_store_si128(reinterpret_cast<__m128i*>(buffer_a.data()), vec_a);
+                              _mm_store_si128(reinterpret_cast<__m128i*>(buffer_b.data()), vec_b);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 buffer_a[i] *= buffer_b[i];
+                              }
+                              return _mm_load_si128(reinterpret_cast<__m128i const *>(buffer_a.data()));
             }
          };
    } // end of namespace functors for template specialization of mul for sse using uint8_t.
@@ -461,6 +495,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<int8_t, sse>, Idof> {
             using Vec = simd<int8_t, sse>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -470,14 +505,15 @@ namespace tvl {
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_a;
-               alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
-               _mm_store_si128(reinterpret_cast<__m128i*>(buffer_a.data()), vec_a);
-               _mm_store_si128(reinterpret_cast<__m128i*>(buffer_b.data()), vec_b);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  buffer_a[i] *= buffer_b[i];
-               }
-               return _mm_load_si128(reinterpret_cast<__m128i const *>(buffer_a.data()));
+                              alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
+                              _mm_store_si128(reinterpret_cast<__m128i*>(buffer_a.data()), vec_a);
+                              _mm_store_si128(reinterpret_cast<__m128i*>(buffer_b.data()), vec_b);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 buffer_a[i] *= buffer_b[i];
+                              }
+                              return _mm_load_si128(reinterpret_cast<__m128i const *>(buffer_a.data()));
             }
          };
    } // end of namespace functors for template specialization of mul for sse using int8_t.
@@ -492,6 +528,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<uint64_t, sse>, Idof> {
             using Vec = simd<uint64_t, sse>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -501,14 +538,15 @@ namespace tvl {
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_a;
-               alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
-               _mm_store_si128(reinterpret_cast<__m128i*>(buffer_a.data()), vec_a);
-               _mm_store_si128(reinterpret_cast<__m128i*>(buffer_b.data()), vec_b);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  buffer_a[i] *= buffer_b[i];
-               }
-               return _mm_load_si128(reinterpret_cast<__m128i const *>(buffer_a.data()));
+                              alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
+                              _mm_store_si128(reinterpret_cast<__m128i*>(buffer_a.data()), vec_a);
+                              _mm_store_si128(reinterpret_cast<__m128i*>(buffer_b.data()), vec_b);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 buffer_a[i] *= buffer_b[i];
+                              }
+                              return _mm_load_si128(reinterpret_cast<__m128i const *>(buffer_a.data()));
             }
          };
    } // end of namespace functors for template specialization of mul for sse using uint64_t.
@@ -523,6 +561,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<int64_t, sse>, Idof> {
             using Vec = simd<int64_t, sse>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -532,14 +571,15 @@ namespace tvl {
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_a;
-               alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
-               _mm_store_si128(reinterpret_cast<__m128i*>(buffer_a.data()), vec_a);
-               _mm_store_si128(reinterpret_cast<__m128i*>(buffer_b.data()), vec_b);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  buffer_a[i] *= buffer_b[i];
-               }
-               return _mm_load_si128(reinterpret_cast<__m128i const *>(buffer_a.data()));
+                              alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
+                              _mm_store_si128(reinterpret_cast<__m128i*>(buffer_a.data()), vec_a);
+                              _mm_store_si128(reinterpret_cast<__m128i*>(buffer_b.data()), vec_b);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 buffer_a[i] *= buffer_b[i];
+                              }
+                              return _mm_load_si128(reinterpret_cast<__m128i const *>(buffer_a.data()));
             }
          };
    } // end of namespace functors for template specialization of mul for sse using int64_t.
@@ -554,6 +594,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<double, sse>, Idof> {
             using Vec = simd<double, sse>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -563,6 +604,7 @@ namespace tvl {
                 typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
+
                return _mm_cvtsd_f64(value) + _mm_cvtsd_f64(_mm_castsi128_pd(_mm_bsrli_si128(_mm_castpd_si128(value),sizeof(double))));
             }
          };
@@ -578,6 +620,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<float, sse>, Idof> {
             using Vec = simd<float, sse>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -587,8 +630,9 @@ namespace tvl {
                 typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
+
                auto res = _mm_hadd_ps(value, value);
-               return _mm_cvtss_f32(res) + _mm_cvtss_f32(_mm_castsi128_ps(_mm_bsrli_si128(_mm_castps_si128(res),sizeof(float))));
+                              return _mm_cvtss_f32(res) + _mm_cvtss_f32(_mm_castsi128_ps(_mm_bsrli_si128(_mm_castps_si128(res),sizeof(float))));
             }
          };
    } // end of namespace functors for template specialization of hadd for sse using float.
@@ -604,6 +648,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<uint64_t, sse>, Idof> {
             using Vec = simd<uint64_t, sse>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -613,6 +658,7 @@ namespace tvl {
                 typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
+
                return _mm_cvtsi128_si64(value) + _mm_cvtsi128_si64(_mm_bsrli_si128(value,sizeof(uint64_t)));
             }
          };
@@ -629,6 +675,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<int64_t, sse>, Idof> {
             using Vec = simd<int64_t, sse>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -638,6 +685,7 @@ namespace tvl {
                 typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
+
                return _mm_cvtsi128_si64(value) + _mm_cvtsi128_si64(_mm_bsrli_si128(value,sizeof(uint64_t)));
             }
          };
@@ -654,6 +702,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<uint32_t, sse>, Idof> {
             using Vec = simd<uint32_t, sse>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -663,8 +712,9 @@ namespace tvl {
                 typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
+
                auto res = _mm_hadd_epi32(value, value);
-               return _mm_cvtsi128_si32(res) + _mm_cvtsi128_si32(_mm_bsrli_si128(res,sizeof(uint32_t)));
+                              return _mm_cvtsi128_si32(res) + _mm_cvtsi128_si32(_mm_bsrli_si128(res,sizeof(uint32_t)));
             }
          };
    } // end of namespace functors for template specialization of hadd for sse using uint32_t.
@@ -680,6 +730,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<int32_t, sse>, Idof> {
             using Vec = simd<int32_t, sse>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -689,8 +740,9 @@ namespace tvl {
                 typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
+
                auto res = _mm_hadd_epi32(value, value);
-               return _mm_cvtsi128_si32(res) + _mm_cvtsi128_si32(_mm_bsrli_si128(res,sizeof(uint32_t)));
+                              return _mm_cvtsi128_si32(res) + _mm_cvtsi128_si32(_mm_bsrli_si128(res,sizeof(uint32_t)));
             }
          };
    } // end of namespace functors for template specialization of hadd for sse using int32_t.
@@ -705,6 +757,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<uint8_t, sse>, Idof> {
             using Vec = simd<uint8_t, sse>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -714,13 +767,14 @@ namespace tvl {
                 typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer;
-               typename Vec::base_type result = 0;
-               _mm_store_si128(reinterpret_cast<__m128i *>(buffer.data()), value);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  result += buffer[i];
-               }
-               return result;
+                              typename Vec::base_type result = 0;
+                              _mm_store_si128(reinterpret_cast<__m128i *>(buffer.data()), value);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 result += buffer[i];
+                              }
+                              return result;
             }
          };
    } // end of namespace functors for template specialization of hadd for sse using uint8_t.
@@ -735,6 +789,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<int8_t, sse>, Idof> {
             using Vec = simd<int8_t, sse>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -744,13 +799,14 @@ namespace tvl {
                 typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer;
-               typename Vec::base_type result = 0;
-               _mm_store_si128(reinterpret_cast<__m128i *>(buffer.data()), value);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  result += buffer[i];
-               }
-               return result;
+                              typename Vec::base_type result = 0;
+                              _mm_store_si128(reinterpret_cast<__m128i *>(buffer.data()), value);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 result += buffer[i];
+                              }
+                              return result;
             }
          };
    } // end of namespace functors for template specialization of hadd for sse using int8_t.
@@ -765,6 +821,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<uint16_t, sse>, Idof> {
             using Vec = simd<uint16_t, sse>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -774,13 +831,14 @@ namespace tvl {
                 typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer;
-               typename Vec::base_type result = 0;
-               _mm_store_si128(reinterpret_cast<__m128i *>(buffer.data()), value);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  result += buffer[i];
-               }
-               return result;
+                              typename Vec::base_type result = 0;
+                              _mm_store_si128(reinterpret_cast<__m128i *>(buffer.data()), value);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 result += buffer[i];
+                              }
+                              return result;
             }
          };
    } // end of namespace functors for template specialization of hadd for sse using uint16_t.
@@ -795,6 +853,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<int16_t, sse>, Idof> {
             using Vec = simd<int16_t, sse>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -804,13 +863,14 @@ namespace tvl {
                 typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer;
-               typename Vec::base_type result = 0;
-               _mm_store_si128(reinterpret_cast<__m128i *>(buffer.data()), value);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  result += buffer[i];
-               }
-               return result;
+                              typename Vec::base_type result = 0;
+                              _mm_store_si128(reinterpret_cast<__m128i *>(buffer.data()), value);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 result += buffer[i];
+                              }
+                              return result;
             }
          };
    } // end of namespace functors for template specialization of hadd for sse using int16_t.
