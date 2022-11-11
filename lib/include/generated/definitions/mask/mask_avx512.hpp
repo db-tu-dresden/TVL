@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/mask/mask_avx512.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief Mask related primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -48,6 +48,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct to_integral<simd<int64_t, avx512>, Idof> {
             using Vec = simd<int64_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -56,6 +57,7 @@ namespace tvl {
             static typename Vec::base_type apply(
                 typename Vec::mask_type vec_mask
             ) {
+
                return vec_mask; //mask is integral already.
             }
          };
@@ -71,6 +73,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct get_msb<simd<int64_t, avx512>, Idof> {
             using Vec = simd<int64_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -79,6 +82,7 @@ namespace tvl {
             static typename Vec::base_type apply(
                 typename Vec::register_type vec
             ) {
+
                return _mm512_movepi64_mask( vec );
             }
          };
@@ -94,6 +98,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct to_vector<simd<int64_t, avx512>, Idof> {
             using Vec = simd<int64_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -102,6 +107,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::mask_type mask
             ) {
+
                return _mm512_maskz_set1_epi64( mask, -1 );
             }
          };
@@ -117,6 +123,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mask_reduce<simd<int64_t, avx512>, Idof> {
             using Vec = simd<int64_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -125,6 +132,7 @@ namespace tvl {
             static typename Vec::base_type apply(
                 typename Vec::base_type mask
             ) {
+
                return mask & 0xFF; //mask is integral already.
             }
          };

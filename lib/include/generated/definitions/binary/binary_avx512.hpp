@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/binary/binary_avx512.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief Bit manipulation primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -48,6 +48,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct binary_and<simd<uint8_t, avx512>, Idof> {
             using Vec = simd<uint8_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -56,6 +57,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type a, typename Vec::register_type b
             ) {
+
                return _mm512_and_si512(a, b);
             }
          };
@@ -71,6 +73,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct binary_and<simd<uint16_t, avx512>, Idof> {
             using Vec = simd<uint16_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -79,6 +82,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type a, typename Vec::register_type b
             ) {
+
                return _mm512_and_si512(a, b);
             }
          };
@@ -94,6 +98,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct binary_and<simd<uint32_t, avx512>, Idof> {
             using Vec = simd<uint32_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -102,6 +107,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type a, typename Vec::register_type b
             ) {
+
                return _mm512_and_si512(a, b);
             }
          };
@@ -117,6 +123,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct binary_and<simd<uint64_t, avx512>, Idof> {
             using Vec = simd<uint64_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -125,6 +132,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type a, typename Vec::register_type b
             ) {
+
                return _mm512_and_si512(a, b);
             }
          };
@@ -140,6 +148,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct binary_and<simd<int8_t, avx512>, Idof> {
             using Vec = simd<int8_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -148,6 +157,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type a, typename Vec::register_type b
             ) {
+
                return _mm512_and_si512(a, b);
             }
          };
@@ -163,6 +173,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct binary_and<simd<int16_t, avx512>, Idof> {
             using Vec = simd<int16_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -171,6 +182,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type a, typename Vec::register_type b
             ) {
+
                return _mm512_and_si512(a, b);
             }
          };
@@ -186,6 +198,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct binary_and<simd<int32_t, avx512>, Idof> {
             using Vec = simd<int32_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -194,6 +207,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type a, typename Vec::register_type b
             ) {
+
                return _mm512_and_si512(a, b);
             }
          };
@@ -209,6 +223,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct binary_and<simd<int64_t, avx512>, Idof> {
             using Vec = simd<int64_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -217,6 +232,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type a, typename Vec::register_type b
             ) {
+
                return _mm512_and_si512(a, b);
             }
          };
@@ -232,6 +248,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct binary_and<simd<float, avx512>, Idof> {
             using Vec = simd<float, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -240,6 +257,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type a, typename Vec::register_type b
             ) {
+
                return _mm512_and_ps(a, b);
             }
          };
@@ -255,6 +273,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct binary_and<simd<double, avx512>, Idof> {
             using Vec = simd<double, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -263,6 +282,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type a, typename Vec::register_type b
             ) {
+
                return _mm512_and_pd(a, b);
             }
          };
@@ -278,6 +298,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct binary_and<simd<float, avx512>, Idof> {
             using Vec = simd<float, avx512>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -287,6 +308,7 @@ namespace tvl {
                 typename Vec::register_type a, typename Vec::register_type b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive binary_and is not supported by your hardware natively while it is forced by using native" );
+
                return _mm512_and_si512(_mm512_castsi512_ps(a) ,_mm512_castsi512_ps(b));
             }
          };
@@ -302,6 +324,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct binary_and<simd<double, avx512>, Idof> {
             using Vec = simd<double, avx512>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -311,6 +334,7 @@ namespace tvl {
                 typename Vec::register_type a, typename Vec::register_type b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive binary_and is not supported by your hardware natively while it is forced by using native" );
+
                return _mm512_and_si512(_mm512_castsi512_pd(a) ,_mm512_castsi512_pd(b));
             }
          };

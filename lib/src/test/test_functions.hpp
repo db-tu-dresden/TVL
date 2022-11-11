@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/src/test/test_functions.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief TODO.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -57,6 +57,20 @@ namespace testing {
          dist_type dist(static_cast<T>(0), max);
          for(std::size_t i = 0; i < element_count; ++i) {
             data[i] = dist(engine);
+         }
+      }
+
+   template<typename T>
+      void seq_init_start_0(T* data, std::size_t element_count) {
+         for(std::size_t i = 0; i < element_count; ++i) {
+            data[i] = i;
+         }
+      }
+
+   template<typename T>
+      void seq_init_start_low(T* data, std::size_t element_count) {
+         for(std::size_t i = std::numeric_limits<T>::lowest(); i < element_count; ++i) {
+            data[i] = i;
          }
       }
 
@@ -141,6 +155,9 @@ namespace testing {
             auto result_ref() { return m_result_ref; }
             auto result_target() { return m_result_target; }
          public:
+            void ship_to_dev() {
+               tvl::memory_cp<Vec>(m_data_target, m_data_ref, m_data_element_count*sizeof(base_t), 1);
+            }
             void synchronize() {
                tvl::memory_cp<Vec>(m_result_target_for_ref, m_result_target, m_result_count*sizeof(base_t), 2);
             }

@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/declarations/memory.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief Memory related primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -37,7 +37,8 @@
 
 #include <cstring>
 namespace tvl {
-   namespace functors {
+   
+namespace functors {
       // Forward declaration of implementation struct for TVL-primitive "allocate".
       template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
          struct allocate{};
@@ -56,7 +57,8 @@ namespace tvl {
             count_bytes
          );
       }
-   namespace functors {
+   
+namespace functors {
       // Forward declaration of implementation struct for TVL-primitive "allocate_aligned".
       template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
          struct allocate_aligned{};
@@ -76,7 +78,8 @@ namespace tvl {
             count_bytes,alignment
          );
       }
-   namespace functors {
+   
+namespace functors {
       // Forward declaration of implementation struct for TVL-primitive "deallocate".
       template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
          struct deallocate{};
@@ -94,7 +97,8 @@ namespace tvl {
             ptr
          );
       }
-   namespace functors {
+   
+namespace functors {
       // Forward declaration of implementation struct for TVL-primitive "memory_cp".
       template<VectorProcessingStyle Vec, ImplementationDegreeOfFreedom Idof>
          struct memory_cp{};

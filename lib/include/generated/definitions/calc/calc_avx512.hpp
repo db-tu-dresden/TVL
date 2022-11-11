@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/calc/calc_avx512.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief This file contains arithmetic primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -51,6 +51,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<uint8_t, avx512>, Idof> {
             using Vec = simd<uint8_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -59,6 +60,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_add_epi8(vec_a, vec_b);
             }
          };
@@ -75,6 +77,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<uint16_t, avx512>, Idof> {
             using Vec = simd<uint16_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -83,6 +86,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_add_epi16(vec_a, vec_b);
             }
          };
@@ -99,6 +103,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<uint32_t, avx512>, Idof> {
             using Vec = simd<uint32_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -107,6 +112,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_add_epi32(vec_a, vec_b);
             }
          };
@@ -123,6 +129,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<uint64_t, avx512>, Idof> {
             using Vec = simd<uint64_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -131,6 +138,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_add_epi64(vec_a, vec_b);
             }
          };
@@ -147,6 +155,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<int8_t, avx512>, Idof> {
             using Vec = simd<int8_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -155,6 +164,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_add_epi8(vec_a, vec_b);
             }
          };
@@ -171,6 +181,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<int16_t, avx512>, Idof> {
             using Vec = simd<int16_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -179,6 +190,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_add_epi16(vec_a, vec_b);
             }
          };
@@ -195,6 +207,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<int32_t, avx512>, Idof> {
             using Vec = simd<int32_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -203,6 +216,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_add_epi32(vec_a, vec_b);
             }
          };
@@ -219,6 +233,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<int64_t, avx512>, Idof> {
             using Vec = simd<int64_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -227,6 +242,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_add_epi64(vec_a, vec_b);
             }
          };
@@ -242,6 +258,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<float, avx512>, Idof> {
             using Vec = simd<float, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -250,6 +267,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_add_ps(vec_a, vec_b);
             }
          };
@@ -265,6 +283,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct add<simd<double, avx512>, Idof> {
             using Vec = simd<double, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -273,6 +292,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_add_pd(vec_a, vec_b);
             }
          };
@@ -288,6 +308,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<float, avx512>, Idof> {
             using Vec = simd<float, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -296,6 +317,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_mul_ps(vec_a, vec_b);
             }
          };
@@ -311,6 +333,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<double, avx512>, Idof> {
             using Vec = simd<double, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -319,6 +342,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_mul_pd(vec_a, vec_b);
             }
          };
@@ -335,6 +359,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<uint16_t, avx512>, Idof> {
             using Vec = simd<uint16_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -343,6 +368,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_mullo_epi16(vec_a, vec_b);
             }
          };
@@ -358,6 +384,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<int16_t, avx512>, Idof> {
             using Vec = simd<int16_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -366,6 +393,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_mullo_epi16(vec_a, vec_b);
             }
          };
@@ -382,6 +410,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<uint32_t, avx512>, Idof> {
             using Vec = simd<uint32_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -390,6 +419,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_mullo_epi32(vec_a, vec_b);
             }
          };
@@ -406,6 +436,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<int32_t, avx512>, Idof> {
             using Vec = simd<int32_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -414,6 +445,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_mullo_epi32(vec_a, vec_b);
             }
          };
@@ -430,6 +462,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<uint64_t, avx512>, Idof> {
             using Vec = simd<uint64_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -438,6 +471,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_mullo_epi64(vec_a, vec_b);
             }
          };
@@ -454,6 +488,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<int64_t, avx512>, Idof> {
             using Vec = simd<int64_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -462,6 +497,7 @@ namespace tvl {
             static typename Vec::register_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm512_mullo_epi64(vec_a, vec_b);
             }
          };
@@ -477,6 +513,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<uint8_t, avx512>, Idof> {
             using Vec = simd<uint8_t, avx512>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -486,14 +523,15 @@ namespace tvl {
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_a;
-               alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
-               _mm512_store_si512(reinterpret_cast<void*>(buffer_a.data()), vec_a);
-               _mm512_store_si512(reinterpret_cast<void*>(buffer_b.data()), vec_b);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  buffer_a[i] *= buffer_b[i];
-               }
-               return _mm512_load_si512(reinterpret_cast<void const *>(buffer_a.data()));
+                              alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer_a.data()), vec_a);
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer_b.data()), vec_b);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 buffer_a[i] *= buffer_b[i];
+                              }
+                              return _mm512_load_si512(reinterpret_cast<void const *>(buffer_a.data()));
             }
          };
    } // end of namespace functors for template specialization of mul for avx512 using uint8_t.
@@ -508,6 +546,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<int8_t, avx512>, Idof> {
             using Vec = simd<int8_t, avx512>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -517,14 +556,15 @@ namespace tvl {
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_a;
-               alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
-               _mm512_store_si512(reinterpret_cast<void*>(buffer_a.data()), vec_a);
-               _mm512_store_si512(reinterpret_cast<void*>(buffer_b.data()), vec_b);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  buffer_a[i] *= buffer_b[i];
-               }
-               return _mm512_load_si512(reinterpret_cast<void const *>(buffer_a.data()));
+                              alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer_a.data()), vec_a);
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer_b.data()), vec_b);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 buffer_a[i] *= buffer_b[i];
+                              }
+                              return _mm512_load_si512(reinterpret_cast<void const *>(buffer_a.data()));
             }
          };
    } // end of namespace functors for template specialization of mul for avx512 using int8_t.
@@ -539,6 +579,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<uint16_t, avx512>, Idof> {
             using Vec = simd<uint16_t, avx512>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -548,14 +589,15 @@ namespace tvl {
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_a;
-               alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
-               _mm512_store_si512(reinterpret_cast<void*>(buffer_a.data()), vec_a);
-               _mm512_store_si512(reinterpret_cast<void*>(buffer_b.data()), vec_b);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  buffer_a[i] *= buffer_b[i];
-               }
-               return _mm512_load_si512(reinterpret_cast<void const *>(buffer_a.data()));
+                              alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer_a.data()), vec_a);
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer_b.data()), vec_b);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 buffer_a[i] *= buffer_b[i];
+                              }
+                              return _mm512_load_si512(reinterpret_cast<void const *>(buffer_a.data()));
             }
          };
    } // end of namespace functors for template specialization of mul for avx512 using uint16_t.
@@ -570,6 +612,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<int16_t, avx512>, Idof> {
             using Vec = simd<int16_t, avx512>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -579,14 +622,15 @@ namespace tvl {
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_a;
-               alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
-               _mm512_store_si512(reinterpret_cast<void*>(buffer_a.data()), vec_a);
-               _mm512_store_si512(reinterpret_cast<void*>(buffer_b.data()), vec_b);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  buffer_a[i] *= buffer_b[i];
-               }
-               return _mm512_load_si512(reinterpret_cast<void const *>(buffer_a.data()));
+                              alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer_a.data()), vec_a);
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer_b.data()), vec_b);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 buffer_a[i] *= buffer_b[i];
+                              }
+                              return _mm512_load_si512(reinterpret_cast<void const *>(buffer_a.data()));
             }
          };
    } // end of namespace functors for template specialization of mul for avx512 using int16_t.
@@ -601,6 +645,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<uint32_t, avx512>, Idof> {
             using Vec = simd<uint32_t, avx512>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -610,14 +655,15 @@ namespace tvl {
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_a;
-               alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
-               _mm512_store_si512(reinterpret_cast<void*>(buffer_a.data()), vec_a);
-               _mm512_store_si512(reinterpret_cast<void*>(buffer_b.data()), vec_b);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  buffer_a[i] *= buffer_b[i];
-               }
-               return _mm512_load_si512(reinterpret_cast<void const *>(buffer_a.data()));
+                              alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer_a.data()), vec_a);
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer_b.data()), vec_b);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 buffer_a[i] *= buffer_b[i];
+                              }
+                              return _mm512_load_si512(reinterpret_cast<void const *>(buffer_a.data()));
             }
          };
    } // end of namespace functors for template specialization of mul for avx512 using uint32_t.
@@ -632,6 +678,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<int32_t, avx512>, Idof> {
             using Vec = simd<int32_t, avx512>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -641,14 +688,15 @@ namespace tvl {
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_a;
-               alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
-               _mm512_store_si512(reinterpret_cast<void*>(buffer_a.data()), vec_a);
-               _mm512_store_si512(reinterpret_cast<void*>(buffer_b.data()), vec_b);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  buffer_a[i] *= buffer_b[i];
-               }
-               return _mm512_load_si512(reinterpret_cast<void const *>(buffer_a.data()));
+                              alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer_a.data()), vec_a);
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer_b.data()), vec_b);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 buffer_a[i] *= buffer_b[i];
+                              }
+                              return _mm512_load_si512(reinterpret_cast<void const *>(buffer_a.data()));
             }
          };
    } // end of namespace functors for template specialization of mul for avx512 using int32_t.
@@ -663,6 +711,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<uint64_t, avx512>, Idof> {
             using Vec = simd<uint64_t, avx512>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -672,14 +721,15 @@ namespace tvl {
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_a;
-               alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
-               _mm512_store_si512(reinterpret_cast<void*>(buffer_a.data()), vec_a);
-               _mm512_store_si512(reinterpret_cast<void*>(buffer_b.data()), vec_b);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  buffer_a[i] *= buffer_b[i];
-               }
-               return _mm512_load_si512(reinterpret_cast<void const *>(buffer_a.data()));
+                              alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer_a.data()), vec_a);
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer_b.data()), vec_b);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 buffer_a[i] *= buffer_b[i];
+                              }
+                              return _mm512_load_si512(reinterpret_cast<void const *>(buffer_a.data()));
             }
          };
    } // end of namespace functors for template specialization of mul for avx512 using uint64_t.
@@ -694,6 +744,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct mul<simd<int64_t, avx512>, Idof> {
             using Vec = simd<int64_t, avx512>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -703,14 +754,15 @@ namespace tvl {
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive mul is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_a;
-               alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
-               _mm512_store_si512(reinterpret_cast<void*>(buffer_a.data()), vec_a);
-               _mm512_store_si512(reinterpret_cast<void*>(buffer_b.data()), vec_b);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  buffer_a[i] *= buffer_b[i];
-               }
-               return _mm512_load_si512(reinterpret_cast<void const *>(buffer_a.data()));
+                              alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer_b;
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer_a.data()), vec_a);
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer_b.data()), vec_b);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 buffer_a[i] *= buffer_b[i];
+                              }
+                              return _mm512_load_si512(reinterpret_cast<void const *>(buffer_a.data()));
             }
          };
    } // end of namespace functors for template specialization of mul for avx512 using int64_t.
@@ -726,6 +778,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<float, avx512>, Idof> {
             using Vec = simd<float, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -734,6 +787,7 @@ namespace tvl {
             static typename Vec::base_type apply(
                 typename Vec::register_type value
             ) {
+
                return _mm512_reduce_add_ps(value);
             }
          };
@@ -750,6 +804,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<double, avx512>, Idof> {
             using Vec = simd<double, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -758,6 +813,7 @@ namespace tvl {
             static typename Vec::base_type apply(
                 typename Vec::register_type value
             ) {
+
                return _mm512_reduce_add_pd(value);
             }
          };
@@ -774,6 +830,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<uint32_t, avx512>, Idof> {
             using Vec = simd<uint32_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -782,6 +839,7 @@ namespace tvl {
             static typename Vec::base_type apply(
                 typename Vec::register_type value
             ) {
+
                return _mm512_reduce_add_epi32(value);
             }
          };
@@ -798,6 +856,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<uint64_t, avx512>, Idof> {
             using Vec = simd<uint64_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -806,6 +865,7 @@ namespace tvl {
             static typename Vec::base_type apply(
                 typename Vec::register_type value
             ) {
+
                return _mm512_reduce_add_epi64(value);
             }
          };
@@ -822,6 +882,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<int32_t, avx512>, Idof> {
             using Vec = simd<int32_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -830,6 +891,7 @@ namespace tvl {
             static typename Vec::base_type apply(
                 typename Vec::register_type value
             ) {
+
                return _mm512_reduce_add_epi32(value);
             }
          };
@@ -846,6 +908,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<int64_t, avx512>, Idof> {
             using Vec = simd<int64_t, avx512>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -854,6 +917,7 @@ namespace tvl {
             static typename Vec::base_type apply(
                 typename Vec::register_type value
             ) {
+
                return _mm512_reduce_add_epi64(value);
             }
          };
@@ -869,6 +933,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<uint8_t, avx512>, Idof> {
             using Vec = simd<uint8_t, avx512>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -878,13 +943,14 @@ namespace tvl {
                 typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer;
-               typename Vec::base_type result = 0;
-               _mm512_store_si512(reinterpret_cast<void*>(buffer.data()), value);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  result += buffer[i];
-               }
-               return result;
+                              typename Vec::base_type result = 0;
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer.data()), value);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 result += buffer[i];
+                              }
+                              return result;
             }
          };
    } // end of namespace functors for template specialization of hadd for avx512 using uint8_t.
@@ -899,6 +965,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<int8_t, avx512>, Idof> {
             using Vec = simd<int8_t, avx512>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -908,13 +975,14 @@ namespace tvl {
                 typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer;
-               typename Vec::base_type result = 0;
-               _mm512_store_si512(reinterpret_cast<void*>(buffer.data()), value);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  result += buffer[i];
-               }
-               return result;
+                              typename Vec::base_type result = 0;
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer.data()), value);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 result += buffer[i];
+                              }
+                              return result;
             }
          };
    } // end of namespace functors for template specialization of hadd for avx512 using int8_t.
@@ -929,6 +997,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<uint16_t, avx512>, Idof> {
             using Vec = simd<uint16_t, avx512>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -938,13 +1007,14 @@ namespace tvl {
                 typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer;
-               typename Vec::base_type result = 0;
-               _mm512_store_si512(reinterpret_cast<void*>(buffer.data()), value);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  result += buffer[i];
-               }
-               return result;
+                              typename Vec::base_type result = 0;
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer.data()), value);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 result += buffer[i];
+                              }
+                              return result;
             }
          };
    } // end of namespace functors for template specialization of hadd for avx512 using uint16_t.
@@ -959,6 +1029,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct hadd<simd<int16_t, avx512>, Idof> {
             using Vec = simd<int16_t, avx512>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -968,13 +1039,14 @@ namespace tvl {
                 typename Vec::register_type value
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive hadd is not supported by your hardware natively while it is forced by using native" );
+
                alignas(Vec::vector_alignment()) std::array<typename Vec::base_type, Vec::vector_element_count()> buffer;
-               typename Vec::base_type result = 0;
-               _mm512_store_si512(reinterpret_cast<void*>(buffer.data()), value);
-               for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
-                  result += buffer[i];
-               }
-               return result;
+                              typename Vec::base_type result = 0;
+                              _mm512_store_si512(reinterpret_cast<void*>(buffer.data()), value);
+                              for(std::size_t i = 0; i < Vec::vector_element_count(); ++i) {
+                                 result += buffer[i];
+                              }
+                              return result;
             }
          };
    } // end of namespace functors for template specialization of hadd for avx512 using int16_t.

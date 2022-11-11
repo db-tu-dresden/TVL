@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/definitions/compare/compare_avx2.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief Compare primitives.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -49,6 +49,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct equal<simd<int8_t, avx2>, Idof> {
             using Vec = simd<int8_t, avx2>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -57,6 +58,7 @@ namespace tvl {
             static typename Vec::mask_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm256_cmpeq_epi8(vec_a, vec_b);
             }
          };
@@ -73,6 +75,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct equal<simd<uint8_t, avx2>, Idof> {
             using Vec = simd<uint8_t, avx2>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -81,6 +84,7 @@ namespace tvl {
             static typename Vec::mask_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm256_cmpeq_epi8(vec_a, vec_b);
             }
          };
@@ -97,6 +101,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct equal<simd<int16_t, avx2>, Idof> {
             using Vec = simd<int16_t, avx2>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -105,6 +110,7 @@ namespace tvl {
             static typename Vec::mask_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm256_cmpeq_epi16(vec_a, vec_b);
             }
          };
@@ -121,6 +127,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct equal<simd<uint16_t, avx2>, Idof> {
             using Vec = simd<uint16_t, avx2>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -129,6 +136,7 @@ namespace tvl {
             static typename Vec::mask_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm256_cmpeq_epi16(vec_a, vec_b);
             }
          };
@@ -145,6 +153,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct equal<simd<int32_t, avx2>, Idof> {
             using Vec = simd<int32_t, avx2>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -153,6 +162,7 @@ namespace tvl {
             static typename Vec::mask_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm256_cmpeq_epi32(vec_a, vec_b);
             }
          };
@@ -169,6 +179,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct equal<simd<uint32_t, avx2>, Idof> {
             using Vec = simd<uint32_t, avx2>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -177,6 +188,7 @@ namespace tvl {
             static typename Vec::mask_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm256_cmpeq_epi32(vec_a, vec_b);
             }
          };
@@ -193,6 +205,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct equal<simd<int64_t, avx2>, Idof> {
             using Vec = simd<int64_t, avx2>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -201,6 +214,7 @@ namespace tvl {
             static typename Vec::mask_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm256_cmpeq_epi64(vec_a, vec_b);
             }
          };
@@ -217,6 +231,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct equal<simd<uint64_t, avx2>, Idof> {
             using Vec = simd<uint64_t, avx2>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -225,6 +240,7 @@ namespace tvl {
             static typename Vec::mask_type apply(
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
+
                return _mm256_cmpeq_epi64(vec_a, vec_b);
             }
          };
@@ -241,6 +257,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct equal<simd<float, avx2>, Idof> {
             using Vec = simd<float, avx2>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -250,6 +267,7 @@ namespace tvl {
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive equal is not supported by your hardware natively while it is forced by using native" );
+
                return _mm256_castsi256_ps(_mm256_cmpeq_epi32(_mm256_castps_si256(vec_a), _mm256_castps_si256(vec_b)));
             }
          };
@@ -266,6 +284,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct equal<simd<double, avx2>, Idof> {
             using Vec = simd<double, avx2>;
+            
             static constexpr bool native_supported() {
                return false;
             }
@@ -275,6 +294,7 @@ namespace tvl {
                 typename Vec::register_type vec_a, typename Vec::register_type vec_b
             ) {
                static_assert( !std::is_same_v< Idof, native >, "The primitive equal is not supported by your hardware natively while it is forced by using native" );
+
                return _mm256_castsi256_pd(_mm256_cmpeq_epi64(_mm256_castpd_si256(vec_a), _mm256_castpd_si256(vec_b)));
             }
          };
@@ -290,6 +310,7 @@ namespace tvl {
       template<ImplementationDegreeOfFreedom Idof>
          struct between_inclusive<simd<int64_t, avx2>, Idof> {
             using Vec = simd<int64_t, avx2>;
+            
             static constexpr bool native_supported() {
                return true;
             }
@@ -298,6 +319,7 @@ namespace tvl {
             static typename Vec::mask_type apply(
                 typename Vec::register_type vec_data, typename Vec::register_type vec_min, typename Vec::register_type vec_max
             ) {
+
                return _mm256_andnot_si256( _mm256_cmpgt_epi64( vec_min, vec_data ), _mm256_andnot_si256( _mm256_cmpgt_epi64( vec_data, vec_max ), _mm256_set1_epi64x(-1)));
             }
          };

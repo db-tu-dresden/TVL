@@ -17,13 +17,13 @@
  *==========================================================================*/
 /*
  * \file /home/runner/work/TVLGen/TVLGen/lib/include/generated/extensions/simd/arm/neon.hpp
- * \date 2022-09-29
+ * \date 2022-11-11
  * \brief Definition of the SIMD TargetExtension neon.
  * \note
  * Git-Local Url : /home/runner/work/TVLGen/TVLGen/generator
  * Git-Remote Url: git@github.com:db-tu-dresden/TVLGen.git
  * Git-Branch    : main
- * Git-Commit    : dced20e (dced20e02fd365f0df93721f53d70e87bfe5cab2)
+ * Git-Commit    : 1ac1135 (1ac11352efd6d9d52816eed86ba5d99af6879f89)
  * Submodule(s):
  *   Git-Local Url : primitive_data
  *   Git-Remote Url: git@github.com:db-tu-dresden/TVLPrimitiveData.git
@@ -41,7 +41,7 @@ namespace tvl {
       template<TVLArithmetic BaseType, std::size_t VectorSizeInBits = 128>
          struct types {
             using default_size_in_bits = std::integral_constant<std::size_t, VectorSizeInBits>;
-            using register_t  =
+            using register_t  = 
                TVL_DEP_TYPE(
                   std::is_integral_v< BaseType >,
                   TVL_DEP_TYPE( 
@@ -79,7 +79,7 @@ namespace tvl {
                      float64x2_t
                   )
                );
-            using mask_t =
+            using mask_t  = 
                TVL_DEP_TYPE(
                   (sizeof( BaseType ) == 1),
                   uint8x16_t,
